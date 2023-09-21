@@ -12,8 +12,13 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private bool isFacingRight = true;
 
-    private SpriteRenderer spriteRenderer;
-    public Sprite[] spriteArray;
+    /*public SpriteRenderer spriteRenderer;
+    public Sprite[] Lucia;
+
+    public float frameTime;
+
+    private float moveCounter = 0;
+    private int i = 0;*/
 
     private void Update()
     {
@@ -32,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Flip();
+        //moveCounter += Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -40,6 +46,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * sideForce, rb.velocity.y);
 
+          /*  if (moveCounter > frameTime)
+            {
+                i = (i == 1) ? 0 : 1;
+                spriteRenderer.sprite = Lucia[i];
+                moveCounter = 0;
+            }*/
         }
     }
 
