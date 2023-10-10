@@ -12,32 +12,21 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private bool isFacingRight = true;
 
-    /*public SpriteRenderer spriteRenderer;
-    public Sprite[] Lucia;
-
-    public float frameTime;
-
-    private float moveCounter = 0;
-    private int i = 0;*/
-
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            Debug.Log("Pressed button down? up?");
             rb.velocity = new Vector2(rb.velocity.x, upwardForce);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
-            Debug.Log("Pressed button up? down?");
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
         Flip();
-        //moveCounter += Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -45,13 +34,6 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded())
         {
             rb.velocity = new Vector2(horizontal * sideForce, rb.velocity.y);
-
-          /*  if (moveCounter > frameTime)
-            {
-                i = (i == 1) ? 0 : 1;
-                spriteRenderer.sprite = Lucia[i];
-                moveCounter = 0;
-            }*/
         }
     }
 
@@ -69,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale; //make transform negative
-            Debug.Log("Flipped");
         }
     }
+
 }
