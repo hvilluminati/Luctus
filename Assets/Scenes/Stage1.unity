@@ -160,7 +160,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08795bdedceb04173a1cc0eef242311a, type: 2}
+  - {fileID: 2100000, guid: 860afaf2bec6c470bb21a8ed06701ca7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3c3097485f3a046e5ad6903667926dd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dcd0044005e541d8887e448de596840, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -244,7 +244,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08795bdedceb04173a1cc0eef242311a, type: 2}
+  - {fileID: 2100000, guid: 860afaf2bec6c470bb21a8ed06701ca7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -265,7 +265,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3c3097485f3a046e5ad6903667926dd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dcd0044005e541d8887e448de596840, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -341,9 +341,10 @@ GameObject:
   - component: {fileID: 391633663}
   - component: {fileID: 391633662}
   - component: {fileID: 391633667}
+  - component: {fileID: 391633668}
   m_Layer: 0
   m_Name: Lucia
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -403,7 +404,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 391633661}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 5221bff1c6f184c1b856b18e45814eee, type: 2}
+  m_Material: {fileID: 6200000, guid: 527daf15d75714d76a11ec87d8b7792b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -459,7 +460,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08795bdedceb04173a1cc0eef242311a, type: 2}
+  - {fileID: 2100000, guid: 860afaf2bec6c470bb21a8ed06701ca7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -480,7 +481,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 96252a6501bb541748d0df5895c4b08a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1129353e20ef4546b9503a64245f36c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -517,7 +518,7 @@ Animator:
   m_GameObject: {fileID: 391633661}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40fc9e03dce5240ae95dc34b19fd8c3a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 047bcb4218c0f4f63baea43e7662d667, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -528,6 +529,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &391633668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391633661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb173163b2b4c49cc82b714070746c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,7 +776,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08795bdedceb04173a1cc0eef242311a, type: 2}
+  - {fileID: 2100000, guid: 860afaf2bec6c470bb21a8ed06701ca7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -784,7 +797,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 3038f642bd4c74c07a658e6e45e4eaa5, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 720525df1525f4f5a9adfb6551ec84df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -792,7 +805,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &542519390
@@ -960,7 +973,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08795bdedceb04173a1cc0eef242311a, type: 2}
+  - {fileID: 2100000, guid: 860afaf2bec6c470bb21a8ed06701ca7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -981,7 +994,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3c3097485f3a046e5ad6903667926dd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dcd0044005e541d8887e448de596840, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1018,7 +1031,7 @@ GameObject:
   - component: {fileID: 1046312040}
   m_Layer: 0
   m_Name: Enemies
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1076,7 +1089,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08795bdedceb04173a1cc0eef242311a, type: 2}
+  - {fileID: 2100000, guid: 860afaf2bec6c470bb21a8ed06701ca7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1097,7 +1110,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3c3097485f3a046e5ad6903667926dd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dcd0044005e541d8887e448de596840, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1160,7 +1173,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08795bdedceb04173a1cc0eef242311a, type: 2}
+  - {fileID: 2100000, guid: 860afaf2bec6c470bb21a8ed06701ca7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1181,7 +1194,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3c3097485f3a046e5ad6903667926dd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dcd0044005e541d8887e448de596840, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1222,7 +1235,7 @@ GameObject:
   - component: {fileID: 1485160442}
   m_Layer: 0
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1252,7 +1265,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1485160437}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 274e161dea3b848dc8511215ce6d0ef7, type: 2}
+  m_Material: {fileID: 6200000, guid: bd74762bb97c34c1e8cbf19754d61ea0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1335,7 +1348,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08795bdedceb04173a1cc0eef242311a, type: 2}
+  - {fileID: 2100000, guid: 860afaf2bec6c470bb21a8ed06701ca7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1356,7 +1369,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 24b27fb9c4f814460814b069c2ffdee2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88c56457f897742ffaa90ca81e062436, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1531,7 +1544,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15, y: 2, z: -0.017260294}
-  m_LocalScale: {x: 12, y: 0.5, z: 1}
+  m_LocalScale: {x: 5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1806629962}
@@ -1572,14 +1585,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.6, y: 2.5}
   m_EdgeRadius: 0
 --- !u!212 &1810307671
 SpriteRenderer:
@@ -1601,7 +1614,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d13dca76abf0c4636a2271c3a97163f9, type: 2}
+  - {fileID: 2100000, guid: 824356e5394c4441892d1ce8704871d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1622,12 +1635,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 3038f642bd4c74c07a658e6e45e4eaa5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 720525df1525f4f5a9adfb6551ec84df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
