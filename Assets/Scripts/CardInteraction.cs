@@ -8,10 +8,16 @@ namespace Assets.Scripts
 	{
 		private RectTransform rectTransform;
 		private Canvas canvas;
-		private bool isDragging;
-		private Vector2 originalPosition;
-		private Vector2 pointerOffset;
+
 		public RectTransform canvasRectransform;
+		public GameObject Arrow;
+
+
+		private void Start()
+		{
+			// Find the Arrow by name
+			Arrow = GameObject.Find("Arrow");
+		}
 
 		public void Awake()
 		{
@@ -32,30 +38,26 @@ namespace Assets.Scripts
 		}
 		public void OnPointerDown(PointerEventData eventData)
 		{
-			//Vector2 normelizedPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+			// Activate the arrow
+			Arrow.SetActive(true);
 
-			isDragging = true;
-			originalPosition = rectTransform.anchoredPosition;
-			//pointerOffset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-			RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, Input.mousePosition, eventData.pressEventCamera, out pointerOffset);
+			//originalPosition = rectTransform.anchoredPosition;
+			//RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, Input.mousePosition, eventData.pressEventCamera, out pointerOffset);
+
+			// Get the RectTransform of the clicked card and pass it to the arrow
+			RectTransform cardRectTransform = GetComponent<RectTransform>();
+
+			// Set the arrow's origin to the position of the card
+			CubicCurveArrow cubicArrowScript = Arrow.GetComponent<CubicCurveArrow>();
+
+			cubicArrowScript.SetArrowOrigin(cardRectTransform.position);
 		}
 
 		public void OnPointerUp(PointerEventData eventData)
 		{
-			isDragging = false;
-			rectTransform.DOAnchorPos(originalPosition, 0.5f);
+			// Deactivate the arrow
+			Arrow.SetActive(false);
 		}
 
-		public void Update()
-		{
-			if (isDragging)
-			{
-				Vector2 cursorPoint = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-				//Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + pointerOffset;
-				RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectransform, Input.mousePosition, null, out Vector2 cursorPosition);
-				rectTransform.anchoredPosition = cursorPosition - pointerOffset;
-				Debug.Log(cursorPosition);
-			}
-		}
 	}
 }
