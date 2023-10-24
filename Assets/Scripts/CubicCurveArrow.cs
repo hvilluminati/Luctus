@@ -16,7 +16,7 @@ public class CubicCurveArrow : MonoBehaviour
 	public float scaleFactor = 1f;
 
 	// Position of P0 (arrows emitter point)
-	private RectTransform origin;
+	public RectTransform rectTransform;
 
 	// List of arrow node's transform
 	private List<RectTransform> arrowNodes = new List<RectTransform>();
@@ -27,17 +27,22 @@ public class CubicCurveArrow : MonoBehaviour
 	// Factors to determine the position of control point P1, P2
 	private readonly List<Vector2> controlPointFactors = new List<Vector2> { new Vector2(-0.3f, 0.8f), new Vector2(0.1f, 1.4f) };
 
-	private void Awake()
+	public void Awake()
 	{
-		//gameObject.SetActive(false);
+		rectTransform = GetComponent<RectTransform>();
+	}
 
+
+	public void Start()
+	{
+		Debug.Log("Inside Arrow start");
 		// Get the RectTransform of the Canvas
 		RectTransform canvasRect = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
 
 		// Set the initial position of the origin to the center of the screen
-		origin = GetComponent<RectTransform>();
-		origin.position = canvasRect.position + new Vector3(canvasRect.rect.width / 2f, canvasRect.rect.height / 2f, 0f);
-
+		//rectTransform.position = canvasRect.position + new Vector3(canvasRect.rect.width / 2f, canvasRect.rect.height / 2f, 0f);
+		//Debug.Log("Position: " + origin.position);
+		//Debug.Log("Origin: " + origin);
 
 		for (int i = 0; i < arrowNodeNum; i++)
 		{
@@ -51,13 +56,15 @@ public class CubicCurveArrow : MonoBehaviour
 		{
 			controlPoints.Add(Vector2.zero);
 		}
+
+		//gameObject.SetActive(false);
 	}
 
 	private void Update()
 	{
-
+		Debug.Log("Inside Arrow Update + Origin position: " + rectTransform.position);
 		// P0 is the arrow emitter point
-		controlPoints[0] = new Vector2(origin.position.x, origin.position.y);
+		controlPoints[0] = new Vector2(rectTransform.position.x, rectTransform.position.y);
 
 		// P3 is at the mouse position
 		controlPoints[3] = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -99,6 +106,7 @@ public class CubicCurveArrow : MonoBehaviour
 
 	public void SetArrowOrigin(Vector3 originPosition)
 	{
-		origin.position = originPosition;
+		Debug.Log("Setting arrow origin");
+		rectTransform.position = originPosition;
 	}
 }

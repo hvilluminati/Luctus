@@ -3,7 +3,9 @@ guid: 468894aad3aa0c5408e509446a2f1387
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - canvasRectransform: {instanceID: 0}
+  - Arrow: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

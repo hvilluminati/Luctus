@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasRectransform: {fileID: 0}
-  Arrow: {fileID: 1429979174198182419, guid: 37b342435bcfb5a4b9a19d29723f20f8, type: 3}
+  ArrowPrefab: {fileID: 786672781161781837, guid: 1160c3b1f18f3bd4d9068880a2ebb271, type: 3}
 --- !u!223 &-8375557467741668188
 Canvas:
   m_ObjectHideFlags: 0
