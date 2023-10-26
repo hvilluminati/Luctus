@@ -7,10 +7,10 @@ public class EnemyBehavior : MonoBehaviour
 	public Transform healthBar;
 	private int currentHealth;
 
-	public void Start()
-	{
-		currentHealth = enemy.health;
-	}
+	//public void Start()
+	//{
+	//	currentHealth = enemy.health;
+	//}
 
 	public void TakeDamage(int damage)
 	{

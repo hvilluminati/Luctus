@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
 	public void Start()
 	{
-		turnText.text = "Player's Turn";
+		//turnText.text = "Player's Turn";
 		// TODO: Create deck in new game
 		if (currentDeck.cards.Count == 0)
 		{
@@ -74,8 +74,8 @@ public class GameManager : MonoBehaviour
 
 			}
 		}
-		else
-			turnText.text = "No more card space";
+		//else
+		//turnText.text = "No more card space";
 	}
 
 
