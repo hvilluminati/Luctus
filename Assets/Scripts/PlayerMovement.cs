@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform player;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
@@ -24,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+        if (player.position.y < -10)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         Flip();

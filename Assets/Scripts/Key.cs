@@ -10,7 +10,7 @@ public class Key : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            door.GetComponent<BoxCollider2D>().enabled = false;
+            door.GetComponent<Door>().enabled = true;
 
             this.gameObject.SetActive(false);
             invKey.SetActive(true);
