@@ -22,7 +22,10 @@ public class Door : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.CompareTag("Player"))
+        {
             enterAllowed = false;
+        }
     }
 
     private void Update()
