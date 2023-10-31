@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 54af0c34f36c040bb976a23b6164d50b
   - enabled: 1
-    path: Assets/Scenes/Stage1.unity
+    path: Assets/Scenes/Forest.unity
     guid: 15de4e169fb3f48628e3cdd779e9eca9
+  - enabled: 1
+    path: Assets/Scenes/NPC.unity
+    guid: 180b7450dbd38484bb5bc0b6885ccec8
+  - enabled: 1
+    path: Assets/Scenes/CardBattle.unity
+    guid: 398a51d53d1c7cd4d8e6f747c518f5d9
   m_configObjects: {}

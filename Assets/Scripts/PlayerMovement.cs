@@ -1,11 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform player;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public GameObject dialoguePanel;
 
     [SerializeField] private float sideForce;
     [SerializeField] private float upwardForce;
@@ -14,19 +17,27 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (!dialoguePanel.activeInHierarchy)
         {
-            rb.velocity = new Vector2(rb.velocity.x, upwardForce);
-        }
+            horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
+            if (Input.GetButtonDown("Jump") && IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, upwardForce);
+            }
 
-        Flip();
+            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+
+            if (player.position.y < -10)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+
+            Flip();
+        }
     }
 
     private void FixedUpdate()
