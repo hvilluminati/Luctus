@@ -1,24 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public Image healthBar;
-    public float healthAmount = 100;
+    private float healthAmount;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthAmount = DataManager.instance.playerHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (healthAmount <= 0)
-        { Application.LoadLevel(Application.loadedLevel); }
+        { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); }
 
         if (Input.GetKeyDown(KeyCode.Backspace)) { TakeDamage(30); }
 
@@ -28,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         healthAmount -= damage;
+        DataManager.instance.ModifyHealth(-damage);
         healthBar.fillAmount = healthAmount / 100f;
     }
 
@@ -36,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
         if((healthAmount + healing) <= 100)
         {
             healthAmount += healing;
+            DataManager.instance.ModifyHealth(healing);
         }
         else
         {
