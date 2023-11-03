@@ -4,6 +4,7 @@ using TMPro;
 
 public class NPCDialogue : MonoBehaviour
 {
+    public GameObject player;
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     public string[] dialogue;
@@ -41,6 +42,7 @@ public class NPCDialogue : MonoBehaviour
             if (!dialoguePanel.activeInHierarchy)
             {
                 dialoguePanel.SetActive(true);
+                player.GetComponent<PlayerMovement>().enabled = false;
                 StartCoroutine(Typing());
             }
             else if (dialogueText.text == dialogue[index])
@@ -60,6 +62,7 @@ public class NPCDialogue : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
+        player.GetComponent<PlayerMovement>().enabled = true;
     }
 
     IEnumerator Typing()

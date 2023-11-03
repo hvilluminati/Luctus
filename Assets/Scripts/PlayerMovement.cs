@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    public GameObject dialoguePanel;
 
     [SerializeField] private float sideForce;
     [SerializeField] private float upwardForce;
@@ -17,27 +16,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!dialoguePanel.activeInHierarchy)
+        horizontal = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            horizontal = Input.GetAxisRaw("Horizontal");
-
-            if (Input.GetButtonDown("Jump") && IsGrounded())
-            {
-                rb.velocity = new Vector2(rb.velocity.x, upwardForce);
-            }
-
-            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-            }
-
-            if (player.position.y < -10)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-
-            Flip();
+            rb.velocity = new Vector2(rb.velocity.x, upwardForce);
         }
+
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+        if (player.position.y < -10)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        Flip();
     }
 
     private void FixedUpdate()
