@@ -1,14 +1,13 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyDecorator : MonoBehaviour
 {
 	public Enemy enemy;
-	public Image spriteImage;
+	public SpriteRenderer spriteImage;
 
 	public void Instantiate()
 	{
-		spriteImage.sprite = enemy.spriteImage;
+		spriteImage = enemy.spriteImage;
 	}
 
 

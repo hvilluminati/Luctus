@@ -23,9 +23,6 @@ namespace Assets.Scripts
 		{
 			rectTransform = GetComponent<RectTransform>();
 			canvas = GetComponent<Canvas>();
-
-			//Arrow = GameObject.FindGameObjectsWithTag("Arrow");
-			//Arrow = GameObject.Find("Arrow");
 		}
 
 		public void OnPointerEnter(PointerEventData eventData)
@@ -41,21 +38,16 @@ namespace Assets.Scripts
 		}
 		public void OnPointerDown(PointerEventData eventData)
 		{
-			Debug.Log("Inside OnPointerDown");
-			//originalPosition = rectTransform.anchoredPosition;
-			//RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, Input.mousePosition, eventData.pressEventCamera, out pointerOffset);
 
 			// Get the RectTransform of the clicked card and pass it to the arrow
 			RectTransform cardRectTransform = GetComponent<RectTransform>();
 			arrowInstance = Instantiate(ArrowPrefab, cardRectTransform.position, Quaternion.identity, canvas.transform);
-			Debug.Log("Arrow instantiated");
 
 			// Set the arrow's origin to the position of the card
 			CubicCurveArrow cubicArrowScript = arrowInstance.GetComponent<CubicCurveArrow>();
 			if (cubicArrowScript != null)
 			{
 				cubicArrowScript.SetArrowOrigin(cardRectTransform.position);
-				//cubicArrowScript.origin = cardRectTransform;
 			}
 			else
 			{
@@ -65,7 +57,6 @@ namespace Assets.Scripts
 
 		public void OnPointerUp(PointerEventData eventData)
 		{
-			Debug.Log("Inside onPointerUp");
 			// Deactivate the arrow
 			Destroy(arrowInstance);
 			arrowInstance = null;
