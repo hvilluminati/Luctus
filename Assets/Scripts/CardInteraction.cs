@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,15 +9,27 @@ namespace Assets.Scripts
 	{
 		private RectTransform rectTransform;
 		private Canvas canvas;
+		private Card card;
 
 		public RectTransform canvasRectransform;
 		public GameObject ArrowPrefab;
 		private GameObject arrowInstance;
 
+		private GameObject[] enemies;
+		public List<EnemyBehavior> enemiesBehaviour;
+
+		public EnemyBehavior selectedEnemy;
 
 		private void Start()
 		{
+			enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
+			foreach (GameObject enemy in enemies)
+			{
+				enemiesBehaviour.Add(enemy.GetComponent<EnemyBehavior>());
+			}
+
+			card = gameObject.GetComponent<CardDecorator>().card;
 		}
 
 		public void Awake()
@@ -53,6 +66,11 @@ namespace Assets.Scripts
 			{
 				Debug.LogWarning("CubicCurveArrow component not found on the arrow GameObject.");
 			}
+
+			foreach (EnemyBehavior behavior in enemiesBehaviour)
+			{
+				behavior.pointerIsOn = true;
+			}
 		}
 
 		public void OnPointerUp(PointerEventData eventData)
@@ -60,6 +78,13 @@ namespace Assets.Scripts
 			// Deactivate the arrow
 			Destroy(arrowInstance);
 			arrowInstance = null;
+
+			selectedEnemy.TakeDamage(card.damage);
+
+			foreach (EnemyBehavior behavior in enemiesBehaviour)
+			{
+				behavior.pointerIsOn = false;
+			}
 		}
 
 	}

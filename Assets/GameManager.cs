@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 		DrawCard();
 		DrawCard();
 	}
+
 	public void CreateDeck()
 	{
 		for (int i = 0; i < initialDeckAmount; i++)

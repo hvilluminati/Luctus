@@ -4,5 +4,5 @@ using UnityEngine;
 public class Enemy : ScriptableObject
 {
 	public int health;
-	public SpriteRenderer spriteImage;
+	public Sprite spriteImage;
 }

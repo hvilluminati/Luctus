@@ -1,43 +1,51 @@
+using Assets.Scripts;
 using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class EnemyBehavior : MonoBehaviour//, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
 	public Enemy enemy;
 	public RectTransform healthBar;
-	private int currentHealth;
-	private bool isHighlighted = false;
+	private int currentHealth = 1000;
+	[SerializeField] private bool isHighlighted = false;
 	private RectTransform enemyTransform;
 	private Vector3 originalScale;
+
+	public bool pointerIsOn = false;
+
+	public List<CardInteraction> cardsInteractions;
 
 
 	private void Start()
 	{
-		enemyTransform = transform.Find("EnemySprite").GetComponent<RectTransform>();
-		Debug.Log(enemyTransform);
+		enemy = new Enemy();
+		enemy.health = 1000;
+		enemyTransform = GetComponent<RectTransform>();
+
 		originalScale = enemyTransform.localScale;
+
+		currentHealth = enemy.health;
 	}
 
-	public void OnPointerEnter(PointerEventData eventData)
-	{
-		Debug.Log("Inside enemy onPointerEnter");
-		HighlightEnemy();
-	}
-
-	public void OnPointerExit(PointerEventData eventData)
-	{
-		Debug.Log("Inside enemy onPointerExit");
-		UnhighlightEnemy();
-	}
-
-	//public void Start()
+	//public void OnPointerEnter(PointerEventData eventData)
 	//{
-	//	currentHealth = enemy.health;
+	//	Debug.Log("Inside enemy onPointerEnter");
+	//	HighlightEnemy();
 	//}
+
+	//public void OnPointerExit(PointerEventData eventData)
+	//{
+	//	Debug.Log("Inside enemy onPointerExit");
+	//	UnhighlightEnemy();
+	//}
+
+
 
 	public void TakeDamage(int damage)
 	{
+		UnhighlightEnemy();
+		Debug.Log("Enemy took damage: " + damage);
 		currentHealth -= damage;
 		// Shake animation
 		if (currentHealth <= 0)
@@ -50,16 +58,22 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	}
 
 
-	private void HighlightEnemy()
+	public void HighlightEnemy()
 	{
-		if (!isHighlighted)
+		if (!isHighlighted && pointerIsOn)
 		{
 			isHighlighted = true;
 			enemyTransform.DOScale(originalScale * 1.1f, 0.3f).SetLoops(-1, LoopType.Yoyo);
+
+			GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
+			foreach (var card in cards)
+			{
+				card.GetComponent<CardInteraction>().selectedEnemy = this;
+			}
 		}
 	}
 
-	private void UnhighlightEnemy()
+	public void UnhighlightEnemy()
 	{
 		if (isHighlighted)
 		{
@@ -69,4 +83,13 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		}
 	}
 
+	public void PointerUp()
+	{
+		Debug.Log("Pointer Up");
+		UnhighlightEnemy();
+		if (!pointerIsOn)
+		{
+			TakeDamage(100);
+		}
+	}
 }
