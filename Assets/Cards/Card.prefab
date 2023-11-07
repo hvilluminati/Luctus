@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 8963323504557051370}
   m_Layer: 5
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,6 +420,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasRectransform: {fileID: 0}
   ArrowPrefab: {fileID: 786672781161781837, guid: 1160c3b1f18f3bd4d9068880a2ebb271, type: 3}
+  enemiesBehaviour: []
+  selectedEnemy: {fileID: 0}
 --- !u!223 &-8375557467741668188
 Canvas:
   m_ObjectHideFlags: 0
@@ -438,7 +440,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 1
