@@ -35,14 +35,9 @@ public class CubicCurveArrow : MonoBehaviour
 
 	public void Start()
 	{
-		Debug.Log("Inside Arrow start");
 		// Get the RectTransform of the Canvas
 		RectTransform canvasRect = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
 
-		// Set the initial position of the origin to the center of the screen
-		//rectTransform.position = canvasRect.position + new Vector3(canvasRect.rect.width / 2f, canvasRect.rect.height / 2f, 0f);
-		//Debug.Log("Position: " + origin.position);
-		//Debug.Log("Origin: " + origin);
 
 		for (int i = 0; i < arrowNodeNum; i++)
 		{
@@ -57,12 +52,10 @@ public class CubicCurveArrow : MonoBehaviour
 			controlPoints.Add(Vector2.zero);
 		}
 
-		//gameObject.SetActive(false);
 	}
 
 	private void Update()
 	{
-		Debug.Log("Inside Arrow Update + Origin position: " + rectTransform.position);
 		// P0 is the arrow emitter point
 		controlPoints[0] = new Vector2(rectTransform.position.x, rectTransform.position.y);
 
@@ -106,7 +99,6 @@ public class CubicCurveArrow : MonoBehaviour
 
 	public void SetArrowOrigin(Vector3 originPosition)
 	{
-		Debug.Log("Setting arrow origin");
 		rectTransform.position = originPosition;
 	}
 }
