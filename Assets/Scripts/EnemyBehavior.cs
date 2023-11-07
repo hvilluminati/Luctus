@@ -88,4 +88,37 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		}
 	}
 
+	public bool turnIsStarted = false;
+	public float timer = 0;
+	public float delay = 3;
+	public bool turnFinished = false;
+
+	void Update()
+	{
+		if (turnIsStarted)
+		{
+			timer += Time.deltaTime;
+			if (timer >= delay)
+			{
+				DoDamage();
+				turnFinished = true;
+
+				turnIsStarted = false;
+				timer = 0;
+			}
+		}
+	}
+
+	public void StartTurn()
+	{
+		turnIsStarted = true;
+		DoDamage();
+	}
+	public void DoDamage()
+	{
+		Debug.Log("i have made damage");
+
+	}
 }
+
+
