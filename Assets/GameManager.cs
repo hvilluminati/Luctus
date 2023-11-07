@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
 	public Card[] cardTypes;
 	public CardDecorator cardPrefab;
 
+	public TurnManager turnManager;
+
+	public GameObject enemies;
+
 
 	public void Start()
 	{
@@ -28,11 +32,17 @@ public class GameManager : MonoBehaviour
 		{
 			CreateDeck();
 		}
-		DrawCard();
-		DrawCard();
-		DrawCard();
-		DrawCard();
-		DrawCard();
+
+		if (turnManager.turn == TurnState.princessTurn)
+		{
+			DrawCard();
+			DrawCard();
+			DrawCard();
+			DrawCard();
+			DrawCard();
+		}
+
+		// Princess start turn
 	}
 	public void CreateDeck()
 	{
