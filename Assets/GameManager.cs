@@ -1,4 +1,5 @@
 using Assets.Scripts;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -25,11 +26,19 @@ public class GameManager : MonoBehaviour
 
 	public TurnManager turnManager;
 
-	public GameObject enemies;
+	public GameObject[] enemies;
+	public List<EnemyBehavior> enemyBehaviors;
 
 
 	public void Start()
 	{
+		enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach (var enemy in enemies)
+		{
+			enemyBehaviors.Add(enemy.GetComponent<EnemyBehavior>());
+		}
+
+		turnManager.gm = this;
 		//turnText.text = "Player's Turn";
 		// TODO: Create deck in new game
 		if (currentDeck.cards.Count == 0)
@@ -89,7 +98,43 @@ public class GameManager : MonoBehaviour
 		//turnText.text = "No more card space";
 	}
 
+	bool enemyTurnInProgress = false;
 
+	private void Update()
+	{
+		if (enemyTurnInProgress)
+		{
+			bool completion = true;
+			foreach (var enemy in enemyBehaviors)
+			{
+				Debug.Log("foreach");
+				if (!enemy.turnFinished)
+				{
+					completion = false;
+				}
+			}
+			if (completion)
+			{
+				Debug.Log("Start player turn");
+				turnManager.StartPlayerTurn();
+				enemyTurnInProgress = false;
+				foreach (var enemy in enemyBehaviors) enemy.turnFinished = false;
+			}
+		}
+
+	}
+
+	public void EnemyTurn()
+	{
+		Debug.Log("Enemy Turn");
+		foreach (var enemy in enemyBehaviors)
+		{
+			enemyTurnInProgress = true;
+			enemy.StartTurn();
+		}
+
+
+	}
 
 	public void OnApplicationQuit()
 	{

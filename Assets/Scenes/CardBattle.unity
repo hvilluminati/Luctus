@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turn: 0
+  gm: {fileID: 0}
 --- !u!4 &45148508
 Transform:
   m_ObjectHideFlags: 0
@@ -540,7 +541,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 45148507}
         m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
-        m_MethodName: EndTurn
+        m_MethodName: EndPlayerTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -838,7 +839,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'End turn
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1247,7 +1250,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1419918b7aa2087429c9f99d3dfa6cf3, type: 2}
   cardPrefab: {fileID: 6037586316611523160, guid: 69d85aa017e80d446b11976a49c2886f, type: 3}
   turnManager: {fileID: 45148507}
-  enemies: {fileID: 0}
+  enemies: []
+  enemyBehaviors: []
 --- !u!4 &1938497899
 Transform:
   m_ObjectHideFlags: 0
