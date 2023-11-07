@@ -107,7 +107,6 @@ public class GameManager : MonoBehaviour
 			bool completion = true;
 			foreach (var enemy in enemyBehaviors)
 			{
-				Debug.Log("foreach");
 				if (!enemy.turnFinished)
 				{
 					completion = false;
