@@ -7,11 +7,6 @@ public class EnemyDecorator : MonoBehaviour
 	public Sprite spriteImage;
 	public Image image;
 
-	public void Instantiate()
-	{
-		//spriteImage = enemy.spriteImage;
-	}
-
 
 	private void Start()
 	{

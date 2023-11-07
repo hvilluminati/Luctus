@@ -79,7 +79,8 @@ namespace Assets.Scripts
 			Destroy(arrowInstance);
 			arrowInstance = null;
 
-			selectedEnemy.TakeDamage(card.damage);
+			if (selectedEnemy != null) selectedEnemy.TakeDamage(card.damage);
+			//selectedEnemy = null;
 
 			foreach (EnemyBehavior behavior in enemiesBehaviour)
 			{

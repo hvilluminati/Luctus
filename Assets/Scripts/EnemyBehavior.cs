@@ -2,12 +2,13 @@ using Assets.Scripts;
 using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class EnemyBehavior : MonoBehaviour//, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
+public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 	public Enemy enemy;
 	public RectTransform healthBar;
-	private int currentHealth = 1000;
+	private int currentHealth;
 	[SerializeField] private bool isHighlighted = false;
 	private RectTransform enemyTransform;
 	private Vector3 originalScale;
@@ -19,8 +20,8 @@ public class EnemyBehavior : MonoBehaviour//, IPointerUpHandler, IPointerEnterHa
 
 	private void Start()
 	{
-		enemy = new Enemy();
-		enemy.health = 1000;
+		enemy = ScriptableObject.CreateInstance<Enemy>();
+		enemy.health = 50; // Shall be deleted at some point
 		enemyTransform = GetComponent<RectTransform>();
 
 		originalScale = enemyTransform.localScale;
@@ -28,17 +29,15 @@ public class EnemyBehavior : MonoBehaviour//, IPointerUpHandler, IPointerEnterHa
 		currentHealth = enemy.health;
 	}
 
-	//public void OnPointerEnter(PointerEventData eventData)
-	//{
-	//	Debug.Log("Inside enemy onPointerEnter");
-	//	HighlightEnemy();
-	//}
+	public void OnPointerEnter(PointerEventData eventData)
+	{
+		HighlightEnemy();
+	}
 
-	//public void OnPointerExit(PointerEventData eventData)
-	//{
-	//	Debug.Log("Inside enemy onPointerExit");
-	//	UnhighlightEnemy();
-	//}
+	public void OnPointerExit(PointerEventData eventData)
+	{
+		UnhighlightEnemy();
+	}
 
 
 
@@ -80,16 +79,13 @@ public class EnemyBehavior : MonoBehaviour//, IPointerUpHandler, IPointerEnterHa
 			isHighlighted = false;
 			enemyTransform.DOKill();
 			enemyTransform.localScale = originalScale;
+
+			GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
+			foreach (var card in cards)
+			{
+				card.GetComponent<CardInteraction>().selectedEnemy = null;
+			}
 		}
 	}
 
-	public void PointerUp()
-	{
-		Debug.Log("Pointer Up");
-		UnhighlightEnemy();
-		if (!pointerIsOn)
-		{
-			TakeDamage(100);
-		}
-	}
 }
