@@ -1,4 +1,5 @@
 using Assets.Scripts;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour
 	private int drawnCardsSpacing = 160;
 	[SerializeField]
 	private int drawnCardsYPosition = 300;
+	[SerializeField]
+	public TMP_Text turnText;
 
 	public RectTransform canvasRectransform;
 	public Transform drawnCardsHolder;
@@ -27,6 +30,7 @@ public class GameManager : MonoBehaviour
 
 	public void Start()
 	{
+		//turnText.text = "Player's Turn";
 		// TODO: Create deck in new game
 		if (currentDeck.cards.Count == 0)
 		{
@@ -44,6 +48,7 @@ public class GameManager : MonoBehaviour
 
 		// Princess start turn
 	}
+
 	public void CreateDeck()
 	{
 		for (int i = 0; i < initialDeckAmount; i++)
@@ -80,7 +85,11 @@ public class GameManager : MonoBehaviour
 
 			}
 		}
+		//else
+		//turnText.text = "No more card space";
 	}
+
+
 
 	public void OnApplicationQuit()
 	{
