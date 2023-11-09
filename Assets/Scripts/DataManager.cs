@@ -8,6 +8,8 @@ public class DataManager : MonoBehaviour
     public float y_old = 0;
     public float x_new = 0;
     public float y_new = 0;
+    public int prevScene = 0;
+    public bool enemyAlive = true;
 
 
     private void Awake()
@@ -34,5 +36,10 @@ public class DataManager : MonoBehaviour
         y_old = y_new;
         x_new = x_curr;
         y_new = y_curr;
+    }
+
+    public void UpdatePrevScene(int sceneNumer)
+    {
+        prevScene = sceneNumer;
     }
 }

@@ -38,6 +38,7 @@ public class Door : MonoBehaviour
         if (Input.GetButtonDown("Submit") && enterAllowed)
         {
             DataManager.instance.SaveCoordinate(player.position.x, player.position.y);
+            DataManager.instance.UpdatePrevScene(SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene(sceneNumber);
         }
     }

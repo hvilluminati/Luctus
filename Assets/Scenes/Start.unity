@@ -240,6 +240,8 @@ MonoBehaviour:
   y_old: 0
   x_new: 0
   y_new: 0
+  prevScene: 0
+  enemyAlive: 1
 --- !u!1 &402904231
 GameObject:
   m_ObjectHideFlags: 0

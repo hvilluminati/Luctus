@@ -11,6 +11,7 @@ public class SceneTransition : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             DataManager.instance.SaveCoordinate(player.position.x, player.position.y);
+            DataManager.instance.UpdatePrevScene(SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene(sceneNumber);
         }
     }
