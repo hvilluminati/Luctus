@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public Image healthBar;
-    private float healthAmount;
+    private float healthAmount = 100;
+    private float damageTaken;
 
     // Start is called before the first frame update
     void Start()
     {
-        healthAmount = DataManager.instance.playerHealth;
+        damageTaken = 100 - DataManager.instance.playerHealth;
+        UpdateDamage(damageTaken);
     }
 
     // Update is called once per frame
@@ -22,6 +24,12 @@ public class PlayerHealth : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Backspace)) { TakeDamage(30); }
 
         if (Input.GetKeyDown(KeyCode.Return)) { HealDamage(20); }
+    }
+
+    public void UpdateDamage(float damage)
+    {
+        healthAmount -= damage;
+        healthBar.fillAmount = healthAmount / 100f;
     }
 
     public void TakeDamage(float damage)
