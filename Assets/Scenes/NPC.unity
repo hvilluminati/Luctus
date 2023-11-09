@@ -644,6 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec73b1254bf494af5822dcba7a3b00fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1958895692}
   dialoguePanel: {fileID: 6288527009836603653}
   dialogueText: {fileID: 2045291988841356304}
   dialogue:
@@ -755,6 +756,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a46c2a52222494b54ad98cb0aac0e187, type: 3}
+--- !u!1 &1958895692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727693200554657269, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+  m_PrefabInstance: {fileID: 920845201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2120013226
 GameObject:
   m_ObjectHideFlags: 0
