@@ -3,11 +3,12 @@ using UnityEngine;
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
-    public float playerHealth;
-    public float x_old;
-    public float y_old;
-    public float x_new;
-    public float y_new;
+    public float playerHealth = 100;
+    public float x_old = 0;
+    public float y_old = 0;
+    public float x_new = 0;
+    public float y_new = 0;
+
 
     private void Awake()
     {

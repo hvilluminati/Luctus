@@ -235,9 +235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3d68abdeb12416d9f92df31fed8385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 0
-  x: 0
-  y: 0
+  playerHealth: 100
+  x_old: 0
+  y_old: 0
+  x_new: 0
+  y_new: 0
 --- !u!1 &402904231
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +648,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1837919370}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadNextScene
+        m_MethodName: LoadTestScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -17,6 +17,6 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadTestScene()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(1);
     }
 }

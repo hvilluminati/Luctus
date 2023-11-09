@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         if (player.position.y < -10)
         {
             this.GetComponent<BoxCollider2D>().enabled = true;
-            transform.position = new Vector3(player.position.x-5, 0, player.position.z);
+            transform.position = new Vector3(player.position.x-7, -3, player.position.z);
         }
 
         Flip();
