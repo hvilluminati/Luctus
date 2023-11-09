@@ -5,10 +5,15 @@ public class Door : MonoBehaviour
 {
     [SerializeField] private int sceneNumber;
     private bool enterAllowed;
+    public Transform player;
+    public bool keyRequired;
 
     private void Start()
     {
-        this.enabled = false;
+        if (keyRequired)
+        {
+            this.enabled = false;
+        }
     }
 
 
@@ -32,6 +37,7 @@ public class Door : MonoBehaviour
     {
         if (Input.GetButtonDown("Submit") && enterAllowed)
         {
+            DataManager.instance.SaveCoordinate(player.position.x, player.position.y);
             SceneManager.LoadScene(sceneNumber);
         }
     }

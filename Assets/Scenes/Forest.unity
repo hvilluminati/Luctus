@@ -1534,6 +1534,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.newSize.y
       value: 3.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7247977098993304812, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 391633666}
+    - target: {fileID: 7247977098993304812, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: sceneNumber
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1723,7 +1731,15 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6680604202880082599, guid: 6cf981e44592940589f36dd6e182d209, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 391633666}
+    - target: {fileID: 6680604202880082599, guid: 6cf981e44592940589f36dd6e182d209, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680604202880082599, guid: 6cf981e44592940589f36dd6e182d209, type: 3}
+      propertyPath: keyRequired
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6680604202880082599, guid: 6cf981e44592940589f36dd6e182d209, type: 3}

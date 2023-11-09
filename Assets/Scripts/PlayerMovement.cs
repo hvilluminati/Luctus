@@ -13,6 +13,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float upwardForce;
     private float horizontal;
     private bool isFacingRight = true;
+    private float x;
+    private float y;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        x = DataManager.instance.x_old;
+        y = DataManager.instance.y_old;
+        transform.position = new Vector3(x, y, player.position.z);
+    }
 
     private void Update()
     {
@@ -30,7 +40,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (player.position.y < -10)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            this.GetComponent<BoxCollider2D>().enabled = true;
+            transform.position = new Vector3(player.position.x-5, 0, player.position.z);
         }
 
         Flip();
