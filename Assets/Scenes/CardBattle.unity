@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5167d9a6159e63d49887917bde3ce20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turn: 0
-  gm: {fileID: 0}
+  playerTurn: {fileID: 0}
+  enemyTurn: {fileID: 0}
 --- !u!4 &45148508
 Transform:
   m_ObjectHideFlags: 0
@@ -195,8 +195,8 @@ Transform:
   m_GameObject: {fileID: 45467248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -718.134, y: -66.954, z: 0}
-  m_LocalScale: {x: 272.32803, y: -343.97067, z: 2.7835054}
+  m_LocalPosition: {x: -705.2487, y: -143.6971, z: 0}
+  m_LocalScale: {x: 83.72992, y: -94.07311, z: 0.8268419}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1528063872}
@@ -221,7 +221,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 61f588f89842549b68df99bc3be7e1d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -242,10 +242,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 0c2192d0108e4d040b337935c982c1d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1e2f91000d7a427784f2c4354061af1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -1538,7 +1538,6 @@ MonoBehaviour:
   maxDrawnCards: 5
   drawnCardsSpacing: 160
   drawnCardsYPosition: -350
-  turnText: {fileID: 0}
   canvasRectransform: {fileID: 1528063872}
   drawnCardsHolder: {fileID: 1102639722}
   currentDeck: {fileID: 11400000, guid: 59bcf6806467c564ca95e0bf49c84883, type: 2}
@@ -1547,9 +1546,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ddb25414f58ce2c47bd1d7a6c98fb3dd, type: 2}
   - {fileID: 11400000, guid: 1419918b7aa2087429c9f99d3dfa6cf3, type: 2}
   cardPrefab: {fileID: 6037586316611523160, guid: 69d85aa017e80d446b11976a49c2886f, type: 3}
-  turnManager: {fileID: 45148507}
-  enemies: []
-  enemyBehaviors: []
 --- !u!4 &1938497899
 Transform:
   m_ObjectHideFlags: 0

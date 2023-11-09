@@ -13,6 +13,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float upwardForce;
     private float horizontal;
     private bool isFacingRight = true;
+    private bool isFlinching;
+
+    private void Start()
+    {
+        isFlinching = false;
+    }
 
     private void Update()
     {
@@ -59,6 +65,19 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale; //make transform negative
         }
+    }
+
+    public void Flinch()
+    {
+
+            rb.velocity = new Vector2(horizontal * -8, 8);
+            isFlinching = false;
+
+    }
+
+    public void setIsFlinching(bool flinchingState)
+    {
+        isFlinching = flinchingState;
     }
 
 }

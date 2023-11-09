@@ -5,11 +5,13 @@ public class PlayerHealth : MonoBehaviour
 {
 	public Image healthBar;
 	public float healthAmount = 100;
+	public SpriteDamageEffect damageEffect;
+	public GameObject player;
 
 	// Start is called before the first frame update
 	void Start()
 	{
-
+		damageEffect = GetComponent<SpriteDamageEffect>();
 	}
 
 	// Update is called once per frame
@@ -29,6 +31,9 @@ public class PlayerHealth : MonoBehaviour
 	{
 		healthAmount -= damage;
 		healthBar.fillAmount = healthAmount / 100f;
+		player.GetComponent<PlayerMovement>().Flinch();
+		damageEffect.StartFlashRenderer();
+		
 	}
 
 	public void HealDamage(float healing)
