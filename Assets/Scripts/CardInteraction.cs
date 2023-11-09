@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace Assets.Scripts
@@ -17,8 +18,9 @@ namespace Assets.Scripts
 
 		private GameObject[] enemies;
 		public List<EnemyBehavior> enemiesBehaviour;
-
 		public EnemyBehavior selectedEnemy;
+
+		public UnityEvent<CardInteraction> cardUsed = new UnityEvent<CardInteraction>();
 
 		private void Start()
 		{
@@ -79,13 +81,19 @@ namespace Assets.Scripts
 			Destroy(arrowInstance);
 			arrowInstance = null;
 
-			if (selectedEnemy != null) selectedEnemy.TakeDamage(card.damage);
-			//selectedEnemy = null;
-
 			foreach (EnemyBehavior behavior in enemiesBehaviour)
 			{
 				behavior.pointerIsOn = false;
 			}
+
+			if (selectedEnemy != null)
+			{
+				selectedEnemy.TakeDamage(card.damage);
+				cardUsed.Invoke(this);
+
+			}
+			//selectedEnemy = null;
+
 		}
 
 	}
