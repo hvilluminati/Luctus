@@ -1,54 +1,65 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-	public Image healthBar;
-	public float healthAmount = 100;
-	public SpriteDamageEffect damageEffect;
-	public GameObject player;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		damageEffect = GetComponent<SpriteDamageEffect>();
-	}
+    public Image healthBar;
+    private float healthAmount = 100;
+    private float damageTaken;
+    public SpriteDamageEffect damageEffect;
+    public GameObject player;
 
-	// Update is called once per frame
-	void Update()
-	{
-		if (healthAmount <= 0)
-		{
-			Application.LoadLevel(Application.loadedLevel);
-		}
+    // Start is called before the first frame update
+    void Start()
+    {
+        damageTaken = 100 - DataManager.instance.playerHealth;
+        UpdateDamage(damageTaken);
+    }
 
-		if (Input.GetKeyDown(KeyCode.Backspace)) { TakeDamage(30); }
+    // Update is called once per frame
+    void Update()
+    {
+        if (healthAmount <= 0)
+        { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); }
 
-		if (Input.GetKeyDown(KeyCode.Return)) { HealDamage(20); }
-	}
+        if (Input.GetKeyDown(KeyCode.Backspace)) { TakeDamage(30); }
+
+        if (Input.GetKeyDown(KeyCode.Return)) { HealDamage(20); }
+    }
+
+    public void UpdateDamage(float damage)
+    {
+        healthAmount -= damage;
+        healthBar.fillAmount = healthAmount / 100f;
+    }
 
 	public void TakeDamage(float damage)
 	{
 		healthAmount -= damage;
+        DataManager.instance.ModifyHealth(-damage);
 		healthBar.fillAmount = healthAmount / 100f;
 		player.GetComponent<PlayerMovement>().Flinch();
 		damageEffect.StartFlashRenderer();
 		
 	}
 
-	public void HealDamage(float healing)
-	{
-		if ((healthAmount + healing) <= 100)
-		{
-			healthAmount += healing;
-		}
-		else
-		{
-			healthAmount = 100;
-		}
 
-		healthBar.fillAmount = Mathf.Clamp(healthAmount, 0, 100);
+    public void HealDamage(float healing)
+    {
+        if((healthAmount + healing) <= 100)
+        {
+            healthAmount += healing;
+            DataManager.instance.ModifyHealth(healing);
+        }
+        else
+        {
+            healthAmount = 100;
+        }
+        
+        healthBar.fillAmount = Mathf.Clamp(healthAmount, 0, 100);
 
-		healthBar.fillAmount = healthAmount / 100f;
-	}
+        healthBar.fillAmount = healthAmount / 100f;
+    }
 }
