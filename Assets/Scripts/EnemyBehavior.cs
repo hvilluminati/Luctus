@@ -15,9 +15,6 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private Vector3 originalScale;
 
 
-
-
-
 	private void Start()
 	{
 		enemy = ScriptableObject.CreateInstance<Enemy>();
@@ -28,15 +25,12 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 		currentHealth = enemy.health;
 
-		turnManager.turnChanged.AddListener(TurnChangedHandler);
+		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
 	}
 
-	private void TurnChangedHandler()
+	private void beginTurnHandler()
 	{
-		if (turnManager.currentTurn == TurnState.enemyTurn)
-		{
-			DoDamage();
-		}
+		DoDamage();
 	}
 
 
@@ -44,7 +38,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public void DoDamage()
 	{
 		Debug.Log("i have made damage");
-		turnManager.StartPlayerTurn();
+		turnManager.StartPlayerTurn(); // Start player turn
 	}
 
 	public void TakeDamage(int damage)
@@ -107,7 +101,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void OnDestroy()
 	{
-		turnManager.turnChanged.RemoveListener(TurnChangedHandler); // Cleanup
+		turnManager.beginEnemyTurn.RemoveListener(beginTurnHandler); // Cleanup
 	}
 }
 

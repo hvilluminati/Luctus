@@ -6,7 +6,8 @@ public class TurnManager : MonoBehaviour
 
 	public GameManager gm;
 
-	public UnityEvent turnChanged = new UnityEvent();
+	public UnityEvent beginEnemyTurn = new UnityEvent();
+	public UnityEvent beginPlayerTurn = new UnityEvent();
 
 	public TurnState currentTurn;
 
@@ -18,14 +19,14 @@ public class TurnManager : MonoBehaviour
 	public void EndPlayerTurn()
 	{
 		currentTurn = TurnState.enemyTurn;
-		turnChanged.Invoke();
+		beginEnemyTurn.Invoke();
 		//gm.EnemyTurn();
 	}
 
 	public void StartPlayerTurn()
 	{
 		currentTurn = TurnState.princessTurn;
-		turnChanged.Invoke();
+		beginEnemyTurn.Invoke();
 
 	}
 }
