@@ -11,7 +11,7 @@ namespace Assets.Scripts
 		public IReadOnlyList<Card> Cards => cards;
 
 		// A deck contains a list of cards
-		private List<Card> cards = new List<Card>();
+		public List<Card> cards = new List<Card>();
 
 		// Event to tell subscriber that the number in the deck has changed
 		public UnityEvent cardsChanged = new UnityEvent();

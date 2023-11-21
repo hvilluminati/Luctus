@@ -70,8 +70,11 @@ namespace Assets.Scripts
 			Destroy(arrowInstance);
 			arrowInstance = null;
 
-			enemieBehaviour.TakeDamage(card.damage);
-			cardUsed.Invoke(this);
+			if (enemieBehaviour != null)
+			{
+				enemieBehaviour.TakeDamage(card.damage);
+				cardUsed.Invoke(this);
+			}
 
 		}
 

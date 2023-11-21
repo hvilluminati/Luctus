@@ -2,7 +2,6 @@ using Assets.Scripts;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -64,8 +63,10 @@ public class GameManager : MonoBehaviour
 
 	public void DrawCard()
 	{
+		Debug.Log(availableCardSlots);
 		if (availableCardSlots <= 0)
 		{
+			Debug.Log("Inside return");
 			return;
 		}
 
