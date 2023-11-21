@@ -1,5 +1,4 @@
 using Assets.Scripts;
-using DG.Tweening;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -17,8 +16,7 @@ public class GameManager : MonoBehaviour
 
 	public RectTransform canvasRectransform;
 	public Transform drawnCardsHolder;
-	private List<GameObject> drawnCardGameObjects = new List<GameObject>();
-	public int availableCardSlots => maxDrawnCards - drawnCardGameObjects.Count;
+	public int availableCardSlots => maxDrawnCards - drawnCardsHolder.childCount;
 	public Deck currentDeck;
 	public Deck discardPile;
 	public CardDecorator cardPrefab;
@@ -32,7 +30,7 @@ public class GameManager : MonoBehaviour
 
 	public void Start()
 	{
-		turnManager.beginPlayerTurn.AddListener(PlayerTurn);
+		turnManager.turnChanged.AddListener(PlayerTurn);
 		// Needs to be refactored
 		enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		foreach (var enemy in enemies)
@@ -45,7 +43,10 @@ public class GameManager : MonoBehaviour
 
 	private void PlayerTurn()
 	{
-		DrawCard();
+		if (turnManager.currentTurn == TurnState.princessTurn)
+		{
+			DrawCard();
+		}
 	}
 
 	private void StartTurn() // First turn of the game
@@ -62,15 +63,16 @@ public class GameManager : MonoBehaviour
 
 	public void DrawCard()
 	{
+		Debug.Log(availableCardSlots);
 		if (availableCardSlots <= 0)
 		{
+			Debug.Log("Inside return");
 			return;
 		}
 
 		Card drawnCard = currentDeck.Cards[0];
 		currentDeck.RemoveCard(drawnCard);
 		CardDecorator cardInstance = Instantiate(cardPrefab, drawnCardsHolder);
-		drawnCardGameObjects.Add(cardInstance.gameObject);
 		cardInstance.card = drawnCard;
 		var cardInteraction = cardInstance.GetComponent<CardInteraction>();
 		cardInteraction.canvasRectransform = canvasRectransform;
@@ -100,10 +102,9 @@ public class GameManager : MonoBehaviour
 	{
 		cardInteraction.cardUsed.RemoveListener(CardUsedHandler); // Cleanup
 		var usedCard = cardInteraction.GetComponent<CardDecorator>().card; // Get used card
-		drawnCardGameObjects.Remove(cardInteraction.gameObject);
 		discardPile.AddCard(usedCard); // Add card to discardpile
-		cardInteraction.GetComponent<RectTransform>().DOKill();
-		DestroyImmediate(cardInteraction.gameObject); // Cleanup
+		Destroy(cardInteraction.gameObject); // Cleanup
+
 		turnManager.EndPlayerTurn(); // End player turn after card is used
 	}
 
