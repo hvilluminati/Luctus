@@ -11,7 +11,7 @@ public class DeckManager : MonoBehaviour
 
 	public void Start()
 	{
-		currentDeck.cards.Clear(); // IS this neccisary?
+		currentDeck.cards.Clear();
 		for (int i = 0; i < initialDeckAmount; i++)
 		{
 			Card card = cardTypes[Random.Range(0, cardTypes.Length)];

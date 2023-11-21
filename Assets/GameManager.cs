@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
 	{
 		cardInteraction.cardUsed.RemoveListener(CardUsedHandler); // Cleanup
 		var usedCard = cardInteraction.GetComponent<CardDecorator>().card; // Get used card
+		drawnCardGameObjects.Remove(cardInteraction.gameObject);
 		discardPile.AddCard(usedCard); // Add card to discardpile
 		cardInteraction.GetComponent<RectTransform>().DOKill();
 		DestroyImmediate(cardInteraction.gameObject); // Cleanup

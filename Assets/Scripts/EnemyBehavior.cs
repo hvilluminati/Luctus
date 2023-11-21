@@ -16,8 +16,6 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 
 
-
-
 	private void Start()
 	{
 		enemy = ScriptableObject.CreateInstance<Enemy>();
@@ -37,11 +35,11 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	}
 
 
-
 	public void DoDamage()
 	{
 		Debug.Log("i have made damage");
-		turnManager.StartPlayerTurn();
+
+		turnManager.StartPlayerTurn(); // Start player turn
 	}
 
 	public void TakeDamage(int damage)
