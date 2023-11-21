@@ -7,8 +7,6 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
 	[SerializeField]
-	private int initialDeckAmount = 10;
-	[SerializeField]
 	private int maxDrawnCards = 5;
 	[SerializeField]
 	private int drawnCardsSpacing = 160;
@@ -21,7 +19,6 @@ public class GameManager : MonoBehaviour
 	public Transform drawnCardsHolder;
 	public int availableCardSlots => maxDrawnCards - drawnCardsHolder.childCount;
 	public Deck currentDeck;
-	public Card[] cardTypes;
 	public CardDecorator cardPrefab;
 
 	public TurnManager turnManager;
@@ -41,10 +38,6 @@ public class GameManager : MonoBehaviour
 		turnManager.gm = this;
 		//turnText.text = "Player's Turn";
 		// TODO: Create deck in new game
-		if (currentDeck.cards.Count == 0)
-		{
-			CreateDeck();
-		}
 
 		if (turnManager.turn == TurnState.princessTurn)
 		{
@@ -56,16 +49,7 @@ public class GameManager : MonoBehaviour
 		}
 
 		// Princess start turn
-	}
-
-	public void CreateDeck()
-	{
-		for (int i = 0; i < initialDeckAmount; i++)
-		{
-			Card card = cardTypes[Random.Range(0, cardTypes.Length)];
-			currentDeck.cards.Add(card);
-		}
-	}
+	}   
 
 	public void DrawCard()
 	{
