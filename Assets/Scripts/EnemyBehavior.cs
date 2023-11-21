@@ -1,6 +1,5 @@
 using Assets.Scripts;
 using DG.Tweening;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,14 +7,15 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
 	public Enemy enemy;
 	public RectTransform healthBar;
+	public TurnManager turnManager;
+
 	private int currentHealth;
-	[SerializeField] private bool isHighlighted = false;
-	private RectTransform enemyTransform;
+	private bool isHighlighted = false;
+	private RectTransform enemyTransform; // Used for animation
 	private Vector3 originalScale;
 
-	public bool pointerIsOn = false;
 
-	public List<CardInteraction> cardsInteractions;
+
 
 
 	private void Start()
@@ -27,39 +27,46 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		originalScale = enemyTransform.localScale;
 
 		currentHealth = enemy.health;
+
+		turnManager.turnChanged.AddListener(TurnChangedHandler);
 	}
 
-	public void OnPointerEnter(PointerEventData eventData)
+	private void TurnChangedHandler()
 	{
-		HighlightEnemy();
+		if (turnManager.currentTurn == TurnState.enemyTurn)
+		{
+			DoDamage();
+		}
 	}
 
-	public void OnPointerExit(PointerEventData eventData)
+
+
+	public void DoDamage()
 	{
-		UnhighlightEnemy();
+		Debug.Log("i have made damage");
+		turnManager.StartPlayerTurn();
 	}
-
-
 
 	public void TakeDamage(int damage)
 	{
 		UnhighlightEnemy();
 		Debug.Log("Enemy took damage: " + damage);
-		currentHealth -= damage;
-		// Shake animation
+		enemyTransform.DOShakePosition(2f, new Vector3(3, 0, 0), 1, 0); // Shake enemy
+		currentHealth -= damage; // Loose health
 		if (currentHealth <= 0)
 		{
 			currentHealth = 0;
 			// End scene
 		}
 		float healthBarScale = (float)currentHealth / enemy.health;
-		healthBar.DOScaleX(healthBarScale, 0.3f);
+		healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
 	}
 
 
 	public void HighlightEnemy()
 	{
-		if (!isHighlighted && pointerIsOn)
+
+		if (GameObject.FindWithTag("Arrow") != null)
 		{
 			isHighlighted = true;
 			enemyTransform.DOScale(originalScale * 1.1f, 0.3f).SetLoops(-1, LoopType.Yoyo);
@@ -67,7 +74,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
 			foreach (var card in cards)
 			{
-				card.GetComponent<CardInteraction>().selectedEnemy = this;
+				card.GetComponent<CardInteraction>().enemieBehaviour = this;
 			}
 		}
 	}
@@ -83,41 +90,24 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
 			foreach (var card in cards)
 			{
-				card.GetComponent<CardInteraction>().selectedEnemy = null;
+				card.GetComponent<CardInteraction>().enemieBehaviour = null;
 			}
 		}
 	}
 
-	public bool turnIsStarted = false;
-	public float timer = 0;
-	public float delay = 3;
-	public bool turnFinished = false;
-
-	void Update()
+	public void OnPointerEnter(PointerEventData eventData)
 	{
-		if (turnIsStarted)
-		{
-			timer += Time.deltaTime;
-			if (timer >= delay)
-			{
-				DoDamage();
-				turnFinished = true;
-
-				turnIsStarted = false;
-				timer = 0;
-			}
-		}
+		HighlightEnemy();
 	}
 
-	public void StartTurn()
+	public void OnPointerExit(PointerEventData eventData)
 	{
-		turnIsStarted = true;
-		DoDamage();
+		UnhighlightEnemy();
 	}
-	public void DoDamage()
-	{
-		Debug.Log("i have made damage");
 
+	public void OnDestroy()
+	{
+		turnManager.turnChanged.RemoveListener(TurnChangedHandler); // Cleanup
 	}
 }
 

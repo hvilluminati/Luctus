@@ -34,31 +34,42 @@ public class GameManager : MonoBehaviour
 
 	public void Start()
 	{
+		turnManager.turnChanged.AddListener(PlayerTurn);
+		// Needs to be refactored
 		enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		foreach (var enemy in enemies)
 		{
 			enemyBehaviors.Add(enemy.GetComponent<EnemyBehavior>());
 		}
 
-		turnManager.gm = this;
-		//turnText.text = "Player's Turn";
 		// TODO: Create deck in new game
 		if (currentDeck.Cards.Count == 0)
 		{
 			CreateDeck();
 		}
 
-		if (turnManager.turn == TurnState.princessTurn)
+		StartTurn();
+	}
+
+	private void PlayerTurn()
+	{
+		if (turnManager.currentTurn == TurnState.princessTurn)
 		{
 			DrawCard();
-			DrawCard();
-			DrawCard();
-			DrawCard();
+		}
+	}
+
+	private void StartTurn() // First turn of the game
+	{
+		// Draw 5 cards
+		for (int i = 0; i < 5; i++)
+		{
 			DrawCard();
 		}
 
-		// Princess start turn
+		Debug.Log("Start player turn");
 	}
+
 
 	public void CreateDeck()
 	{
@@ -99,65 +110,19 @@ public class GameManager : MonoBehaviour
 			child.anchoredPosition = new Vector2(xPos, drawnCardsYPosition);
 
 		}
-		cardInteraction.cardUsed.AddListener(CardUsedHandler);
-		//else
-		//turnText.text = "No more card space";
-	}
-
-
-
-	bool enemyTurnInProgress = false;
-
-	private void Update()
-	{
-		if (!enemyTurnInProgress)
-		{
-			return;
-		}
-		bool completion = true;
-		foreach (var enemy in enemyBehaviors)
-		{
-			if (!enemy.turnFinished)
-			{
-				completion = false;
-			}
-		}
-		if (completion)
-		{
-			Debug.Log("Start player turn");
-			turnManager.StartPlayerTurn();
-			enemyTurnInProgress = false;
-			foreach (var enemy in enemyBehaviors)
-			{
-				enemy.turnFinished = false;
-			}
-
-			var drawCardCount = availableCardSlots;
-			for (int i = 0; i < drawCardCount; i++)
-			{
-				DrawCard();
-			}
-		}
+		cardInteraction.cardUsed.AddListener(CardUsedHandler); // Subscribe to know when a card is used
 
 	}
 
-	public void EnemyTurn()
-	{
-		Debug.Log("Enemy Turn");
-		foreach (var enemy in enemyBehaviors)
-		{
-			enemyTurnInProgress = true;
-			enemy.StartTurn();
-		}
-
-	}
 
 	public void CardUsedHandler(CardInteraction cardInteraction)
 	{
-		cardInteraction.cardUsed.RemoveListener(CardUsedHandler);
-		var card = cardInteraction.GetComponent<CardDecorator>().card;
-		discardPile.AddCard(card);
-		Destroy(cardInteraction.gameObject);
+		cardInteraction.cardUsed.RemoveListener(CardUsedHandler); // Cleanup
+		var usedCard = cardInteraction.GetComponent<CardDecorator>().card; // Get used card
+		discardPile.AddCard(usedCard); // Add card to discardpile
+		Destroy(cardInteraction.gameObject); // Cleanup
+
+		turnManager.EndPlayerTurn(); // End player turn after card is used
 	}
 
 	public void OnApplicationQuit()
