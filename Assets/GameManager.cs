@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 	public Transform drawnCardsHolder;
 	public int availableCardSlots => maxDrawnCards - drawnCardsHolder.childCount;
 	public Deck currentDeck;
+	public Deck discardPile;
 	public CardDecorator cardPrefab;
 
 	public TurnManager turnManager;
@@ -27,100 +28,88 @@ public class GameManager : MonoBehaviour
 	public List<EnemyBehavior> enemyBehaviors;
 
 
+
 	public void Start()
 	{
+		turnManager.turnChanged.AddListener(PlayerTurn);
+		// Needs to be refactored
 		enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		foreach (var enemy in enemies)
 		{
 			enemyBehaviors.Add(enemy.GetComponent<EnemyBehavior>());
 		}
 
-		turnManager.gm = this;
-		//turnText.text = "Player's Turn";
-		// TODO: Create deck in new game
+		StartTurn();
+	}
 
-		if (turnManager.turn == TurnState.princessTurn)
+	private void PlayerTurn()
+	{
+		if (turnManager.currentTurn == TurnState.princessTurn)
 		{
 			DrawCard();
-			DrawCard();
-			DrawCard();
-			DrawCard();
+		}
+	}
+
+	private void StartTurn() // First turn of the game
+	{
+		// Draw 5 cards
+		for (int i = 0; i < 5; i++)
+		{
 			DrawCard();
 		}
 
 		// Princess start turn
-	}   
+		Debug.Log("Start player turn");
+	}
 
 	public void DrawCard()
 	{
-		if (availableCardSlots > 0)
+		if (availableCardSlots <= 0)
 		{
-			Card drawnCard = currentDeck.cards[0];
-			currentDeck.cards.Remove(drawnCard);
-			CardDecorator cardInstance = Instantiate(cardPrefab, drawnCardsHolder);
-			cardInstance.card = drawnCard;
-			cardInstance.GetComponent<CardInteraction>().canvasRectransform = canvasRectransform;
-
-			cardInstance.Instantiate();
-
-			cardInstance.transform.localScale = Vector3.one * 0.75f;
-
-			// Move all cards into position
-			int drawnCardsCount = drawnCardsHolder.childCount;
-			int xStartPos = 0 - (drawnCardsCount - 1) * (drawnCardsSpacing / 2);
-
-			for (int i = 0; i < drawnCardsCount; i++)
-			{
-				RectTransform child = drawnCardsHolder.GetChild(i).GetComponent<RectTransform>();
-				int xPos = xStartPos + i * drawnCardsSpacing;
-
-				child.anchoredPosition = new Vector2(xPos, drawnCardsYPosition);
-
-			}
+			return;
 		}
-		//else
-		//turnText.text = "No more card space";
-	}
 
-	bool enemyTurnInProgress = false;
+		Card drawnCard = currentDeck.Cards[0];
+		currentDeck.RemoveCard(drawnCard);
+		CardDecorator cardInstance = Instantiate(cardPrefab, drawnCardsHolder);
+		cardInstance.card = drawnCard;
+		var cardInteraction = cardInstance.GetComponent<CardInteraction>();
+		cardInteraction.canvasRectransform = canvasRectransform;
 
-	private void Update()
-	{
-		if (enemyTurnInProgress)
+		cardInstance.Instantiate();
+
+		cardInstance.transform.localScale = Vector3.one * 0.75f;
+
+		// Move all cards into position
+		int drawnCardsCount = drawnCardsHolder.childCount;
+		int xStartPos = 0 - (drawnCardsCount - 1) * (drawnCardsSpacing / 2);
+
+		for (int i = 0; i < drawnCardsCount; i++)
 		{
-			bool completion = true;
-			foreach (var enemy in enemyBehaviors)
-			{
-				if (!enemy.turnFinished)
-				{
-					completion = false;
-				}
-			}
-			if (completion)
-			{
-				Debug.Log("Start player turn");
-				turnManager.StartPlayerTurn();
-				enemyTurnInProgress = false;
-				foreach (var enemy in enemyBehaviors) enemy.turnFinished = false;
-			}
+			RectTransform child = drawnCardsHolder.GetChild(i).GetComponent<RectTransform>();
+			int xPos = xStartPos + i * drawnCardsSpacing;
+
+			child.anchoredPosition = new Vector2(xPos, drawnCardsYPosition);
+
 		}
+		cardInteraction.cardUsed.AddListener(CardUsedHandler); // Subscribe to know when a card is used
 
 	}
 
-	public void EnemyTurn()
+
+	public void CardUsedHandler(CardInteraction cardInteraction)
 	{
-		Debug.Log("Enemy Turn");
-		foreach (var enemy in enemyBehaviors)
-		{
-			enemyTurnInProgress = true;
-			enemy.StartTurn();
-		}
+		cardInteraction.cardUsed.RemoveListener(CardUsedHandler); // Cleanup
+		var usedCard = cardInteraction.GetComponent<CardDecorator>().card; // Get used card
+		discardPile.AddCard(usedCard); // Add card to discardpile
+		Destroy(cardInteraction.gameObject); // Cleanup
 
-
+		turnManager.EndPlayerTurn(); // End player turn after card is used
 	}
 
 	public void OnApplicationQuit()
 	{
-		currentDeck.cards.Clear();
+		currentDeck.ClearDeck();
+		discardPile.ClearDeck();
 	}
 }

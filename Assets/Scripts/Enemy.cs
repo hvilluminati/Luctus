@@ -5,4 +5,5 @@ public class Enemy : ScriptableObject
 {
 	public int health;
 	public Sprite spriteImage;
+
 }

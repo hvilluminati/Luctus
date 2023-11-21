@@ -13,15 +13,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float upwardForce;
     private float horizontal;
     private bool isFacingRight = true;
+
+    private bool isFlinching;
+
     private float x;
     private float y;
 
     // Start is called before the first frame update
     void Start()
     {
+        isFlinching = false;
         x = DataManager.instance.x_old;
         y = DataManager.instance.y_old;
         transform.position = new Vector3(x, y, player.position.z);
+
     }
 
     private void Update()
@@ -70,6 +75,19 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale; //make transform negative
         }
+    }
+
+    public void Flinch()
+    {
+
+            rb.velocity = new Vector2(horizontal * -8, 8);
+            isFlinching = false;
+
+    }
+
+    public void setIsFlinching(bool flinchingState)
+    {
+        isFlinching = flinchingState;
     }
 
 }

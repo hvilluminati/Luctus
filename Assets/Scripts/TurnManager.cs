@@ -1,31 +1,31 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TurnManager : MonoBehaviour
 {
-	public TurnState turn = TurnState.princessTurn;
+
 	public GameManager gm;
 
-	// Start is called before the first frame update
-	void Start()
+	public UnityEvent turnChanged = new UnityEvent();
+
+	public TurnState currentTurn;
+
+	public void Start()
 	{
-
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
-
+		currentTurn = TurnState.princessTurn; // Start game with player turn
 	}
 
 	public void EndPlayerTurn()
 	{
-		turn = TurnState.enemyTurn;
-		gm.EnemyTurn();
+		currentTurn = TurnState.enemyTurn;
+		turnChanged.Invoke();
+		//gm.EnemyTurn();
 	}
 
 	public void StartPlayerTurn()
 	{
-		turn = TurnState.princessTurn;
+		currentTurn = TurnState.princessTurn;
+		turnChanged.Invoke();
 
 	}
 }
