@@ -7,8 +7,6 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
 	[SerializeField]
-	private int initialDeckAmount = 10;
-	[SerializeField]
 	private int maxDrawnCards = 5;
 	[SerializeField]
 	private int drawnCardsSpacing = 160;
@@ -22,7 +20,6 @@ public class GameManager : MonoBehaviour
 	public int availableCardSlots => maxDrawnCards - drawnCardsHolder.childCount;
 	public Deck currentDeck;
 	public Deck discardPile;
-	public Card[] cardTypes;
 	public CardDecorator cardPrefab;
 
 	public TurnManager turnManager;
@@ -40,12 +37,6 @@ public class GameManager : MonoBehaviour
 		foreach (var enemy in enemies)
 		{
 			enemyBehaviors.Add(enemy.GetComponent<EnemyBehavior>());
-		}
-
-		// TODO: Create deck in new game
-		if (currentDeck.Cards.Count == 0)
-		{
-			CreateDeck();
 		}
 
 		StartTurn();
@@ -67,17 +58,8 @@ public class GameManager : MonoBehaviour
 			DrawCard();
 		}
 
+		// Princess start turn
 		Debug.Log("Start player turn");
-	}
-
-
-	public void CreateDeck()
-	{
-		for (int i = 0; i < initialDeckAmount; i++)
-		{
-			Card card = cardTypes[Random.Range(0, cardTypes.Length)];
-			currentDeck.AddCard(card);
-		}
 	}
 
 	public void DrawCard()
