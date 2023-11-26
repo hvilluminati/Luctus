@@ -10,7 +10,7 @@ public class DataManager : MonoBehaviour
     public float y_new = 0;
     public int prevScene = 0;
     public bool enemyAlive = true;
-
+    public bool gameOver = false;
 
     private void Awake()
     {

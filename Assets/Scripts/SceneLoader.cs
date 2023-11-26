@@ -27,6 +27,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadTestScene()
     {
+        DataManager.instance.gameOver = false;
         SceneManager.LoadScene(testSceneNumber);
     }
 }
