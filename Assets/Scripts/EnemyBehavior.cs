@@ -8,6 +8,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public Enemy enemy;
 	public RectTransform healthBar;
 	public TurnManager turnManager;
+	public GameObject Exit;
 
 	private int currentHealth;
 	private bool isHighlighted = false;
@@ -19,7 +20,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private void Start()
 	{
 		enemy = ScriptableObject.CreateInstance<Enemy>();
-		enemy.health = 50; // Shall be deleted at some point
+		enemy.health = 20; // Shall be deleted at some point
 		enemyTransform = GetComponent<RectTransform>();
 
 		originalScale = enemyTransform.localScale;
@@ -29,7 +30,15 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
 	}
 
-	private void beginTurnHandler()
+    private void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            Exit.GetComponent<SceneLoader>().LoadPrevScene();
+        }
+    }
+
+    private void beginTurnHandler()
 	{
 		DoDamage();
 	}

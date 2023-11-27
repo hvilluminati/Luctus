@@ -6,10 +6,10 @@ public class DeckManager : MonoBehaviour
 {
 	public static DeckManager instance;
 	public Deck currentDeck;
-	public int initialDeckAmount = 10;
+	public int initialDeckAmount = 20;
 	public Card[] cardTypes;
 
-	public void Start()
+	public void CreateNewDeck()
 	{
 		currentDeck.cards.Clear();
 		for (int i = 0; i < initialDeckAmount; i++)

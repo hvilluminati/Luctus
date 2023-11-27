@@ -22,7 +22,11 @@ public class PlayerHealth : MonoBehaviour
 	void Update()
 	{
 		if (healthAmount <= 0)
-		{ SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); }
+		{
+			DataManager.instance.GetComponent<DataManager>().DataReset();
+			DataManager.instance.gameOver = true;
+			SceneManager.LoadScene(0);
+		}
 
 		if (Input.GetKeyDown(KeyCode.Backspace)) { TakeDamage(30); }
 

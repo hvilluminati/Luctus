@@ -27,6 +27,10 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadTestScene()
     {
+        DeckManager.instance.GetComponent<DeckManager>().CreateNewDeck();
+        DataManager.instance.gameOver = false;
+        DataManager.instance.gameFinish = false;
+        
         SceneManager.LoadScene(testSceneNumber);
     }
 }
