@@ -212,7 +212,7 @@ MonoBehaviour:
   player: {fileID: 2727693200554657269}
   deckButton: {fileID: 5896708688110747430}
   closeButton: {fileID: 7099100265096233713}
-  drawnCardsSpacing: 160
+  drawnCardsSpacing: 100
   drawnCardsYPosition: -100
   drawnCardsHolder: {fileID: 6581413387013587178}
   currentDeck: {fileID: 11400000, guid: 59bcf6806467c564ca95e0bf49c84883, type: 2}

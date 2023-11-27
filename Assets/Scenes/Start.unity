@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDeck: {fileID: 11400000, guid: 59bcf6806467c564ca95e0bf49c84883, type: 2}
-  initialDeckAmount: 10
+  initialDeckAmount: 20
   cardTypes:
   - {fileID: 11400000, guid: 3ca670ca29b21a44f8865c1dda55f393, type: 2}
   - {fileID: 11400000, guid: e72bf9b2c354374408a2f334c6aa714c, type: 2}

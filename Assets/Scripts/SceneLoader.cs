@@ -27,12 +27,10 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadTestScene()
     {
-        if (DataManager.instance.gameOver || DataManager.instance.gameFinish)
-        {
-            DeckManager.instance.GetComponent<DeckManager>().CreateNewDeck();
-            DataManager.instance.gameOver = false;
-            DataManager.instance.gameFinish = false;
-        }
+        DeckManager.instance.GetComponent<DeckManager>().CreateNewDeck();
+        DataManager.instance.gameOver = false;
+        DataManager.instance.gameFinish = false;
+        
         SceneManager.LoadScene(testSceneNumber);
     }
 }
