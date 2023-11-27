@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if (healthAmount <= 0)
 		{
-			DataManager.instance.playerHealth = 100;
+			DataManager.instance.GetComponent<DataManager>().DataReset();
 			DataManager.instance.gameOver = true;
 			SceneManager.LoadScene(0);
 		}

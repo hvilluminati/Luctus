@@ -3,14 +3,19 @@ using UnityEngine;
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
+
     public float playerHealth = 100;
+
     public float x_old = 0;
     public float y_old = 0;
     public float x_new = 0;
     public float y_new = 0;
     public int prevScene = 0;
+
     public bool enemyAlive = true;
+
     public bool gameOver = false;
+    public bool gameFinish = false;
 
     private void Awake()
     {
@@ -42,4 +47,15 @@ public class DataManager : MonoBehaviour
     {
         prevScene = sceneNumer;
     }
+
+    public void DataReset()
+    {
+        playerHealth = 100;
+        x_old = 0;
+        y_old = 0;
+        x_new = 0;
+        y_new = 0;
+        prevScene = 0;
+        enemyAlive = true;
+    }    
 }

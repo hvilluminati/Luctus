@@ -9,7 +9,7 @@ public class DeckManager : MonoBehaviour
 	public int initialDeckAmount = 10;
 	public Card[] cardTypes;
 
-	public void Start()
+	public void CreateNewDeck()
 	{
 		currentDeck.cards.Clear();
 		for (int i = 0; i < initialDeckAmount; i++)
