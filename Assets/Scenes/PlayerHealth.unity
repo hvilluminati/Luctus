@@ -976,6 +976,7 @@ Transform:
   - {fileID: 1878693771}
   - {fileID: 996535946}
   - {fileID: 1790656809}
+  - {fileID: 1743204910}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1332483771
@@ -1400,7 +1401,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1046312040}
     m_Modifications:
     - target: {fileID: 5601335232957756878, guid: 82020af7572c7494bbbdf29a5d7dcf92, type: 3}
       propertyPath: m_Name
@@ -1412,15 +1413,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8358615954419711858, guid: 82020af7572c7494bbbdf29a5d7dcf92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.002642
+      value: -11.309214
       objectReference: {fileID: 0}
     - target: {fileID: 8358615954419711858, guid: 82020af7572c7494bbbdf29a5d7dcf92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.64233
+      value: -5.268111
       objectReference: {fileID: 0}
     - target: {fileID: 8358615954419711858, guid: 82020af7572c7494bbbdf29a5d7dcf92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.0040373458
       objectReference: {fileID: 0}
     - target: {fileID: 8358615954419711858, guid: 82020af7572c7494bbbdf29a5d7dcf92, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1428,11 +1429,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8358615954419711858, guid: 82020af7572c7494bbbdf29a5d7dcf92, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8358615954419711858, guid: 82020af7572c7494bbbdf29a5d7dcf92, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8358615954419711858, guid: 82020af7572c7494bbbdf29a5d7dcf92, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1455,6 +1456,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82020af7572c7494bbbdf29a5d7dcf92, type: 3}
+--- !u!4 &1743204910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8358615954419711858, guid: 82020af7572c7494bbbdf29a5d7dcf92, type: 3}
+  m_PrefabInstance: {fileID: 1743204909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782094428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,7 +1557,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15, y: 2, z: -0.017260294}
-  m_LocalScale: {x: 5, y: 0.5, z: 1}
+  m_LocalScale: {x: 15, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1806629962}
@@ -1588,7 +1594,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.049057543}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1599,7 +1605,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.6, y: 2.5}
+  m_Size: {x: 1.0203567, y: 1.1263973}
   m_EdgeRadius: 0
 --- !u!212 &1810307671
 SpriteRenderer:
@@ -1916,10 +1922,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lucia
       objectReference: {fileID: 0}
-    - target: {fileID: 7439039137020760514, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
-      propertyPath: damageEffect
-      value: 
-      objectReference: {fileID: 8554685761281571331}
     - target: {fileID: 3275048874650326091, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.14167
@@ -1956,6 +1958,18 @@ PrefabInstance:
       propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7099100265096233713, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439039137020760514, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: damageEffect
+      value: 
+      objectReference: {fileID: 8554685761281571331}
+    - target: {fileID: 8277130217748748223, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1984,4 +1998,3 @@ SceneRoots:
   - {fileID: 1806629962}
   - {fileID: 1046312040}
   - {fileID: 1032184180}
-  - {fileID: 1743204909}
