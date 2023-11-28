@@ -87,8 +87,8 @@ GameObject:
   - component: {fileID: 4871449490363375292}
   - component: {fileID: 4450053856341633269}
   - component: {fileID: 4573993641246361494}
-  - component: {fileID: 3447656645836046277}
-  - component: {fileID: 8391031572747231695}
+  - component: {fileID: 6386485775268607985}
+  - component: {fileID: 9163198692899936764}
   m_Layer: 5
   m_Name: PlayerDeck
   m_TagString: Untagged
@@ -155,12 +155,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3447656645836046277
+--- !u!114 &6386485775268607985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,12 +192,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 757743250228781470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc884cd19a18d45cea6a3d718798f789, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bc8c77c49854234d804acf9b7930a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cardCountField: {fileID: 8153873013995227036}
   deck: {fileID: 11400000, guid: 59bcf6806467c564ca95e0bf49c84883, type: 2}
---- !u!114 &8391031572747231695
+--- !u!114 &9163198692899936764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 757743250228781470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0057fc50f981c478c8ec53db9e6b5d4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e8547cdc0690f544b4dcfc11f1b847c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2727693200554657269}
@@ -216,7 +216,7 @@ MonoBehaviour:
   drawnCardsYPosition: -100
   drawnCardsHolder: {fileID: 6581413387013587178}
   currentDeck: {fileID: 11400000, guid: 59bcf6806467c564ca95e0bf49c84883, type: 2}
-  cardPrefab: {fileID: 6037586316611523160, guid: 7be9a186cabb0410f87a18632982a896, type: 3}
+  cardPrefab: {fileID: 6037586316611523160, guid: 46f3e827979abdf49a81c556f1af4d8e, type: 3}
 --- !u!1 &899274195309379212
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,14 +242,14 @@ RectTransform:
   m_GameObject: {fileID: 899274195309379212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.43438, y: 0.43438, z: 0.43438}
+  m_LocalScale: {x: 0.7, y: 0.43438, z: 0.43438}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543983920776987678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.28237915, y: -0.0020141602}
+  m_AnchoredPosition: {x: 0.28234863, y: -0.0020141602}
   m_SizeDelta: {x: 770.21, y: 550.16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2252421183235065122
@@ -622,14 +622,14 @@ RectTransform:
   m_GameObject: {fileID: 4087148373222801697}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543983920776987678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 201.8738, y: -198.57726}
+  m_AnchoredPosition: {x: 695.70715, y: -276.57724}
   m_SizeDelta: {x: 42.6965, y: 54.0226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1908681269438545447
@@ -893,7 +893,7 @@ RectTransform:
   m_GameObject: {fileID: 5896708688110747430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2134831409527903879}
@@ -901,7 +901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 202.9, y: -247.98293}
+  m_AnchoredPosition: {x: 696.73334, y: -428}
   m_SizeDelta: {x: 112.2732, y: 24.0341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &748028255306087449
@@ -986,7 +986,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8391031572747231695}
+      - m_Target: {fileID: 9163198692899936764}
         m_TargetAssemblyTypeName: DisplayCurrentDeck, Assembly-CSharp
         m_MethodName: DisplayDeck
         m_Mode: 1
@@ -1026,7 +1026,7 @@ RectTransform:
   m_GameObject: {fileID: 7099100265096233713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6292481893488078532}
@@ -1034,7 +1034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 202.9, y: -247.98293}
+  m_AnchoredPosition: {x: 696.73334, y: -428}
   m_SizeDelta: {x: 112.2732, y: 24.0341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3456438461279409586
@@ -1119,7 +1119,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8391031572747231695}
+      - m_Target: {fileID: 9163198692899936764}
         m_TargetAssemblyTypeName: DisplayCurrentDeck, Assembly-CSharp
         m_MethodName: CloseDisplay
         m_Mode: 1
@@ -1233,14 +1233,14 @@ RectTransform:
   m_GameObject: {fileID: 7416562754293884317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.14167, y: 0.14167, z: 0.14167}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.14167}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543983920776987678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200.16675, y: -200}
+  m_AnchoredPosition: {x: 694, y: -278}
   m_SizeDelta: {x: 600, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1901920266992704571
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
