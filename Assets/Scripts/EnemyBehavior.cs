@@ -6,12 +6,14 @@ using UnityEngine.EventSystems;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+
 	public Enemy enemy;
 	public RectTransform healthBar;
 	private int currentHealth;
 	[SerializeField] private bool isHighlighted = false;
 	private RectTransform enemyTransform;
 	private Vector3 originalScale;
+	private EnemyAttack enemyAttack;
 
 	public bool pointerIsOn = false;
 
@@ -27,6 +29,8 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		originalScale = enemyTransform.localScale;
 
 		currentHealth = enemy.health;
+		enemyAttack = new EnemyAttack();
+		enemy.charge = 0;
 	}
 
 	public void OnPointerEnter(PointerEventData eventData)
@@ -100,7 +104,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			timer += Time.deltaTime;
 			if (timer >= delay)
 			{
-				DoDamage();
+				StartTurn();
 				turnFinished = true;
 
 				turnIsStarted = false;
@@ -112,13 +116,10 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public void StartTurn()
 	{
 		turnIsStarted = true;
-		DoDamage();
+		enemyAttack.AttackHandler(enemy);
 	}
-	public void DoDamage()
-	{
-		Debug.Log("i have made damage");
 
-	}
+
 }
 
 

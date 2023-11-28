@@ -9,7 +9,6 @@ namespace TurnSystem
         {
 
             Debug.Log("Enemy turn started\n");
-            // TODO: INSERT ENEMY TURN LOGIC
 
         }
 
