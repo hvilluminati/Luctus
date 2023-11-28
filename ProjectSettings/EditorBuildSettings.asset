@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 54af0c34f36c040bb976a23b6164d50b
   - enabled: 1
-    path: Assets/Scenes/LevelTemplate.unity
-    guid: e08cafd6194dd8f4990508bf4774f372
-  - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: 15de4e169fb3f48628e3cdd779e9eca9
   - enabled: 1
@@ -23,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerHealth.unity
     guid: 918aa0a2285609847ac125d0651d35c8
+  - enabled: 1
+    path: Assets/Scenes/LevelTemplate.unity
+    guid: e08cafd6194dd8f4990508bf4774f372
   m_configObjects: {}
