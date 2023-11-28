@@ -54,9 +54,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Apply horizontal movement regardless of whether the player is grounded
         if (IsGrounded())
         {
             rb.velocity = new Vector2(horizontal * sideForce, rb.velocity.y);
+        }
+        else
+        {
+            // If in the air and not already moving horizontally, apply a reduced force
+            if (Mathf.Abs(rb.velocity.x) < 0.01f) // Adjust this threshold as needed
+            {
+                rb.velocity = new Vector2(horizontal * (sideForce * 0.5f), rb.velocity.y);
+            }
         }
     }
 
