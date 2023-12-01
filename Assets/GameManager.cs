@@ -24,20 +24,33 @@ public class GameManager : MonoBehaviour
 	public CardDecorator cardPrefab;
 
 	public TurnManager turnManager;
+	public EnemyBehavior enemyBehavior;
 
-	public GameObject[] enemies;
-	public List<EnemyBehavior> enemyBehaviors;
 
 
 
 	public void Start()
 	{
 		turnManager.beginPlayerTurn.AddListener(PlayerTurn);
-		// Needs to be refactored
-		enemies = GameObject.FindGameObjectsWithTag("Enemy");
-		foreach (var enemy in enemies)
+
+		GameObject enemyGameObject = GameObject.FindGameObjectWithTag("Enemy");
+		// Get the EnemyBehavior component attached to the enemy GameObject
+		if (enemyGameObject != null)
 		{
-			enemyBehaviors.Add(enemy.GetComponent<EnemyBehavior>());
+			enemyBehavior = enemyGameObject.GetComponent<EnemyBehavior>();
+			if (enemyBehavior != null)
+			{
+				// Subscribe to the event in the EnemyBehavior class
+				enemyBehavior.enemyDead.AddListener(OnEnemyDeadHandler);
+			}
+			else
+			{
+				Debug.LogError("EnemyBehavior component not found on the enemy GameObject.");
+			}
+		}
+		else
+		{
+			Debug.LogError("No GameObject found with the 'Enemy' tag.");
 		}
 
 		StartTurn();
@@ -107,6 +120,29 @@ public class GameManager : MonoBehaviour
 
 		turnManager.EndPlayerTurn(); // End player turn after card is used
 	}
+
+	public void OnEnemyDeadHandler()
+	{
+		ReturnDrawnCardsToDeck(); // Return drawn cards to the deck
+		Debug.Log("Cards goes back inside deck");
+		// Go back to forest scene
+	}
+
+	public void ReturnDrawnCardsToDeck()
+	{
+		foreach (var drawnCardObject in drawnCardGameObjects)
+		{
+			CardDecorator cardDecorator = drawnCardObject.GetComponent<CardDecorator>();
+			if (cardDecorator != null)
+			{
+				Card drawnCard = cardDecorator.card;
+				currentDeck.AddCard(drawnCard); // Adding drawn card back to the deck
+				Destroy(drawnCardObject); // Destroy drawn card object from the drawn cards holder
+			}
+		}
+		drawnCardGameObjects.Clear(); // Clear the list of drawn card game objects
+	}
+
 
 	public void OnApplicationQuit()
 	{

@@ -1,6 +1,7 @@
 using Assets.Scripts;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -14,7 +15,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private bool isHighlighted = false;
 	private RectTransform enemyTransform; // Used for animation
 	private Vector3 originalScale;
-
+	public UnityEvent enemyDead = new UnityEvent();
 
 
 	private void Start()
@@ -30,15 +31,15 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
 	}
 
-    private void Update()
-    {
-        if (currentHealth <= 0)
-        {
-            Exit.GetComponent<SceneLoader>().LoadPrevScene();
-        }
-    }
+	private void Update()
+	{
+		if (currentHealth <= 0)
+		{
+			Exit.GetComponent<SceneLoader>().LoadPrevScene();
+		}
+	}
 
-    private void beginTurnHandler()
+	private void beginTurnHandler()
 	{
 		DoDamage();
 	}
@@ -107,6 +108,14 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public void OnPointerExit(PointerEventData eventData)
 	{
 		UnhighlightEnemy();
+	}
+
+	private void EnemyDied()
+	{
+		if (currentHealth <= 0)
+		{
+			enemyDead.Invoke();
+		}
 	}
 
 	public void OnDestroy()
