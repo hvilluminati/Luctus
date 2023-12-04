@@ -7,9 +7,13 @@ namespace Assets.Scripts
 	[CreateAssetMenu(fileName = "New Deck", menuName = "Deck")]
 	public class Deck : ScriptableObject
 	{
+		// The public card list that can't be canged from the outside
 		public IReadOnlyList<Card> Cards => cards;
 
-		private List<Card> cards = new List<Card>();
+		// A deck contains a list of cards
+		public List<Card> cards = new List<Card>();
+
+		// Event to tell subscriber that the number in the deck has changed
 		public UnityEvent cardsChanged = new UnityEvent();
 
 		public void AddCard(Card card)

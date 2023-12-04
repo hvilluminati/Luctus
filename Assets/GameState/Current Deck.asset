@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8fcb1f65f80b141b3f9e890869d801, type: 3}
   m_Name: Current Deck
   m_EditorClassIdentifier: 
-  cards: []
+  cards:
+  - {fileID: 11400000, guid: 9908c3e0f2529124db8cd49b2ee708d6, type: 2}
+  - {fileID: 11400000, guid: e72bf9b2c354374408a2f334c6aa714c, type: 2}
+  - {fileID: 11400000, guid: 1419918b7aa2087429c9f99d3dfa6cf3, type: 2}
+  - {fileID: 11400000, guid: 1419918b7aa2087429c9f99d3dfa6cf3, type: 2}
+  - {fileID: 11400000, guid: e72bf9b2c354374408a2f334c6aa714c, type: 2}
+  - {fileID: 11400000, guid: e72bf9b2c354374408a2f334c6aa714c, type: 2}
+  - {fileID: 11400000, guid: 1419918b7aa2087429c9f99d3dfa6cf3, type: 2}
+  - {fileID: 11400000, guid: 1419918b7aa2087429c9f99d3dfa6cf3, type: 2}
+  - {fileID: 11400000, guid: e72bf9b2c354374408a2f334c6aa714c, type: 2}
+  - {fileID: 11400000, guid: 3ca670ca29b21a44f8865c1dda55f393, type: 2}

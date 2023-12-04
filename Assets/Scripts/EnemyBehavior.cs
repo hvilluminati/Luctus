@@ -1,6 +1,5 @@
 using Assets.Scripts;
 using DG.Tweening;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,61 +8,76 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public Enemy enemy;
 	public RectTransform healthBar;
+	public TurnManager turnManager;
+	public GameObject Exit;
+
 	private int currentHealth;
-	[SerializeField] private bool isHighlighted = false;
-	private RectTransform enemyTransform;
+	private bool isHighlighted = false;
+	private RectTransform enemyTransform; // Used for animation
 	private Vector3 originalScale;
 	private EnemyAttack enemyAttack;
 
-	public bool pointerIsOn = false;
-
-	public List<CardInteraction> cardsInteractions;
 
 
 	private void Start()
 	{
 		enemy = ScriptableObject.CreateInstance<Enemy>();
-		enemy.health = 50; // Shall be deleted at some point
+		enemy.health = 20; // Shall be deleted at some point
 		enemyTransform = GetComponent<RectTransform>();
 
 		originalScale = enemyTransform.localScale;
 
 		currentHealth = enemy.health;
+<<<<<<< HEAD
 		enemyAttack = new EnemyAttack();
 		enemy.charge = 0;
+=======
+
+		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 	}
 
-	public void OnPointerEnter(PointerEventData eventData)
+    private void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            Exit.GetComponent<SceneLoader>().LoadPrevScene();
+        }
+    }
+
+    private void beginTurnHandler()
 	{
-		HighlightEnemy();
+		DoDamage();
 	}
 
-	public void OnPointerExit(PointerEventData eventData)
+
+	public void DoDamage()
 	{
-		UnhighlightEnemy();
+		Debug.Log("i have made damage");
+
+		turnManager.StartPlayerTurn(); // Start player turn
 	}
-
-
 
 	public void TakeDamage(int damage)
 	{
 		UnhighlightEnemy();
 		Debug.Log("Enemy took damage: " + damage);
-		currentHealth -= damage;
-		// Shake animation
+		enemyTransform.DOShakePosition(2f, new Vector3(3, 0, 0), 1, 0); // Shake enemy
+		currentHealth -= damage; // Loose health
 		if (currentHealth <= 0)
 		{
 			currentHealth = 0;
 			// End scene
 		}
 		float healthBarScale = (float)currentHealth / enemy.health;
-		healthBar.DOScaleX(healthBarScale, 0.3f);
+		healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
 	}
 
 
 	public void HighlightEnemy()
 	{
-		if (!isHighlighted && pointerIsOn)
+
+		if (GameObject.FindWithTag("Arrow") != null)
 		{
 			isHighlighted = true;
 			enemyTransform.DOScale(originalScale * 1.1f, 0.3f).SetLoops(-1, LoopType.Yoyo);
@@ -71,7 +85,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
 			foreach (var card in cards)
 			{
-				card.GetComponent<CardInteraction>().selectedEnemy = this;
+				card.GetComponent<CardInteraction>().enemieBehaviour = this;
 			}
 		}
 	}
@@ -87,18 +101,14 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
 			foreach (var card in cards)
 			{
-				card.GetComponent<CardInteraction>().selectedEnemy = null;
+				card.GetComponent<CardInteraction>().enemieBehaviour = null;
 			}
 		}
 	}
 
-	public bool turnIsStarted = false;
-	public float timer = 0;
-	public float delay = 3;
-	public bool turnFinished = false;
-
-	void Update()
+	public void OnPointerEnter(PointerEventData eventData)
 	{
+<<<<<<< HEAD
 		if (turnIsStarted)
 		{
 			timer += Time.deltaTime;
@@ -111,15 +121,28 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 				timer = 0;
 			}
 		}
+=======
+		HighlightEnemy();
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 	}
 
-	public void StartTurn()
+	public void OnPointerExit(PointerEventData eventData)
 	{
+<<<<<<< HEAD
 		turnIsStarted = true;
 		enemyAttack.AttackHandler(enemy);
 	}
 
 
+=======
+		UnhighlightEnemy();
+	}
+
+	public void OnDestroy()
+	{
+		turnManager.beginEnemyTurn.RemoveListener(beginTurnHandler); // Cleanup
+	}
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 }
 
 

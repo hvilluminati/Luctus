@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shader Graphs_DamageFlash
-  m_Shader: {fileID: -6465566751694194690, guid: 125ea40ae81aa4749b5f5eecbdd4730b, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 95fc9e390ba806745beffb1bae1b04d9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public int testSceneNumber;
     
     public void LoadNextScene()
     {
@@ -15,6 +16,7 @@ public class SceneLoader : MonoBehaviour
         int prevSceneInd = DataManager.instance.prevScene;
         DataManager.instance.SaveCoordinate(0, 0);
         DataManager.instance.enemyAlive = false;
+        DeckManager.instance.AddRandomCard();
         SceneManager.LoadScene(prevSceneInd);
     }
 
@@ -25,6 +27,10 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadTestScene()
     {
-        SceneManager.LoadScene(4);
+        DeckManager.instance.GetComponent<DeckManager>().CreateNewDeck();
+        DataManager.instance.gameOver = false;
+        DataManager.instance.gameFinish = false;
+        
+        SceneManager.LoadScene(testSceneNumber);
     }
 }

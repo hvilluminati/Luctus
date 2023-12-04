@@ -16,7 +16,7 @@ TagManager:
   - UI
   - Ground
   - GameObjects
-  - 
+  - Background
   - 
   - 
   - 
@@ -44,6 +44,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Enemy
+  - name: Background
     uniqueID: 617172225
+    locked: 0
+  - name: Ground
+    uniqueID: 59805135
+    locked: 0
+  - name: Objects
+    uniqueID: 3704615375
+    locked: 0
+  - name: Player
+    uniqueID: 4107654341
+    locked: 0
+  - name: Enemies
+    uniqueID: 3725404561
     locked: 0
