@@ -20597,7 +20597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2701280216620064324, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.79
+      value: 11.95
       objectReference: {fileID: 0}
     - target: {fileID: 2701280216620064324, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20642,6 +20642,10 @@ PrefabInstance:
     - target: {fileID: 3939526868525202512, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939526868525202512, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: m_TagString
+      value: OverworldEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4399290606432170292, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: health
@@ -30122,7 +30126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 377076791709587818, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 668198694408101267, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: m_Size.x
@@ -30211,6 +30215,10 @@ PrefabInstance:
     - target: {fileID: 3939526868525202512, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939526868525202512, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: m_TagString
+      value: OverworldEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4399290606432170292, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: health

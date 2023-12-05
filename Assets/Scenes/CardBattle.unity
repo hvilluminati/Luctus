@@ -1510,7 +1510,7 @@ MonoBehaviour:
   discardPile: {fileID: 11400000, guid: cb890115ab1ca284291f97c0f2c31d79, type: 2}
   cardPrefab: {fileID: 6037586316611523160, guid: 69d85aa017e80d446b11976a49c2886f, type: 3}
   turnManager: {fileID: 45148507}
-  enemyBehavior: {fileID: 0}
+  enemyBehavior: {fileID: 1159628577928523767}
   Exit: {fileID: 1593105409}
 --- !u!4 &1938497899
 Transform:
@@ -1676,6 +1676,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
+--- !u!114 &1159628577928523767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6736662284013870317, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
+  m_PrefabInstance: {fileID: 1159628577928523766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326ca43cac126144eb8eda4c22186ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8634871047476055876 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}

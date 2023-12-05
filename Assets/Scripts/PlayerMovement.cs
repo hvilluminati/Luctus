@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position = new Vector3(player.position.x-7, -3, player.position.z);
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(10); // Adjust the damage value as needed
+                playerHealth.TakeDamage(10);
             }
         }
 

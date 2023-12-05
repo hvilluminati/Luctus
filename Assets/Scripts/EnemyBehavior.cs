@@ -46,14 +46,12 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         if (collidedEnemy != null)
         {
-            enemy.health = collidedEnemy.GetHealth(); // Assuming EnemyType has a GetHealth method
+            enemy.health = collidedEnemy.GetHealth();
         }
         else
         {
             enemy.health = 20; // Default value if no enemy found
         }
-
-        currentHealth = enemy.health;
     }
 
 
@@ -66,7 +64,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 return enemyState.enemyType;
             }
         }
-        return null; // Return null if no matching enemy is found
+        return null; 
     }
 
 	private void beginTurnHandler()

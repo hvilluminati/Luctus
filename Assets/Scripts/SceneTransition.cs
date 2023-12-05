@@ -31,7 +31,7 @@ public class SceneTransition : MonoBehaviour
                 DataManager.instance.UpdateLastEnemyCollided(enemyID);
                 SetEnemyAliveStatusInDataManager(enemyID, false);
             }
-
+            DisableOverworldEnemies();
             SceneManager.LoadScene(sceneNumber);
         }
     }
@@ -48,4 +48,14 @@ public class SceneTransition : MonoBehaviour
             }
         }
     }
+
+    private void DisableOverworldEnemies()
+    {
+        GameObject[] overworldEnemies = GameObject.FindGameObjectsWithTag("OverworldEnemy");
+        foreach (GameObject enemy in overworldEnemies)
+        {
+            enemy.SetActive(false); // Disable each overworld enemy
+        }
+    }
+
 }
