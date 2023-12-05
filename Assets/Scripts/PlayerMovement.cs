@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float sideForce;
     [SerializeField] private float upwardForce;
+
+    private PlayerHealth playerHealth;
+
     private float horizontal;
     private bool isFacingRight = true;
 
@@ -22,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerHealth = GetComponent<PlayerHealth>();
         isFlinching = false;
         x = DataManager.instance.x_old;
         y = DataManager.instance.y_old;
@@ -47,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
         {
             this.GetComponent<BoxCollider2D>().enabled = true;
             transform.position = new Vector3(player.position.x-7, -3, player.position.z);
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(10); // Adjust the damage value as needed
+            }
         }
 
         Flip();

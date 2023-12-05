@@ -317,9 +317,10 @@ MonoBehaviour:
   x_new: 0
   y_new: 0
   prevScene: 0
-  enemyAlive: 1
+  enemies: []
   gameOver: 0
   gameFinish: 0
+  lastEnemyCollidedID: -1
 --- !u!1 &402904231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12563492d672f4b2b8a59ede76637b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testSceneNumber: 4
+  testSceneNumber: 5
 --- !u!1 &2027702825
 GameObject:
   m_ObjectHideFlags: 0

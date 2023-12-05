@@ -20,8 +20,8 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private void Start()
 	{
 		enemy = ScriptableObject.CreateInstance<Enemy>();
-		enemy.health = 20; // Shall be deleted at some point
-		enemyTransform = GetComponent<RectTransform>();
+        InitializeEnemyFromLastCollided();
+        enemyTransform = GetComponent<RectTransform>();
 
 		originalScale = enemyTransform.localScale;
 
@@ -38,6 +38,36 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
     }
 
+    private void InitializeEnemyFromLastCollided()
+    {
+        int lastCollidedID = DataManager.instance.lastEnemyCollidedID;
+        EnemyType collidedEnemy = GetEnemyTypeFromDataManager(lastCollidedID);
+
+        if (collidedEnemy != null)
+        {
+            enemy.health = collidedEnemy.GetHealth(); // Assuming EnemyType has a GetHealth method
+        }
+        else
+        {
+            enemy.health = 20; // Default value if no enemy found
+        }
+
+        currentHealth = enemy.health;
+    }
+
+
+    private EnemyType GetEnemyTypeFromDataManager(int enemyID)
+    {
+        foreach (var enemyState in DataManager.instance.enemies)
+        {
+            if (enemyState.enemyType.GetEnemyID() == enemyID)
+            {
+                return enemyState.enemyType;
+            }
+        }
+        return null; // Return null if no matching enemy is found
+    }
+
     private void beginTurnHandler()
 	{
 		DoDamage();
@@ -46,7 +76,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void DoDamage()
 	{
-		Debug.Log("i have made damage");
+		Debug.Log("I have taken damage");
 
 		turnManager.StartPlayerTurn(); // Start player turn
 	}
