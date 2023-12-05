@@ -25,6 +25,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 00814a4ff1dee49f892fdc9a1773a86f, type: 3}
     - target: {fileID: 1005654459157853997, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005654459157853997, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -569562735
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005654459157853997, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -90,10 +98,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7247977098993304812, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
       propertyPath: sceneNumber
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833670349958372683, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: distance
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6854881215773587569, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4399290606432170292}
   m_SourcePrefab: {fileID: 100100000, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+--- !u!1 &3939526868525202512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6854881215773587569, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+  m_PrefabInstance: {fileID: 7605855148948292641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4399290606432170292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3939526868525202512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd6a065974f13549ba01358343ccecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyID: 1
+  enemySprite: {fileID: 21300000, guid: ff9621127aea4444c85e6e600b64dc34, type: 3}
+  damageMultiplier: 1
+  isBoss: 0
+  health: 30
