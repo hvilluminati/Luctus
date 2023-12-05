@@ -59,7 +59,6 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		// Shake enemy on damage
 		enemyTransform.DOShakePosition(0.5f, new Vector3(20, 0, 0), 5, 45f);
 
-
 		currentHealth -= damage; // Loose health
 		if (currentHealth <= 0)
 		{
