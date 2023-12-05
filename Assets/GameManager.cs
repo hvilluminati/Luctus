@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
 	public TurnManager turnManager;
 	public EnemyBehavior enemyBehavior;
+	public GameObject Exit;
 
 
 
@@ -124,8 +125,10 @@ public class GameManager : MonoBehaviour
 	public void OnEnemyDeadHandler()
 	{
 		ReturnDrawnCardsToDeck(); // Return drawn cards to the deck
-		Debug.Log("Cards goes back inside deck");
-		// Go back to forest scene
+
+		// Dead animation or delay
+		// Choose card 
+		Exit.GetComponent<SceneLoader>().LoadPrevScene(); // Go back to platformer
 	}
 
 	public void ReturnDrawnCardsToDeck()
@@ -143,6 +146,12 @@ public class GameManager : MonoBehaviour
 		drawnCardGameObjects.Clear(); // Clear the list of drawn card game objects
 	}
 
+	private void ChooseCard()
+	{
+		// Dark canvas active 
+		// Cardholder with 2 cards
+		// Choose a card
+	}
 
 	public void OnApplicationQuit()
 	{

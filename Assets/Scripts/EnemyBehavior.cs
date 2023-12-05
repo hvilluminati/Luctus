@@ -9,7 +9,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public Enemy enemy;
 	public RectTransform healthBar;
 	public TurnManager turnManager;
-	public GameObject Exit;
+
 
 	private int currentHealth;
 	private bool isHighlighted = false;
@@ -35,7 +35,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	{
 		if (currentHealth <= 0)
 		{
-			Exit.GetComponent<SceneLoader>().LoadPrevScene();
+			enemyDead.Invoke();
 		}
 	}
 
@@ -110,13 +110,6 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		UnhighlightEnemy();
 	}
 
-	private void EnemyDied()
-	{
-		if (currentHealth <= 0)
-		{
-			enemyDead.Invoke();
-		}
-	}
 
 	public void OnDestroy()
 	{
