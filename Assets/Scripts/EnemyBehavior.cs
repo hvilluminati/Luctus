@@ -30,15 +30,15 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
 	}
 
-    private void Update()
-    {
-        if (currentHealth <= 0)
-        {
-            Exit.GetComponent<SceneLoader>().LoadPrevScene();
-        }
-    }
+	private void Update()
+	{
+		if (currentHealth <= 0)
+		{
+			Exit.GetComponent<SceneLoader>().LoadPrevScene();
+		}
+	}
 
-    private void beginTurnHandler()
+	private void beginTurnHandler()
 	{
 		DoDamage();
 	}
@@ -55,7 +55,11 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	{
 		UnhighlightEnemy();
 		Debug.Log("Enemy took damage: " + damage);
-		enemyTransform.DOShakePosition(2f, new Vector3(3, 0, 0), 1, 0); // Shake enemy
+
+		// Shake enemy on damage
+		enemyTransform.DOShakePosition(0.5f, new Vector3(20, 0, 0), 5, 45f);
+
+
 		currentHealth -= damage; // Loose health
 		if (currentHealth <= 0)
 		{
