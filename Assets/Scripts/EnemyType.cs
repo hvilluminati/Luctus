@@ -4,20 +4,11 @@ using UnityEngine;
 
 public class EnemyType : MonoBehaviour
 {
-    [Header("Enemy Settings")]
-    [Tooltip("Unique identifier for the enemy")]
+    [Tooltip("Must be unique to the scene")]
     [SerializeField] private int enemyID; 
-
-    [Tooltip("The sprite for the enemy")]
     [SerializeField] private Sprite enemySprite; 
-
-    [Tooltip("Damage multiplier for the enemy")]
     [SerializeField] private float damageMultiplier = 1.0f; 
-
-    [Tooltip("Check if the enemy is a boss")]
     [SerializeField] private bool isBoss = false; 
-
-    [Tooltip("Health of the enemy")]
     [SerializeField] private int health = 100; 
 
 
