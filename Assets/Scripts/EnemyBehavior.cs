@@ -53,20 +53,23 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void TakeDamage(int damage)
 	{
-		UnhighlightEnemy();
-		Debug.Log("Enemy took damage: " + damage);
-
-		// Shake enemy on damage
-		enemyTransform.DOShakePosition(0.5f, new Vector3(20, 0, 0), 5, 45f);
-
-		currentHealth -= damage; // Loose health
-		if (currentHealth <= 0)
+		if (isHighlighted)
 		{
-			currentHealth = 0;
-			// End scene
+			UnhighlightEnemy();
+			Debug.Log("Enemy took damage: " + damage);
+
+			// Shake enemy on damage
+			enemyTransform.DOShakePosition(0.5f, new Vector3(20, 0, 0), 5, 45f);
+
+			currentHealth -= damage; // Loose health
+			if (currentHealth <= 0)
+			{
+				currentHealth = 0;
+				// End scene
+			}
+			float healthBarScale = (float)currentHealth / enemy.health;
+			healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
 		}
-		float healthBarScale = (float)currentHealth / enemy.health;
-		healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
 	}
 
 

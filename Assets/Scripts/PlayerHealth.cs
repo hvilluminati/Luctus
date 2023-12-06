@@ -10,12 +10,15 @@ public class PlayerHealth : MonoBehaviour
 	private float damageTaken;
 	public SpriteDamageEffect damageEffect;
 	public GameObject player;
+	[SerializeField]
+	private new AudioSource audio;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		damageTaken = 100 - DataManager.instance.playerHealth;
 		UpdateDamage(damageTaken);
+
 	}
 
 	// Update is called once per frame
@@ -41,6 +44,8 @@ public class PlayerHealth : MonoBehaviour
 
 	public void TakeDamage(float damage)
 	{
+		Debug.Log("Took damage");
+		audio.Play();
 		healthAmount -= damage;
 		DataManager.instance.ModifyHealth(-damage);
 		healthBar.fillAmount = healthAmount / 100f;
