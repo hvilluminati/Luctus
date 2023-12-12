@@ -6,6 +6,7 @@ public class EnemyDecorator : MonoBehaviour
 	public Enemy enemy;
 	public Sprite spriteImage;
 	public Image image;
+    public EnemyType collidedEnemy;
 
 
     private void Start()
@@ -16,7 +17,7 @@ public class EnemyDecorator : MonoBehaviour
     private void SetImageToLastCollidedEnemySprite()
     {
         int lastCollidedID = DataManager.instance.lastEnemyCollidedID;
-        EnemyType collidedEnemy = GetEnemyTypeFromDataManager(lastCollidedID);
+        collidedEnemy = GetEnemyTypeFromDataManager(lastCollidedID);
 
         if (collidedEnemy != null)
         {

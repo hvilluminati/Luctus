@@ -25,9 +25,14 @@ public class GameManager : MonoBehaviour
 
 	public TurnManager turnManager;
 	public EnemyBehavior enemyBehavior;
+	private EnemyType enemyType;
+
 	public GameObject Exit;
-
-
+	public GameObject choosePanel;
+	public Card Card1;
+	public Card Card2;
+	public GameObject actualCard1;
+	public GameObject actualCard2;
 
 
 	public void Start()
@@ -54,6 +59,13 @@ public class GameManager : MonoBehaviour
 			Debug.LogError("No GameObject found with the 'Enemy' tag.");
 		}
 
+
+		//set reward cards
+		enemyType = enemyGameObject.GetComponent<EnemyDecorator>().collidedEnemy;
+		Card1 = enemyType.GetCard1();
+		Card2 = enemyType.GetCard2();
+		actualCard1.GetComponent<CardDecoratorSimple>().Initiate(Card1);
+		actualCard2.GetComponent<CardDecoratorSimple>().Initiate(Card2);
 		StartTurn();
 	}
 
@@ -126,9 +138,8 @@ public class GameManager : MonoBehaviour
 	{
 		ReturnDrawnCardsToDeck(); // Return drawn cards to the deck
 
-		// Dead animation or delay
-		// Choose card 
-		Exit.GetComponent<SceneLoader>().LoadPrevScene(); // Go back to platformer
+		//ChooseCards
+		choosePanel.SetActive(true);
 	}
 
 	public void ReturnDrawnCardsToDeck()
@@ -146,11 +157,18 @@ public class GameManager : MonoBehaviour
 		drawnCardGameObjects.Clear(); // Clear the list of drawn card game objects
 	}
 
-	private void ChooseCard()
+	public void ChooseCard1()
 	{
-		// Dark canvas active 
-		// Cardholder with 2 cards
-		// Choose a card
+		DeckManager.instance.AddCard(Card1);
+		// Go back to platformer
+		Exit.GetComponent<SceneLoader>().LoadPrevScene();
+	}
+
+	public void ChooseCard2()
+	{
+		DeckManager.instance.AddCard(Card2);
+		// Go back to platformer
+		Exit.GetComponent<SceneLoader>().LoadPrevScene();
 	}
 
 	public void OnApplicationQuit()
