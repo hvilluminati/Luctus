@@ -4,18 +4,21 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour
 {
-	private int damage;
-	private int charge;
-	private Projectile projectile;
+	public int charge;
+	public Projectile projectile;
 	private static int MELEE_DAMAGE = 20;
 	private static int PROJECTILE_DAMAGE = 15;
 	private static int CHARGED_DAMAGE = 50;
 
+	private Enemy enemy;
+	public Transform launchOffset;
+
     private void Start()
     {
-		damage = 0;
 		charge = 0;
     }
+
+
 
 
     // boss attacks = all the same amount of damage for simplicity
@@ -41,23 +44,20 @@ public class EnemyAttack : MonoBehaviour
         }
 
 		
-
-		
 		Debug.Log($"Enemy of type {enemy.type} is dealing damage");
-		PlayerHealth.instance.TakeDamage(damage);
 	}
 
 	// effect on princess: hit animation 
 	public void MeleeAttack() {
-		damage = 20;
+		PlayerHealth.instance.TakeDamage(MELEE_DAMAGE);
 
 	}
 
 	// different type of ranged attacks include ice, fire, slime
 	public void RangedAttack() {
-		damage = 15;
-		projectile.setDamage(damage);
+		projectile.setDamage(PROJECTILE_DAMAGE);
 		projectile.Launch();
+		Instantiate(projectile, launchOffset.position, transform.rotation);
 	}
 
 	public void chargedAttack() {
@@ -65,10 +65,10 @@ public class EnemyAttack : MonoBehaviour
 		if (charge < 3)
         {
 			charge++;
-			damage = 0;
+			
         } else
         {
-			damage = 50; 
+			PlayerHealth.instance.TakeDamage(CHARGED_DAMAGE);
         }
 
 	}

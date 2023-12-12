@@ -2,12 +2,13 @@ using Assets.Scripts;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
 	public Enemy enemy;
-	public RectTransform healthBar;
+	public Image healthBar;
 	public TurnManager turnManager;
 	public GameObject Exit;
 
@@ -28,13 +29,9 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		originalScale = enemyTransform.localScale;
 
 		currentHealth = enemy.health;
-<<<<<<< HEAD
-		enemyAttack = new EnemyAttack();
 		enemy.charge = 0;
-=======
 
 		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
->>>>>>> e29620c59106179b577dae518312c3d74e01412a
 	}
 
     private void Update()
@@ -53,6 +50,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void DoDamage()
 	{
+		enemyAttack.AttackHandler(enemy);
 		Debug.Log("i have made damage");
 
 		turnManager.StartPlayerTurn(); // Start player turn
@@ -69,8 +67,12 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			currentHealth = 0;
 			// End scene
 		}
+
+		/*
 		float healthBarScale = (float)currentHealth / enemy.health;
 		healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
+		*/
+		healthBar.fillAmount = currentHealth / 100f;
 	}
 
 
@@ -81,6 +83,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		{
 			isHighlighted = true;
 			enemyTransform.DOScale(originalScale * 1.1f, 0.3f).SetLoops(-1, LoopType.Yoyo);
+
 
 			GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
 			foreach (var card in cards)
@@ -108,33 +111,11 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-<<<<<<< HEAD
-		if (turnIsStarted)
-		{
-			timer += Time.deltaTime;
-			if (timer >= delay)
-			{
-				StartTurn();
-				turnFinished = true;
-
-				turnIsStarted = false;
-				timer = 0;
-			}
-		}
-=======
 		HighlightEnemy();
->>>>>>> e29620c59106179b577dae518312c3d74e01412a
 	}
 
 	public void OnPointerExit(PointerEventData eventData)
 	{
-<<<<<<< HEAD
-		turnIsStarted = true;
-		enemyAttack.AttackHandler(enemy);
-	}
-
-
-=======
 		UnhighlightEnemy();
 	}
 
@@ -142,7 +123,6 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	{
 		turnManager.beginEnemyTurn.RemoveListener(beginTurnHandler); // Cleanup
 	}
->>>>>>> e29620c59106179b577dae518312c3d74e01412a
 }
 
 
