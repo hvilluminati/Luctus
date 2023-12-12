@@ -6,16 +6,19 @@ public class DeckManager : MonoBehaviour
 {
 	public static DeckManager instance;
 	public Deck currentDeck;
-	public int initialDeckAmount = 20;
-	public Card[] cardTypes;
+	public Deck collectedDeck;
+	public int initialDeckAmount = 10;
+	public Card[] starterCards;
 
 	public void CreateNewDeck()
 	{
 		currentDeck.cards.Clear();
+		collectedDeck.cards.Clear();
 		for (int i = 0; i < initialDeckAmount; i++)
 		{
-			Card card = cardTypes[Random.Range(0, cardTypes.Length)];
+			Card card = starterCards[i];
 			currentDeck.cards.Add(card);
+			collectedDeck.cards.Add(card);
 		}
 	}
 
@@ -32,9 +35,9 @@ public class DeckManager : MonoBehaviour
 		}
 	}
 
-	public void AddRandomCard()
+	public void AddCard(Card card)
 	{
-		Card card = cardTypes[Random.Range(0, cardTypes.Length)];
 		currentDeck.cards.Add(card);
+		collectedDeck.cards.Add(card);
 	}
 }
