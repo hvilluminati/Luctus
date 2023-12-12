@@ -28,10 +28,9 @@ public class SceneLoader : MonoBehaviour
                 break;
             }
         }
-
-        DeckManager.instance.AddRandomCard();
         SceneManager.LoadScene(prevSceneInd);
     }
+
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);

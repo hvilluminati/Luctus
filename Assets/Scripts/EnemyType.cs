@@ -9,13 +9,16 @@ public class EnemyType : MonoBehaviour
     [SerializeField] private Sprite enemySprite; 
     [SerializeField] private float damageMultiplier = 1.0f; 
     [SerializeField] private bool isBoss = false; 
-    [SerializeField] private int health = 100; 
+    [SerializeField] private int health = 100;
+    [SerializeField] private Card card1;
+    [SerializeField] private Card card2;
 
 
     void Start()
     {
         CheckInitialAliveStatus();
     }
+
     private void Awake()
     {
         // Check for existing instance with the same ID
@@ -87,4 +90,13 @@ public class EnemyType : MonoBehaviour
         return health;
     }
 
+    public Card GetCard1()
+    {
+        return card1;
+    }
+
+    public Card GetCard2()
+    {
+        return card2;
+    }
 }
