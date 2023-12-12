@@ -9,6 +9,7 @@ public class EnemyAttack : MonoBehaviour
 	private static int MELEE_DAMAGE = 20;
 	private static int PROJECTILE_DAMAGE = 15;
 	private static int CHARGED_DAMAGE = 50;
+	private PlayerHealth playerHealth;
 
 	private Enemy enemy;
 	public Transform launchOffset;
@@ -49,13 +50,12 @@ public class EnemyAttack : MonoBehaviour
 
 	// effect on princess: hit animation 
 	public void MeleeAttack() {
-		PlayerHealth.instance.TakeDamage(MELEE_DAMAGE);
+		playerHealth.TakeDamage(MELEE_DAMAGE);
 
 	}
 
 	// different type of ranged attacks include ice, fire, slime
 	public void RangedAttack() {
-		projectile.setDamage(PROJECTILE_DAMAGE);
 		projectile.Launch();
 		Instantiate(projectile, launchOffset.position, transform.rotation);
 	}
