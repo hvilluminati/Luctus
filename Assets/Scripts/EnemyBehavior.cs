@@ -1,73 +1,124 @@
 using Assets.Scripts;
 using DG.Tweening;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+
 	public Enemy enemy;
-	public RectTransform healthBar;
+	public Image healthBar;
+	public TurnManager turnManager;
+
+
 	private int currentHealth;
-	[SerializeField] private bool isHighlighted = false;
-	private RectTransform enemyTransform;
+	private bool isHighlighted = false;
+	private RectTransform enemyTransform; // Used for animation
 	private Vector3 originalScale;
-
-	public bool pointerIsOn = false;
-
-	public List<CardInteraction> cardsInteractions;
+	private EnemyAttack enemyAttack;
+	public UnityEvent enemyDead = new UnityEvent();
 
 
 	private void Start()
 	{
 		enemy = ScriptableObject.CreateInstance<Enemy>();
-		enemy.health = 50; // Shall be deleted at some point
-		enemyTransform = GetComponent<RectTransform>();
+        InitializeEnemyFromLastCollided();
+        enemyTransform = GetComponent<RectTransform>();
 
 		originalScale = enemyTransform.localScale;
 
 		currentHealth = enemy.health;
+		enemy.charge = 0;
+
+		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
 	}
 
-	public void OnPointerEnter(PointerEventData eventData)
+	private void Update()
 	{
-		HighlightEnemy();
+		if (currentHealth <= 0)
+		{
+			enemyDead.Invoke();
+		}
 	}
 
-	public void OnPointerExit(PointerEventData eventData)
+    private void InitializeEnemyFromLastCollided()
+    {
+        int lastCollidedID = DataManager.instance.lastEnemyCollidedID;
+        EnemyType collidedEnemy = GetEnemyTypeFromDataManager(lastCollidedID);
+
+        if (collidedEnemy != null)
+        {
+            enemy.health = collidedEnemy.GetHealth();
+        }
+        else
+        {
+            enemy.health = 20; // Default value if no enemy found
+        }
+    }
+
+
+    private EnemyType GetEnemyTypeFromDataManager(int enemyID)
+    {
+        foreach (var enemyState in DataManager.instance.enemies)
+        {
+            if (enemyState.enemyType.GetEnemyID() == enemyID)
+            {
+                return enemyState.enemyType;
+            }
+        }
+        return null; 
+    }
+
+	private void beginTurnHandler()
 	{
-		UnhighlightEnemy();
+		DoDamage();
 	}
 
 
+	public void DoDamage()
+	{
+		enemyAttack.AttackHandler(enemy);
+		Debug.Log("i have made damage");
+
+
+		turnManager.StartPlayerTurn(); // Start player turn
+	}
 
 	public void TakeDamage(int damage)
 	{
 		UnhighlightEnemy();
 		Debug.Log("Enemy took damage: " + damage);
-		currentHealth -= damage;
-		// Shake animation
+		enemyTransform.DOShakePosition(2f, new Vector3(3, 0, 0), 1, 0); // Shake enemy
+		currentHealth -= damage; // Loose health
 		if (currentHealth <= 0)
 		{
 			currentHealth = 0;
 			// End scene
 		}
+
+		/*
 		float healthBarScale = (float)currentHealth / enemy.health;
-		healthBar.DOScaleX(healthBarScale, 0.3f);
+		healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
+		*/
+		healthBar.fillAmount = currentHealth / 100f;
 	}
 
 
 	public void HighlightEnemy()
 	{
-		if (!isHighlighted && pointerIsOn)
+
+		if (GameObject.FindWithTag("Arrow") != null)
 		{
 			isHighlighted = true;
 			enemyTransform.DOScale(originalScale * 1.1f, 0.3f).SetLoops(-1, LoopType.Yoyo);
 
+
 			GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
 			foreach (var card in cards)
 			{
-				card.GetComponent<CardInteraction>().selectedEnemy = this;
+				card.GetComponent<CardInteraction>().enemieBehaviour = this;
 			}
 		}
 	}
@@ -83,41 +134,25 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
 			foreach (var card in cards)
 			{
-				card.GetComponent<CardInteraction>().selectedEnemy = null;
+				card.GetComponent<CardInteraction>().enemieBehaviour = null;
 			}
 		}
 	}
 
-	public bool turnIsStarted = false;
-	public float timer = 0;
-	public float delay = 3;
-	public bool turnFinished = false;
-
-	void Update()
+	public void OnPointerEnter(PointerEventData eventData)
 	{
-		if (turnIsStarted)
-		{
-			timer += Time.deltaTime;
-			if (timer >= delay)
-			{
-				DoDamage();
-				turnFinished = true;
-
-				turnIsStarted = false;
-				timer = 0;
-			}
-		}
+		HighlightEnemy();
 	}
 
-	public void StartTurn()
+	public void OnPointerExit(PointerEventData eventData)
 	{
-		turnIsStarted = true;
-		DoDamage();
+		UnhighlightEnemy();
 	}
-	public void DoDamage()
-	{
-		Debug.Log("i have made damage");
 
+
+	public void OnDestroy()
+	{
+		turnManager.beginEnemyTurn.RemoveListener(beginTurnHandler); // Cleanup
 	}
 }
 
