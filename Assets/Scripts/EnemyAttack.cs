@@ -4,22 +4,19 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour
 {
-	public int charge;
-	public Projectile projectile;
+	private int damage;
+	private int charge;
+	private Projectile projectile;
 	private static int MELEE_DAMAGE = 20;
 	private static int PROJECTILE_DAMAGE = 15;
 	private static int CHARGED_DAMAGE = 50;
 	private PlayerHealth playerHealth;
 
-	private Enemy enemy;
-	public Transform launchOffset;
-
     private void Start()
     {
+		damage = 0;
 		charge = 0;
     }
-
-
 
 
     // boss attacks = all the same amount of damage for simplicity
@@ -45,19 +42,30 @@ public class EnemyAttack : MonoBehaviour
         }
 
 		
+
+		
 		Debug.Log($"Enemy of type {enemy.type} is dealing damage");
+		PlayerHealth.instance.TakeDamage(damage);
 	}
 
 	// effect on princess: hit animation 
 	public void MeleeAttack() {
+<<<<<<< HEAD
 		playerHealth.TakeDamage(MELEE_DAMAGE);
+=======
+		damage = 20;
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 
 	}
 
 	// different type of ranged attacks include ice, fire, slime
 	public void RangedAttack() {
+<<<<<<< HEAD
+=======
+		damage = 15;
+		projectile.setDamage(damage);
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 		projectile.Launch();
-		Instantiate(projectile, launchOffset.position, transform.rotation);
 	}
 
 	public void chargedAttack() {
@@ -65,10 +73,10 @@ public class EnemyAttack : MonoBehaviour
 		if (charge < 3)
         {
 			charge++;
-			
+			damage = 0;
         } else
         {
-			PlayerHealth.instance.TakeDamage(CHARGED_DAMAGE);
+			damage = 50; 
         }
 
 	}

@@ -152,6 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5167d9a6159e63d49887917bde3ce20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  turn: 0
+  gm: {fileID: 0}
+=======
   gm: {fileID: 1938497898}
   beginEnemyTurn:
     m_PersistentCalls:
@@ -160,6 +164,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   currentTurn: 0
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 --- !u!4 &45148508
 Transform:
   m_ObjectHideFlags: 0
@@ -186,10 +191,9 @@ GameObject:
   - component: {fileID: 45467249}
   - component: {fileID: 45467251}
   - component: {fileID: 45467250}
+  - component: {fileID: 45467251}
   - component: {fileID: 45467252}
   - component: {fileID: 45467253}
-  - component: {fileID: 45467254}
-  - component: {fileID: 45467255}
   m_Layer: 7
   m_Name: Princess
   m_TagString: Player
@@ -197,7 +201,171 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!4 &45467249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45467248}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -703, y: -91, z: 0}
+  m_LocalScale: {x: 100, y: -100, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2014549303}
+  m_Father: {fileID: 1528063872}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &45467250
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45467248}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 61f588f89842549b68df99bc3be7e1d6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: a1e2f91000d7a427784f2c4354061af1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 1
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &45467251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45467248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb61652ee924a4d5c8de22ee022e2368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColour: {r: 1, g: 0, b: 0, a: 1}
+  flashDuration: 0.2
+--- !u!61 &45467252
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45467248}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 53fa3edc00b484f45a164ec436c70efd, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+  m_EdgeRadius: 0
+--- !u!114 &45467253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45467248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a3a3da08e28234c8b416b4a93e1307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 2014549304}
+  damageEffect: {fileID: 45467251}
+  player: {fileID: 0}
+--- !u!1 &115737214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 115737215}
+  - component: {fileID: 115737217}
+  - component: {fileID: 115737216}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &115737215
+=======
 --- !u!224 &45467249
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,13 +376,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1887228453}
+  m_Children: []
   m_Father: {fileID: 1528063872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -684, y: -100}
+  m_AnchoredPosition: {x: -705.2487, y: -143.6971}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45467250
@@ -229,7 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 9806637d5f47a2d4887508b709827ef3, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -255,14 +422,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45467248}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!61 &45467252
 BoxCollider2D:
 --- !u!1 &217667376
+=======
+<<<<<<< HEAD
+--- !u!1 &280284730
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 45467248}
   m_Enabled: 1
   m_Density: 1
@@ -310,17 +483,32 @@ GameObject:
   - component: {fileID: 217667378}
   m_Layer: 5
   m_Name: RandomCard
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 280284731}
+  - component: {fileID: 280284733}
+  - component: {fileID: 280284732}
+  m_Layer: 5
+  m_Name: Green
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 0
 --- !u!224 &217667377
+=======
+  m_IsActive: 1
+--- !u!224 &280284731
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 217667376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -337,37 +525,35 @@ RectTransform:
   m_SizeDelta: {x: -490.428, y: -446.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &217667378
+=======
+  m_GameObject: {fileID: 280284730}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014549303}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_SizeDelta: {x: 375, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &280284732
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45467248}
+  m_GameObject: {fileID: 280284730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27a3a3da08e28234c8b416b4a93e1307, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1887228454}
-  damageEffect: {fileID: 45467255}
-  player: {fileID: 45467248}
---- !u!50 &45467254
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45467248}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -388,40 +574,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.16037738, g: 0.07791921, b: 0.07791921, a: 0.972549}
+=======
+  m_Color: {r: 0, g: 0.8207547, b: 0.026640112, a: 1}
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
+=======
+  m_Sprite: {fileID: 7482667652216324306, guid: 2d416375fe3d2e24a86935c119a7579a, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD
 --- !u!222 &217667379
+=======
+--- !u!222 &280284733
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45467248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8df3d9f11918fa742983b4523461781c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashColour: {r: 1, g: 0, b: 0, a: 1}
-  flashDuration: 0.2
+  m_GameObject: {fileID: 280284730}
+  m_CullTransparentMesh: 1
 --- !u!1 &364154604
+<<<<<<< HEAD
   m_GameObject: {fileID: 217667376}
   m_CullTransparentMesh: 1
 --- !u!1 &400998002
+=======
+=======
+--- !u!1 &400998002
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -444,7 +645,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364154604}
+  m_GameObject: {fileID: 400998002}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12563492d672f4b2b8a59ede76637b5a, type: 3}
@@ -457,7 +658,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364154604}
+  m_GameObject: {fileID: 400998002}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 125.52679, y: 239.27132, z: 3.342041}
@@ -534,6 +735,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 21, y: 15.001465}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &465047870
+=======
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -710,6 +923,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 633476770}
   m_CullTransparentMesh: 1
 --- !u!1 &659315636
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -717,22 +931,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+  - component: {fileID: 465047871}
+  - component: {fileID: 465047874}
+  - component: {fileID: 465047873}
+  - component: {fileID: 465047872}
+  m_Layer: 5
+  m_Name: Canvas
+=======
   - component: {fileID: 659315637}
   - component: {fileID: 659315639}
   - component: {fileID: 659315638}
   m_Layer: 5
   m_Name: DiscardGraphics
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!224 &465047871
+=======
 --- !u!224 &659315637
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 465047870}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7773184, y: 0.7773184, z: 0.7773184}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1528063872}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 746.22705, y: 540}
+  m_SizeDelta: {x: 1920, y: 1389.3896}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &465047872
+=======
   m_GameObject: {fileID: 659315636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -747,11 +990,26 @@ RectTransform:
   m_SizeDelta: {x: 197.066, y: 171.744}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &659315638
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 465047870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &465047873
+=======
   m_GameObject: {fileID: 659315636}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -822,11 +1080,33 @@ RectTransform:
   m_SizeDelta: {x: 229.018, y: 192.701}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &670067438
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 465047870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &465047874
+Canvas:
+=======
   m_GameObject: {fileID: 670067436}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -853,12 +1133,33 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &670067439
 CanvasRenderer:
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 465047870}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+=======
   m_GameObject: {fileID: 670067436}
   m_CullTransparentMesh: 1
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 --- !u!1 &731181210
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,6 +1288,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885445446}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &1058741371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1442,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089136879}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 --- !u!1 &1102639721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1479,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1212019256
+--- !u!1 &1116808370
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1183,37 +1487,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1212019257}
-  - component: {fileID: 1212019259}
-  - component: {fileID: 1212019258}
-  m_Layer: 5
-  m_Name: HealthBar
+  - component: {fileID: 1116808371}
+  - component: {fileID: 1116808372}
+  - component: {fileID: 1116808373}
+  - component: {fileID: 1116808374}
+  m_Layer: 7
+  m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1212019257
+--- !u!224 &1116808371
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212019256}
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1116808370}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.77602637, y: 0.77602637, z: 0.77602637}
+  m_LocalScale: {x: 500, y: 500, z: 10}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 893473381}
-  - {fileID: 1089136880}
-  m_Father: {fileID: 8634871047476055876}
+  m_Children: []
+  m_Father: {fileID: 1528063872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -178}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 197, y: -212.39}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
 --- !u!114 &1212019258
 --- !u!1001 &1156427757
 PrefabInstance:
@@ -1334,11 +1638,67 @@ GameObject:
   m_PrefabInstance: {fileID: 1156427757}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1156427760
+=======
+--- !u!212 &1116808372
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116808370}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 7293598183456022363, guid: 1ddc9afd21fec77489b1248d18f31b68, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1116808373
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1156427759}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1439,13 +1799,111 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1156427757}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
+=======
+  m_GameObject: {fileID: 1116808370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdba5b692cf84236896ff728dde4ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+--- !u!61 &1116808374
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116808370}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_EdgeRadius: 0
+--- !u!1 &1176443928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176443929}
+  - component: {fileID: 1176443931}
+  - component: {fileID: 1176443930}
+  m_Layer: 5
+  m_Name: Red
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1176443929
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176443928}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014549303}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_SizeDelta: {x: 375, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1176443930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176443928}
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8679245, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1462,13 +1920,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1212019259
+--- !u!222 &1176443931
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212019256}
+  m_GameObject: {fileID: 1176443928}
   m_CullTransparentMesh: 1
 --- !u!1 &1220280517
 GameObject:
@@ -1706,7 +2164,15 @@ RectTransform:
   - {fileID: 1102639722}
   - {fileID: 45467249}
   - {fileID: 1593105410}
+<<<<<<< HEAD
   - {fileID: 217667377}
+=======
+<<<<<<< HEAD
+  - {fileID: 1116808371}
+  - {fileID: 465047871}
+=======
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.968}
   m_AnchorMin: {x: 0, y: 0}
@@ -1759,81 +2225,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1541455285
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1541455286}
-  - component: {fileID: 1541455288}
-  - component: {fileID: 1541455287}
-  m_Layer: 5
-  m_Name: Red
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1541455286
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541455285}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1887228453}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
-  m_SizeDelta: {x: 375, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1541455287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541455285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8679245, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 2d416375fe3d2e24a86935c119a7579a, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1541455288
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541455285}
-  m_CullTransparentMesh: 1
 --- !u!1 &1587020289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,8 +2372,6 @@ GameObject:
   - component: {fileID: 1593105410}
   - component: {fileID: 1593105413}
   - component: {fileID: 1593105414}
-  - component: {fileID: 1593105411}
-  - component: {fileID: 1593105412}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -2009,6 +2398,7 @@ RectTransform:
   m_AnchoredPosition: {x: -361, y: 476.86807}
   m_SizeDelta: {x: 160, y: 50.264}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
 --- !u!114 &1593105411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2095,6 +2485,8 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+=======
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
 --- !u!222 &1593105413
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2184,41 +2576,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1702540865
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1702540866}
-  m_Layer: 5
-  m_Name: LaunchOffset
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1702540866
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1702540865}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8634871047476055876}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.90625006, y: 0.5}
-  m_AnchoredPosition: {x: 95, y: -43}
-  m_SizeDelta: {x: -30, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1727079930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,158 +2996,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790881653}
   m_CullTransparentMesh: 1
---- !u!1 &1870093114
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1870093115}
-  - component: {fileID: 1870093117}
-  - component: {fileID: 1870093116}
-  m_Layer: 5
-  m_Name: Green
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1870093115
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870093114}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1887228453}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
-  m_SizeDelta: {x: 375, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1870093116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870093114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.8207547, b: 0.026640112, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 2d416375fe3d2e24a86935c119a7579a, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 0
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1870093117
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870093114}
-  m_CullTransparentMesh: 1
---- !u!1 &1887228452
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1887228453}
-  - component: {fileID: 1887228455}
-  - component: {fileID: 1887228454}
-  m_Layer: 5
-  m_Name: HealthBar (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1887228453
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887228452}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.77602637, y: 0.77602637, z: 0.77602637}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1541455286}
-  - {fileID: 1870093115}
-  m_Father: {fileID: 45467249}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -145.394}
-  m_SizeDelta: {x: 400, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1887228454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887228452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 2d416375fe3d2e24a86935c119a7579a, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1887228455
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887228452}
-  m_CullTransparentMesh: 1
 --- !u!1 &1938497897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,7 +3034,11 @@ MonoBehaviour:
   currentDeck: {fileID: 11400000, guid: 59bcf6806467c564ca95e0bf49c84883, type: 2}
   discardPile: {fileID: 11400000, guid: cb890115ab1ca284291f97c0f2c31d79, type: 2}
   cardPrefab: {fileID: 6037586316611523160, guid: 69d85aa017e80d446b11976a49c2886f, type: 3}
+<<<<<<< HEAD
+  turnManager: {fileID: 0}
+=======
   turnManager: {fileID: 45148507}
+<<<<<<< HEAD
   enemyBehavior: {fileID: 1159628577928523767}
   Exit: {fileID: 1593105409}
   choosePanel: {fileID: 217667376}
@@ -2837,6 +3046,11 @@ MonoBehaviour:
   Card2: {fileID: 0}
   actualCard1: {fileID: 2010365130}
   actualCard2: {fileID: 1156427759}
+=======
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
+  enemies: []
+  enemyBehaviors: []
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 --- !u!4 &1938497899
 Transform:
   m_ObjectHideFlags: 0
@@ -2852,6 +3066,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &2010365128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2971,11 +3186,54 @@ GameObject:
   m_PrefabInstance: {fileID: 2010365128}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2010365131
+=======
+--- !u!1 &2014549302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014549303}
+  - component: {fileID: 2014549305}
+  - component: {fileID: 2014549304}
+  m_Layer: 5
+  m_Name: HealthBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2014549303
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014549302}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.007773184, y: -0.007773184, z: 0.007773184}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1176443929}
+  - {fileID: 280284731}
+  m_Father: {fileID: 45467249}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.12, y: 1.6799927}
+  m_SizeDelta: {x: 400, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2014549304
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 2010365130}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3054,11 +3312,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 2010365128}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
+=======
+  m_GameObject: {fileID: 2014549302}
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!114 &2010365135 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4358643889677958642, guid: 46f3e827979abdf49a81c556f1af4d8e, type: 3}
@@ -3081,6 +3343,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: 2d416375fe3d2e24a86935c119a7579a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2014549305
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014549302}
+  m_CullTransparentMesh: 1
+>>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 --- !u!1001 &1159628577928523766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3117,18 +3407,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 4277166041564346098, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
+      propertyPath: spriteImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 5ab2bafd8c7ed184ea1186b74c3521ee, type: 3}
+=======
     - target: {fileID: 6736662284013870317, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: Exit
       value: 
       objectReference: {fileID: 1593105409}
     - target: {fileID: 6736662284013870317, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 1212019257}
-    - target: {fileID: 6736662284013870317, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: turnManager
       value: 
       objectReference: {fileID: 45148507}
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
     - target: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3235,13 +3528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1702540866}
-    - targetCorrespondingSourceObject: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1212019257}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2451879925719130349, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       insertIndex: -1
@@ -3275,9 +3562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ccc890aba9242b1b17d2f15c70ea90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charge: 0
-  projectile: {fileID: 8858694491691653622, guid: 8973d5a48c8084d73bedc0a57d7c49ff, type: 3}
-  launchOffset: {fileID: 1702540866}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

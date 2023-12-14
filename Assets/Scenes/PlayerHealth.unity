@@ -1631,6 +1631,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lucia
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
     - target: {fileID: 3275048874650326091, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.14167
@@ -1671,14 +1673,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
     - target: {fileID: 7439039137020760514, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
       propertyPath: damageEffect
       value: 
       objectReference: {fileID: 8554685761281571331}
+<<<<<<< HEAD
+=======
     - target: {fileID: 8277130217748748223, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
       propertyPath: m_text
       value: 0
       objectReference: {fileID: 0}
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1692,7 +1698,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: cb61652ee924a4d5c8de22ee022e2368, type: 3}
+=======
   m_Script: {fileID: 11500000, guid: 8df3d9f11918fa742983b4523461781c, type: 3}
+>>>>>>> e29620c59106179b577dae518312c3d74e01412a
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
