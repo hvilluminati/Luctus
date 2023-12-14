@@ -1,6 +1,6 @@
 ﻿using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace Assets.Scripts
@@ -15,15 +15,19 @@ namespace Assets.Scripts
 		public GameObject ArrowPrefab;
 		private GameObject arrowInstance;
 
-		private GameObject enemy;
-		public EnemyBehavior enemieBehaviour;
+		private GameObject[] enemies;
+		public List<EnemyBehavior> enemiesBehaviour;
 
-		public UnityEvent<CardInteraction> cardUsed = new UnityEvent<CardInteraction>();
+		public EnemyBehavior selectedEnemy;
 
 		private void Start()
 		{
-			enemy = GameObject.FindGameObjectWithTag("Enemy");
-			enemieBehaviour = (enemy.GetComponent<EnemyBehavior>());
+			enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+			foreach (GameObject enemy in enemies)
+			{
+				enemiesBehaviour.Add(enemy.GetComponent<EnemyBehavior>());
+			}
 
 			card = gameObject.GetComponent<CardDecorator>().card;
 		}
@@ -62,6 +66,11 @@ namespace Assets.Scripts
 			{
 				Debug.LogWarning("CubicCurveArrow component not found on the arrow GameObject.");
 			}
+
+			foreach (EnemyBehavior behavior in enemiesBehaviour)
+			{
+				behavior.pointerIsOn = true;
+			}
 		}
 
 		public void OnPointerUp(PointerEventData eventData)
@@ -70,15 +79,14 @@ namespace Assets.Scripts
 			Destroy(arrowInstance);
 			arrowInstance = null;
 
-			if (enemieBehaviour != null)
-			{
-				enemieBehaviour.TakeDamage(card.damage);
-				cardUsed.Invoke(this);
-			}
+			if (selectedEnemy != null) selectedEnemy.TakeDamage(card.damage);
+			//selectedEnemy = null;
 
+			foreach (EnemyBehavior behavior in enemiesBehaviour)
+			{
+				behavior.pointerIsOn = false;
+			}
 		}
 
 	}
-
 }
-

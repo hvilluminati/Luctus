@@ -10,7 +10,6 @@ public class TrapDamage : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            //DataManager.instance.ModifyHealth(-damage);
             collision.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
     }

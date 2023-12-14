@@ -13,20 +13,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float upwardForce;
     private float horizontal;
     private bool isFacingRight = true;
-
-    private bool isFlinching;
-
     private float x;
     private float y;
 
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         isFlinching = false;
+=======
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
         x = DataManager.instance.x_old;
         y = DataManager.instance.y_old;
         transform.position = new Vector3(x, y, player.position.z);
-
     }
 
     private void Update()
@@ -54,18 +53,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Apply horizontal movement regardless of whether the player is grounded
         if (IsGrounded())
         {
             rb.velocity = new Vector2(horizontal * sideForce, rb.velocity.y);
-        }
-        else
-        {
-            // If in the air and not already moving horizontally, apply a reduced force
-            if (Mathf.Abs(rb.velocity.x) < 0.01f) // Adjust this threshold as needed
-            {
-                rb.velocity = new Vector2(horizontal * (sideForce * 0.5f), rb.velocity.y);
-            }
         }
     }
 
@@ -84,19 +74,6 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale; //make transform negative
         }
-    }
-
-    public void Flinch()
-    {
-
-            rb.velocity = new Vector2(horizontal * -8, 8);
-            isFlinching = false;
-
-    }
-
-    public void setIsFlinching(bool flinchingState)
-    {
-        isFlinching = flinchingState;
     }
 
 }

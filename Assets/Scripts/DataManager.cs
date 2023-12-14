@@ -3,19 +3,21 @@ using UnityEngine;
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
-
     public float playerHealth = 100;
-
     public float x_old = 0;
     public float y_old = 0;
     public float x_new = 0;
     public float y_new = 0;
     public int prevScene = 0;
+    public bool enemyAlive = true;
 
+<<<<<<< HEAD
     public bool enemyAlive = true;
 
     public bool gameOver = false;
     public bool gameFinish = false;
+=======
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 
     private void Awake()
     {
@@ -47,6 +49,7 @@ public class DataManager : MonoBehaviour
     {
         prevScene = sceneNumer;
     }
+<<<<<<< HEAD
 
     public void DataReset()
     {
@@ -58,4 +61,6 @@ public class DataManager : MonoBehaviour
         prevScene = 0;
         enemyAlive = true;
     }    
+=======
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 }

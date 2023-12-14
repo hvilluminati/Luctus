@@ -16,7 +16,11 @@ TagManager:
   - UI
   - Ground
   - GameObjects
+<<<<<<< HEAD
   - Background
+=======
+  - 
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   - 
   - 
   - 
@@ -44,18 +48,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
+  - name: Enemy
     uniqueID: 617172225
-    locked: 0
-  - name: Ground
-    uniqueID: 59805135
-    locked: 0
-  - name: Objects
-    uniqueID: 3704615375
-    locked: 0
-  - name: Player
-    uniqueID: 4107654341
-    locked: 0
-  - name: Enemies
-    uniqueID: 3725404561
     locked: 0

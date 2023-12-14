@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   turn: 0
   gm: {fileID: 0}
 =======
@@ -165,6 +166,10 @@ MonoBehaviour:
       m_Calls: []
   currentTurn: 0
 >>>>>>> e29620c59106179b577dae518312c3d74e01412a
+=======
+  turn: 0
+  gm: {fileID: 0}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 --- !u!4 &45148508
 Transform:
   m_ObjectHideFlags: 0
@@ -189,8 +194,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45467249}
-  - component: {fileID: 45467251}
   - component: {fileID: 45467250}
+<<<<<<< HEAD
   - component: {fileID: 45467251}
   - component: {fileID: 45467252}
   - component: {fileID: 45467253}
@@ -644,13 +649,16 @@ GameObject:
   m_Component:
   - component: {fileID: 400998004}
   - component: {fileID: 400998003}
+=======
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_Layer: 0
-  m_Name: SceneLoader
+  m_Name: Princess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!114 &400998003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,26 +673,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testSceneNumber: 5
 --- !u!4 &400998004
+=======
+--- !u!4 &45467249
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 400998002}
+=======
+  m_GameObject: {fileID: 45467248}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 125.52679, y: 239.27132, z: 3.342041}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -718.134, y: -66.954, z: 0}
+  m_LocalScale: {x: 272.32803, y: -343.97067, z: 2.7835054}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1528063872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &482817870
 GameObject:
+=======
+--- !u!212 &45467250
+SpriteRenderer:
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 482817871}
@@ -735,19 +756,117 @@ MonoBehaviour:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 21, y: 15.001465}
+=======
+  m_GameObject: {fileID: 45467248}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 0c2192d0108e4d040b337935c982c1d6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!1 &465047870
 =======
+=======
+--- !u!1 &115737214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 115737215}
+  - component: {fileID: 115737217}
+  - component: {fileID: 115737216}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &115737215
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115737214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1593105410}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &115737216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115737214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: 8f9127d9ff2cdc64ba7ff44a6af3a9c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -759,15 +878,93 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &482817873
+=======
+  m_text: Exit
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &115737217
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 482817870}
   m_CullTransparentMesh: 1
 --- !u!1 &659315636
 >>>>>>> e29620c59106179b577dae518312c3d74e01412a
+=======
+  m_GameObject: {fileID: 115737214}
+  m_CullTransparentMesh: 1
+--- !u!1 &364154604
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -775,6 +972,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
 <<<<<<< HEAD
   - component: {fileID: 465047871}
   - component: {fileID: 465047874}
@@ -789,21 +987,33 @@ GameObject:
   m_Layer: 5
   m_Name: DiscardGraphics
 >>>>>>> e29620c59106179b577dae518312c3d74e01412a
+=======
+  - component: {fileID: 364154605}
+  - component: {fileID: 364154606}
+  m_Layer: 0
+  m_Name: topBar
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!224 &465047871
 =======
 --- !u!224 &659315637
 >>>>>>> e29620c59106179b577dae518312c3d74e01412a
 RectTransform:
+=======
+--- !u!4 &364154605
+Transform:
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 465047870}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -824,10 +1034,18 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+=======
+  m_GameObject: {fileID: 364154604}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.26972, y: 3.65, z: -0.3}
+  m_LocalScale: {x: 0.913574, y: 0.71055436, z: 0.51211125}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1785901888}
+  m_Father: {fileID: 1484866585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 10.856, y: -5.076}
@@ -836,10 +1054,15 @@ RectTransform:
 --- !u!114 &659315638
 >>>>>>> e29620c59106179b577dae518312c3d74e01412a
 MonoBehaviour:
+=======
+--- !u!212 &364154606
+SpriteRenderer:
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 465047870}
   m_Enabled: 1
@@ -855,38 +1078,55 @@ MonoBehaviour:
 --- !u!114 &465047873
 =======
   m_GameObject: {fileID: 659315636}
+=======
+  m_GameObject: {fileID: 364154604}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 8f9127d9ff2cdc64ba7ff44a6af3a9c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 499f4143dc352da4aa6b77eb9c3299a1, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &659315639
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659315636}
-  m_CullTransparentMesh: 1
---- !u!1 &670067436
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 21, y: 15.001465}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &832573736
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -894,22 +1134,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 670067437}
-  - component: {fileID: 670067439}
-  - component: {fileID: 670067438}
+  - component: {fileID: 832573737}
+  - component: {fileID: 832573741}
+  - component: {fileID: 832573740}
+  - component: {fileID: 832573739}
+  - component: {fileID: 832573738}
+  - component: {fileID: 832573742}
   m_Layer: 5
-  m_Name: DeckGraphics
+  m_Name: AnimationTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &670067437
+--- !u!224 &832573737
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 670067436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1028,79 +1272,100 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731181210}
+=======
+  m_GameObject: {fileID: 832573736}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 670067437}
-  - {fileID: 1220280518}
+  - {fileID: 1568540120}
   m_Father: {fileID: 1528063872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -834, y: -411}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &731181212
+--- !u!111 &832573738
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832573736}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 550c9840ecad1c747a67a44887e4c225, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &832573739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731181210}
+  m_GameObject: {fileID: 832573736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef45f10e8f0b6894bb167bdc320ffba6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardCountField: {fileID: 1220280519}
-  deck: {fileID: 11400000, guid: 59bcf6806467c564ca95e0bf49c84883, type: 2}
---- !u!1 &885445446
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 885445447}
-  - component: {fileID: 885445449}
-  - component: {fileID: 885445448}
-  m_Layer: 5
-  m_Name: Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &885445447
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885445446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 482817871}
-  m_Father: {fileID: 1528063872}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.248, y: -21.2}
-  m_SizeDelta: {x: 2790.316, y: 1516.959}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &885445448
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 832573740}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 832573742}
+        m_TargetAssemblyTypeName: AnimationTest, Assembly-CSharp
+        m_MethodName: playAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &832573740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885445446}
+  m_GameObject: {fileID: 832573736}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1114,8 +1379,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8777a03aec6db2342a557853acc02327, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1124,14 +1389,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &885445449
+--- !u!222 &832573741
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885445446}
+  m_GameObject: {fileID: 832573736}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &1058741371
@@ -1175,17 +1441,21 @@ RectTransform:
   m_SizeDelta: {x: 375, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893473382
+=======
+--- !u!114 &832573742
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893473380}
+  m_GameObject: {fileID: 832573736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: eda2e70a15057f64b81306ca55859077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_Material: {fileID: 0}
   m_Color: {r: 0.8679245, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
@@ -1289,6 +1559,8 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 =======
 >>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
+=======
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 --- !u!1 &1102639721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1596,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
 --- !u!1 &1116808370
+=======
+--- !u!1 &1103468570
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1332,17 +1608,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1116808371}
   - component: {fileID: 1116808372}
   - component: {fileID: 1116808373}
   - component: {fileID: 1116808374}
   m_Layer: 7
   m_Name: Projectile
+=======
+  - component: {fileID: 1103468572}
+  - component: {fileID: 1103468571}
+  m_Layer: 0
+  m_Name: SceneLoader
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &1116808371
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1541,6 +1825,9 @@ SpriteRenderer:
 >>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 =======
 >>>>>>> parent of df25e5c (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
+=======
+--- !u!114 &1103468571
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1548,7 +1835,161 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_GameObject: {fileID: 1156427759}
+=======
+  m_GameObject: {fileID: 1103468570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12563492d672f4b2b8a59ede76637b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1103468572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103468570}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 150.65422, y: 206.04967, z: 0.27816507}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1268355305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1268355306}
+  - component: {fileID: 1268355307}
+  m_Layer: 0
+  m_Name: Deck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1268355306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268355305}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -995.749, y: -421.985, z: 0}
+  m_LocalScale: {x: 41.44565, y: 33.99613, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1528063872}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1268355307
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268355305}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 4976846793d360a45a06b05e4d6db590, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5, y: 5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1417227209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417227210}
+  - component: {fileID: 1417227213}
+  - component: {fileID: 1417227212}
+  - component: {fileID: 1417227211}
+  m_Layer: 5
+  m_Name: EndTurn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1417227210
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417227209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1587020290}
+  m_Father: {fileID: 1528063872}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 649, y: -436}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1417227211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417227209}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -1582,13 +2023,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1417227212}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1938497898}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ChooseCard2
+      - m_Target: {fileID: 45148507}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: EndPlayerTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1598,11 +2039,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1156427761 stripped
+--- !u!114 &1417227212
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1487444890182695127, guid: 46f3e827979abdf49a81c556f1af4d8e, type: 3}
-  m_PrefabInstance: {fileID: 1156427757}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1749,12 +2192,16 @@ MonoBehaviour:
 =======
   m_GameObject: {fileID: 1212019256}
 >>>>>>> parent of df25e5c (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
+=======
+  m_GameObject: {fileID: 1417227209}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_Color: {r: 0.8679245, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1830,6 +2277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+=======
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1837,84 +2286,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1220280520
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1417227213
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220280517}
+  m_GameObject: {fileID: 1417227209}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &1417227209
+=======
+--- !u!1 &1484866584
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1922,23 +2316,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1417227210}
   - component: {fileID: 1417227213}
   - component: {fileID: 1417227212}
   - component: {fileID: 1417227211}
   m_Layer: 5
   m_Name: EndTurn
+=======
+  - component: {fileID: 1484866585}
+  - component: {fileID: 1484866586}
+  m_Layer: 0
+  m_Name: background
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &1417227210
 RectTransform:
+=======
+--- !u!4 &1484866585
+Transform:
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1417227209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1955,10 +2362,25 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417227211
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 1484866584}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.046, y: 1.532, z: 0}
+  m_LocalScale: {x: 123.839386, y: 99.93991, z: 5.4353533}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 364154605}
+  m_Father: {fileID: 1528063872}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1484866586
+SpriteRenderer:
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1417227209}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2047,6 +2469,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417227209}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 1484866584}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8777a03aec6db2342a557853acc02327, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 21, y: 15.001465}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 --- !u!1 &1528063868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,7 +2529,6 @@ GameObject:
   - component: {fileID: 1528063871}
   - component: {fileID: 1528063870}
   - component: {fileID: 1528063869}
-  - component: {fileID: 1528063873}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2142,13 +2611,14 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 885445447}
-  - {fileID: 731181211}
-  - {fileID: 1785901888}
+  - {fileID: 1268355306}
+  - {fileID: 1730051700}
+  - {fileID: 1484866585}
   - {fileID: 8634871047476055876}
   - {fileID: 1102639722}
   - {fileID: 45467249}
   - {fileID: 1417227210}
+<<<<<<< HEAD
   - {fileID: 1593105410}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2162,6 +2632,10 @@ RectTransform:
 >>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 =======
 >>>>>>> parent of df25e5c (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
+=======
+  - {fileID: 832573737}
+  - {fileID: 1593105410}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.968}
   m_AnchorMin: {x: 0, y: 0}
@@ -2169,12 +2643,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< HEAD
 --- !u!61 &1528063873
 BoxCollider2D:
+=======
+--- !u!1 &1568540119
+GameObject:
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1528063868}
   m_Enabled: 1
   m_Density: 1
@@ -2214,6 +2694,136 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568540120}
+  - component: {fileID: 1568540122}
+  - component: {fileID: 1568540121}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1568540120
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568540119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 832573737}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1568540121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568540119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1568540122
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568540119}
+  m_CullTransparentMesh: 1
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 --- !u!1 &1587020289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2360,7 +2970,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1593105410}
   - component: {fileID: 1593105413}
+<<<<<<< HEAD
   - component: {fileID: 1593105414}
+=======
+  - component: {fileID: 1593105412}
+  - component: {fileID: 1593105411}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -2379,7 +2994,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 115737215}
   m_Father: {fileID: 1528063872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2432,7 +3048,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1103468571}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadPrevScene
         m_Mode: 1
@@ -2484,19 +3100,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593105409}
   m_CullTransparentMesh: 1
---- !u!114 &1593105414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593105409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12563492d672f4b2b8a59ede76637b5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  testSceneNumber: 0
 --- !u!1 &1654429538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,7 +3180,6 @@ GameObject:
   - component: {fileID: 1727079932}
   - component: {fileID: 1727079931}
   - component: {fileID: 1727079934}
-  - component: {fileID: 1727079935}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2703,103 +3305,7 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!82 &1727079935
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727079930}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6ff1235f057203f438f819b564d18e4e, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.5
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!1 &1785901887
+--- !u!1 &1730051699
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2807,101 +3313,74 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1785901888}
-  - component: {fileID: 1785901889}
-  m_Layer: 5
+  - component: {fileID: 1730051700}
+  - component: {fileID: 1730051701}
+  m_Layer: 0
   m_Name: Discard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1785901888
-RectTransform:
+--- !u!4 &1730051700
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785901887}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 659315637}
-  - {fileID: 1790881654}
-  m_Father: {fileID: 1528063872}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 827, y: -434}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1785901889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785901887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef45f10e8f0b6894bb167bdc320ffba6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardCountField: {fileID: 1790881655}
-  deck: {fileID: 11400000, guid: cb890115ab1ca284291f97c0f2c31d79, type: 2}
---- !u!1 &1790881653
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1790881654}
-  - component: {fileID: 1790881656}
-  - component: {fileID: 1790881655}
-  m_Layer: 5
-  m_Name: DiscardCount
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1790881654
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790881653}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1730051699}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 968.278, y: -417.905, z: 0}
+  m_LocalScale: {x: 35.919563, y: 31.276443, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1785901888}
+  m_Father: {fileID: 1528063872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77, y: 25}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1790881655
-MonoBehaviour:
+--- !u!212 &1730051701
+SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790881653}
+  m_GameObject: {fileID: 1730051699}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 499f4143dc352da4aa6b77eb9c3299a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2985,6 +3464,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790881653}
   m_CullTransparentMesh: 1
+=======
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5, y: 5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 --- !u!1 &1938497897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,6 +3504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009209b2be25430438f6e7a9f725bb6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialDeckAmount: 10
   maxDrawnCards: 5
   drawnCardsSpacing: 160
   drawnCardsYPosition: -350
@@ -3021,12 +3512,16 @@ MonoBehaviour:
   canvasRectransform: {fileID: 1528063872}
   drawnCardsHolder: {fileID: 1102639722}
   currentDeck: {fileID: 11400000, guid: 59bcf6806467c564ca95e0bf49c84883, type: 2}
-  discardPile: {fileID: 11400000, guid: cb890115ab1ca284291f97c0f2c31d79, type: 2}
+  cardTypes:
+  - {fileID: 11400000, guid: 3ca670ca29b21a44f8865c1dda55f393, type: 2}
+  - {fileID: 11400000, guid: ddb25414f58ce2c47bd1d7a6c98fb3dd, type: 2}
+  - {fileID: 11400000, guid: 1419918b7aa2087429c9f99d3dfa6cf3, type: 2}
   cardPrefab: {fileID: 6037586316611523160, guid: 69d85aa017e80d446b11976a49c2886f, type: 3}
 <<<<<<< HEAD
   turnManager: {fileID: 0}
 =======
   turnManager: {fileID: 45148507}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   enemyBehavior: {fileID: 1159628577928523767}
@@ -3045,6 +3540,10 @@ MonoBehaviour:
   enemies: []
   enemyBehaviors: []
 >>>>>>> parent of df25e5c (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
+=======
+  enemies: []
+  enemyBehaviors: []
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 --- !u!4 &1938497899
 Transform:
   m_ObjectHideFlags: 0
@@ -3054,12 +3553,13 @@ Transform:
   m_GameObject: {fileID: 1938497897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 442, y: 225.92346, z: 34.196358}
+  m_LocalPosition: {x: 190.52206, y: 225.92346, z: 34.196358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &2010365128
@@ -3368,6 +3868,8 @@ CanvasRenderer:
 >>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
 =======
 >>>>>>> parent of df25e5c (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
+=======
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 --- !u!1001 &1159628577928523766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3379,11 +3881,15 @@ PrefabInstance:
     - target: {fileID: -6940083670654341980, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: m_Sprite
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 21300000, guid: 00814a4ff1dee49f892fdc9a1773a86f, type: 3}
     - target: {fileID: -6940083670654341980, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 21300000, guid: fe662a4c94fc99341a559a3e7e0db9c6, type: 3}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
     - target: {fileID: -6940083670654341980, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
@@ -3405,6 +3911,7 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 4277166041564346098, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: spriteImage
       value: 
@@ -3419,6 +3926,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 45148507}
 >>>>>>> e29620c59106179b577dae518312c3d74e01412a
+=======
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
     - target: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3445,23 +3954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 320
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
+      value: 380
       objectReference: {fileID: 0}
     - target: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3511,10 +4008,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7694052918372185370, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -3526,6 +4019,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
+<<<<<<< HEAD
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2451879925719130349, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       insertIndex: -1
@@ -3536,11 +4030,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2451879925719130349, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
   m_PrefabInstance: {fileID: 1159628577928523766}
   m_PrefabAsset: {fileID: 0}
+=======
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 --- !u!224 &8634871047476055876 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7673970871046849791, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
   m_PrefabInstance: {fileID: 1159628577928523766}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!114 &8634871047476055877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3553,6 +4052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ccc890aba9242b1b17d2f15c70ea90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> parent of 82bb07c (Merge pull request #31 from hvilluminati/feature/damage-animation)
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3560,6 +4061,6 @@ SceneRoots:
   - {fileID: 1727079933}
   - {fileID: 45148508}
   - {fileID: 1938497899}
+  - {fileID: 1103468572}
   - {fileID: 1528063872}
   - {fileID: 1654429541}
-  - {fileID: 400998004}

@@ -418,12 +418,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468894aad3aa0c5408e509446a2f1387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasRectransform: {fileID: 6574662573103643686}
+  canvasRectransform: {fileID: 0}
   ArrowPrefab: {fileID: 786672781161781837, guid: 1160c3b1f18f3bd4d9068880a2ebb271, type: 3}
-  enemieBehaviour: {fileID: 0}
-  cardUsed:
-    m_PersistentCalls:
-      m_Calls: []
+  enemiesBehaviour: []
+  selectedEnemy: {fileID: 0}
 --- !u!223 &-8375557467741668188
 Canvas:
   m_ObjectHideFlags: 0
