@@ -355,7 +355,6 @@ GameObject:
   - component: {fileID: 6037586316611523160}
   - component: {fileID: -8375557467741668188}
   - component: {fileID: 8963323504557051370}
-  - component: {fileID: -53894943954362347}
   m_Layer: 5
   m_Name: CardNoInteraction
   m_TagString: Card
@@ -446,18 +445,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &-53894943954362347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125618110180661090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a34c59810422fe40a5a675feafb9b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2483132922067031491
 GameObject:
   m_ObjectHideFlags: 0

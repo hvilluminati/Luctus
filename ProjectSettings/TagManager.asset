@@ -7,7 +7,6 @@ TagManager:
   - Arrow
   - Enemy
   - Card
-  - OverworldEnemy
   layers:
   - Default
   - TransparentFX
@@ -18,8 +17,8 @@ TagManager:
   - Ground
   - GameObjects
   - Background
-  - Enemy
-  - Invisible Wall
+  - 
+  - 
   - 
   - 
   - 

@@ -1,7 +1,6 @@
 using Assets.Scripts;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -10,21 +9,21 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public Enemy enemy;
 	public RectTransform healthBar;
 	public TurnManager turnManager;
-
+	public GameObject Exit;
 
 	private int currentHealth;
 	private bool isHighlighted = false;
 	private RectTransform enemyTransform; // Used for animation
 	private Vector3 originalScale;
 	private EnemyAttack enemyAttack;
-	public UnityEvent enemyDead = new UnityEvent();
+
 
 
 	private void Start()
 	{
 		enemy = ScriptableObject.CreateInstance<Enemy>();
-        InitializeEnemyFromLastCollided();
-        enemyTransform = GetComponent<RectTransform>();
+		enemy.health = 20; // Shall be deleted at some point
+		enemyTransform = GetComponent<RectTransform>();
 
 		originalScale = enemyTransform.localScale;
 
@@ -38,43 +37,15 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 >>>>>>> e29620c59106179b577dae518312c3d74e01412a
 	}
 
-	private void Update()
-	{
-		if (currentHealth <= 0)
-		{
-			enemyDead.Invoke();
-		}
-	}
-
-    private void InitializeEnemyFromLastCollided()
+    private void Update()
     {
-        int lastCollidedID = DataManager.instance.lastEnemyCollidedID;
-        EnemyType collidedEnemy = GetEnemyTypeFromDataManager(lastCollidedID);
-
-        if (collidedEnemy != null)
+        if (currentHealth <= 0)
         {
-            enemy.health = collidedEnemy.GetHealth();
-        }
-        else
-        {
-            enemy.health = 20; // Default value if no enemy found
+            Exit.GetComponent<SceneLoader>().LoadPrevScene();
         }
     }
 
-
-    private EnemyType GetEnemyTypeFromDataManager(int enemyID)
-    {
-        foreach (var enemyState in DataManager.instance.enemies)
-        {
-            if (enemyState.enemyType.GetEnemyID() == enemyID)
-            {
-                return enemyState.enemyType;
-            }
-        }
-        return null; 
-    }
-
-	private void beginTurnHandler()
+    private void beginTurnHandler()
 	{
 		DoDamage();
 	}
@@ -83,7 +54,6 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public void DoDamage()
 	{
 		Debug.Log("i have made damage");
-
 
 		turnManager.StartPlayerTurn(); // Start player turn
 	}
@@ -167,7 +137,6 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 =======
 		UnhighlightEnemy();
 	}
-
 
 	public void OnDestroy()
 	{
