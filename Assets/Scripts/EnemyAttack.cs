@@ -10,7 +10,6 @@ public class EnemyAttack : MonoBehaviour
 	private static int MELEE_DAMAGE = 20;
 	private static int PROJECTILE_DAMAGE = 15;
 	private static int CHARGED_DAMAGE = 50;
-	private PlayerHealth playerHealth;
 
     private void Start()
     {
@@ -51,20 +50,28 @@ public class EnemyAttack : MonoBehaviour
 	// effect on princess: hit animation 
 	public void MeleeAttack() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		playerHealth.TakeDamage(MELEE_DAMAGE);
 =======
 		damage = 20;
 >>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
+=======
+		PlayerHealth.instance.TakeDamage(MELEE_DAMAGE);
+>>>>>>> parent of 4ab7070 (added stuff i accidentally removed)
 
 	}
 
 	// different type of ranged attacks include ice, fire, slime
 	public void RangedAttack() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		damage = 15;
 		projectile.setDamage(damage);
 >>>>>>> parent of 0e91204 (Merge branch 'development' of https://github.com/hvilluminati/Luctus into feature/damage-animation)
+=======
+		projectile.setDamage(PROJECTILE_DAMAGE);
+>>>>>>> parent of 4ab7070 (added stuff i accidentally removed)
 		projectile.Launch();
 	}
 
