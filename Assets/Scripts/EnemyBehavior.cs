@@ -10,8 +10,8 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
 
 	public Enemy enemy;
+	//public Image healthBar;
 	public Image healthBar;
-	public RectTransform healthBar;
 	public TMP_Text healthNumber;
 	public TurnManager turnManager;
 	public CheckCardEffects checkCardEffects;

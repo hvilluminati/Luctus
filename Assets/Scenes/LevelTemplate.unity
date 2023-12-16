@@ -30972,6 +30972,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4399290606432170292, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: isBoss
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399290606432170292, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: enemyID
       value: 2
       objectReference: {fileID: 0}
@@ -45425,7 +45429,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 500332532}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -56048,3 +56052,4 @@ SceneRoots:
   - {fileID: 774330545}
   - {fileID: 8554685761281571330}
   - {fileID: 1032184180}
+  - {fileID: 1732358259}
