@@ -5,12 +5,12 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UI;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
 	public Enemy enemy;
-	//public Image healthBar;
 	public Image healthBar;
 	public TMP_Text healthNumber;
 	public TurnManager turnManager;

@@ -19,7 +19,7 @@ public class EnemyType : MonoBehaviour
     [SerializeField] private int health = 100;
     [SerializeField] private Card card1;
     [SerializeField] private Card card2;
-
+    [SerializeField] private Projectile projectile;
 
     void Start()
     {
@@ -118,3 +118,4 @@ public class EnemyType : MonoBehaviour
         return card2;
     }
 }
+

@@ -6,7 +6,6 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 30f;
     private int damage;
-   
 
     private void Start()
     {
@@ -37,7 +36,6 @@ public class Projectile : MonoBehaviour
             Debug.Log("proejctile collided");
             //collision.GetComponent<PlayerHealth>().TakeDamage(damage);
             Destroy(this.gameObject);
-            
         }
 
 
