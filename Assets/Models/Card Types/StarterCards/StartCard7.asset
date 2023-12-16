@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa7ea04d8566884290a37e19477d7c9, type: 3}
   m_Name: StartCard7
   m_EditorClassIdentifier: 
-  name: Magic Blast
-  description: Magic Energy Blast. Literally.
-  artwork: {fileID: 21300000, guid: bde2c5e3962adb04f8bc7ab014b15513, type: 3}
-  damageType: 0
-  damage: 8
+  name: BurnTest
+  description: Burn 2dmg for 2 rd, reduce enemy atk.
+  artwork: {fileID: 21300000, guid: f587d53381a358f4593aaa9b7460690d, type: 3}
+  damageType: 2
+  damage: 2
   shield: 0
+  statusDuration: 2
   effect: 0
   effectAmount: 0

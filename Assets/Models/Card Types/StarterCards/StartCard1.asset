@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa7ea04d8566884290a37e19477d7c9, type: 3}
   m_Name: StartCard1
   m_EditorClassIdentifier: 
-  name: Horse Kick
-  description: Lucia's pony kicks the opponent in the face!
-  artwork: {fileID: 21300000, guid: cea3e4c13a60b154e9b6d53ee5e55b4c, type: 3}
+  name: Firebolt
+  description: Shoot a small ball of fire for 8 damage.
+  artwork: {fileID: 21300000, guid: 6ffa8ca51ad88354f98bac0198d82518, type: 3}
   damageType: 0
-  damage: 2
+  damage: 8
   shield: 0
+  statusDuration: 0
   effect: 0
   effectAmount: 0
