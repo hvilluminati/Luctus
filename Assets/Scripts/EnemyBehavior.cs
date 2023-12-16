@@ -3,11 +3,12 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 	public Enemy enemy;
-	public RectTransform healthBar;
+	public Image healthBar;
 	public TurnManager turnManager;
 
 
@@ -91,8 +92,9 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			currentHealth = 0;
 			// End scene
 		}
-		float healthBarScale = (float)currentHealth / enemy.health;
-		healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
+		//float healthBarScale = (float)currentHealth / enemy.health;
+		//healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
+		healthBar.fillAmount = currentHealth / 100f;
 	}
 
 
