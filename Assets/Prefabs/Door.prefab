@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneNumber: 0
-  tag: 
+  player: {fileID: 0}
+  keyRequired: 0
 --- !u!61 &3125431899256641877
 BoxCollider2D:
   m_ObjectHideFlags: 0

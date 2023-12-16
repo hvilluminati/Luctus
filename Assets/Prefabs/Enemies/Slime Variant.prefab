@@ -80,6 +80,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6088874987005523221, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: card1
+      value: 
+      objectReference: {fileID: 11400000, guid: 97a0f47b4dc484e24a543ffd59280be4, type: 2}
+    - target: {fileID: 6088874987005523221, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: card2
+      value: 
+      objectReference: {fileID: 11400000, guid: aa1f8a05f97fd406ca127c344502c1cc, type: 2}
+    - target: {fileID: 6088874987005523221, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: isBoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088874987005523221, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: attackType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6854881215773587569, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
       propertyPath: m_Name
       value: Slime Variant

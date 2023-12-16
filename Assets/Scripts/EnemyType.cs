@@ -1,14 +1,19 @@
-
-=======
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyType : MonoBehaviour
 {
+    public enum EnemyAttackType
+    {
+        Melee,
+        Ranged
+    }
+
     [Tooltip("Must be unique to the scene")]
     [SerializeField] private int enemyID; 
-    [SerializeField] private Sprite enemySprite; 
+    [SerializeField] private Sprite enemySprite;
+    [SerializeField] private EnemyAttackType attackType;
     [SerializeField] private float damageMultiplier = 1.0f; 
     [SerializeField] private bool isBoss = false; 
     [SerializeField] private int health = 100;
@@ -87,6 +92,17 @@ public class EnemyType : MonoBehaviour
         return enemySprite;
     }
 
+    public bool GetIsBoss()
+    {
+        return isBoss;
+    }
+
+
+    public EnemyAttackType GetAttackType()
+    {
+        return attackType;
+    }
+
     public int GetHealth()
     {
         return health;
@@ -102,4 +118,3 @@ public class EnemyType : MonoBehaviour
         return card2;
     }
 }
->>>>>>> 8613333ffde7f4c85afeec8a076394d6f9514e5a

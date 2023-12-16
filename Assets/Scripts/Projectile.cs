@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     private int damage;
    
 
-    private void Start(int damage)
+    private void Start()
     {
         // pick image here using enemy type
         setDamage(damage);
