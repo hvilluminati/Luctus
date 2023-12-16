@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa7ea04d8566884290a37e19477d7c9, type: 3}
   m_Name: StartCard6
   m_EditorClassIdentifier: 
-  name: Flock of Birds
-  description: Caw Caw Caw
-  artwork: {fileID: 21300000, guid: 49a4f04272065b544807679b3a2b9b98, type: 3}
+  name: Magic Missile
+  description: Shoot a burst of arcane energy for 10 damage.
+  artwork: {fileID: 21300000, guid: bde2c5e3962adb04f8bc7ab014b15513, type: 3}
   damageType: 0
-  damage: 5
+  damage: 10
   shield: 0
+  statusDuration: 0
   effect: 0
   effectAmount: 0
