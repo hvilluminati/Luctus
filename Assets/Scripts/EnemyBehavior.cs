@@ -91,7 +91,6 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void DoDamage()
 	{
-		enemyAttack.AttackHandler(enemy.type);
 		Debug.Log("I have taken damage");
 
 		turnManager.StartPlayerTurn(); // Start player turn
