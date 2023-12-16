@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa7ea04d8566884290a37e19477d7c9, type: 3}
   m_Name: StartCard3
   m_EditorClassIdentifier: 
-  name: Magic Orb
-  description: Mysterious Black Ball
-  artwork: {fileID: 21300000, guid: 35052439756e7d046b1fcf8361b2f54a, type: 3}
+  name: Ice Blast
+  description: Shoots a snowball for 5 damage.
+  artwork: {fileID: 21300000, guid: 6ffa8ca51ad88354f98bac0198d82518, type: 3}
   damageType: 0
-  damage: 8
+  damage: 5
   shield: 0
+  statusDuration: 0
   effect: 0
   effectAmount: 0

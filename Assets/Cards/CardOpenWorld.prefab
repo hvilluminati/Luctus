@@ -301,8 +301,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -441,6 +441,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98420a1f2df4642e18a08a8ef783c775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AddCardPanel: {fileID: 0}
+  CardObject: {fileID: 0}
+  card: {fileID: 0}
+  thisCard: {fileID: 0}
+  myCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  distance: 0.5
 --- !u!114 &7385728976934900821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,7 +464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d3f5e80a9f343a6b4e4611cf1175cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardOpen: {fileID: 0}
   titleTextField: {fileID: 5991049844924913273}
   descriptionTextField: {fileID: 4358643889677958642}
   artworkImage: {fileID: 4688261074182318220}
@@ -805,8 +815,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

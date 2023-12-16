@@ -3,13 +3,16 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
+using TMPro;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 	public Enemy enemy;
 	public Image healthBar;
+	public RectTransform healthBar;
+	public TMP_Text healthNumber;
 	public TurnManager turnManager;
+	public CheckCardEffects checkCardEffects;
 
 
 	private int currentHealth;
@@ -18,6 +21,11 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private Vector3 originalScale;
 	public UnityEvent enemyDead = new UnityEvent();
 
+	private int statusDamage = 0;
+	private int bleedDamage;
+	private int bleedCounter;
+	private int burnDamage;
+	private int burnCounter;
 
 	private void Start()
 	{
@@ -30,10 +38,13 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		currentHealth = enemy.health;
 
 		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
+
+		healthNumber.text = currentHealth.ToString();
 	}
 
 	private void Update()
 	{
+		healthNumber.text = currentHealth.ToString();
 		if (currentHealth <= 0)
 		{
 			enemyDead.Invoke();
@@ -81,8 +92,56 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		turnManager.StartPlayerTurn(); // Start player turn
 	}
 
-	public void TakeDamage(int damage)
+	public void ManageCard(int damage, DamageType damageType, int statusDuration)
 	{
+		if (damageType == DamageType.Normal)
+		{
+			TakeDamage(statusDamage + damage);
+		}
+
+		else if (damageType == DamageType.Poison)
+        {
+			Debug.Log("Enemy poisoned.");
+			checkCardEffects.isPoisoned = true;
+			statusDamage += damage;
+			TakeDamage(statusDamage);
+		}
+
+		else if (damageType == DamageType.Bleed)
+		{
+			bleedDamage += damage;
+			bleedCounter += statusDuration;
+			Debug.Log("Enemy bleeding.");
+			checkCardEffects.isBleeding = true;
+
+			statusDamage += damage;
+			TakeDamage(statusDamage);
+		}
+
+		else if (damageType == DamageType.Fire)
+		{
+			burnDamage += damage;
+			burnCounter += statusDuration;
+			Debug.Log("Enemy burned.");
+			checkCardEffects.isBurning = true;
+			//deal with reduce atk
+			statusDamage += damage;
+			TakeDamage(statusDamage);
+		}
+
+		else if (damageType == DamageType.Frost)
+		{
+			Debug.Log("Enemy frozen.");
+			checkCardEffects.isFreezing = true;
+			//deal with freezing
+			TakeDamage(statusDamage);
+		}
+
+		CheckStatus();
+	}
+
+	public void TakeDamage(int damage)
+    {
 		UnhighlightEnemy();
 		Debug.Log("Enemy took damage: " + damage);
 		enemyTransform.DOShakePosition(2f, new Vector3(3, 0, 0), 1, 0); // Shake enemy
@@ -97,6 +156,30 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		healthBar.fillAmount = currentHealth / 100f;
 	}
 
+	public void CheckStatus()
+    {
+		//check bleed
+		if (bleedCounter > 1)
+        {
+			bleedCounter--;
+        } else {
+			statusDamage -= bleedDamage;
+			bleedDamage = 0;
+			checkCardEffects.isBleeding = false;
+        }
+
+		//check statusDuration
+		if (burnCounter > 1)
+		{
+			burnCounter--;
+		}
+		else
+		{
+			statusDamage -= burnDamage;
+			checkCardEffects.isBurning = false;
+			burnDamage = 0;
+		}
+	}
 
 	public void HighlightEnemy()
 	{

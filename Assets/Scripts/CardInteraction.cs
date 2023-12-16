@@ -72,7 +72,7 @@ namespace Assets.Scripts
 
 			if (enemieBehaviour != null)
 			{
-				enemieBehaviour.TakeDamage(card.damage);
+				enemieBehaviour.ManageCard(card.damage, card.damageType, card.statusDuration);
 				cardUsed.Invoke(this);
 			}
 
