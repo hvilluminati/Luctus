@@ -17,8 +17,8 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private bool isHighlighted = false;
 	private RectTransform enemyTransform; // Used for animation
 	private Vector3 originalScale;
-	private EnemyAttack enemyAttack;
-	public UnityEvent enemyDead = new UnityEvent();
+    [SerializeField] public EnemyAttack enemyAttack;
+    public UnityEvent enemyDead = new UnityEvent();
 
 
 	private void Start()
@@ -29,7 +29,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 		originalScale = enemyTransform.localScale;
 
-		currentHealth = enemy.health;
+		currentHealth = enemy.type.GetHealth();
 		enemy.charge = 0;
 
 		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
@@ -79,9 +79,8 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void DoDamage()
 	{
-		enemyAttack.AttackHandler(enemy);
-		Debug.Log("i have made damage");
-
+		enemyAttack.AttackHandler(enemy.type);
+		Debug.Log("I have taken damage");
 
 		turnManager.StartPlayerTurn(); // Start player turn
 	}
@@ -92,7 +91,8 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		Debug.Log("Enemy took damage: " + damage);
 		enemyTransform.DOShakePosition(2f, new Vector3(3, 0, 0), 1, 0); // Shake enemy
 		currentHealth -= damage; // Loose health
-		if (currentHealth <= 0)
+        healthBar.fillAmount = (float)currentHealth / enemy.health;
+        if (currentHealth <= 0)
 		{
 			currentHealth = 0;
 			// End scene
@@ -102,7 +102,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		float healthBarScale = (float)currentHealth / enemy.health;
 		healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
 		*/
-		healthBar.fillAmount = currentHealth / 100f;
+
 	}
 
 
