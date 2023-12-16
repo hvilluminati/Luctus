@@ -15,6 +15,7 @@ public class Card : ScriptableObject
 	public DamageType damageType;
 	public int damage;
 	public int shield;
+	public int statusDuration;
 
 
 	[Space]
