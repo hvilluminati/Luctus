@@ -29,6 +29,9 @@ public class EnemyAttack : MonoBehaviour
 
 		else
         {
+			MeleeAttack(damage);
+			// placeholder for now.
+			// 
 
         }
 
