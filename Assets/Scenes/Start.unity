@@ -718,6 +718,10 @@ PrefabInstance:
       propertyPath: m_margin.x
       value: -0.26701355
       objectReference: {fileID: 0}
+    - target: {fileID: 6434072496748009285, guid: 04108489102914af1b6bc81b78421611, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6506809552900394083, guid: 04108489102914af1b6bc81b78421611, type: 3}
       propertyPath: m_SortingOrder
       value: 1
