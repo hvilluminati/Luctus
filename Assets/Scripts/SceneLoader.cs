@@ -1,9 +1,12 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
     public int testSceneNumber;
+    public Animator transition;
+    public float transitionTime;
 
     public void LoadNextScene()
     {
@@ -42,6 +45,18 @@ public class SceneLoader : MonoBehaviour
         DataManager.instance.gameOver = false;
         DataManager.instance.gameFinish = false;
 
-        SceneManager.LoadScene(testSceneNumber);
+        StartCoroutine(LoadLevel(testSceneNumber));
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        //Play animation
+        transition.SetTrigger("Start");
+
+        //wait
+        yield return new WaitForSeconds(transitionTime);
+
+        //load scene
+        SceneManager.LoadScene(levelIndex);
     }
 }
