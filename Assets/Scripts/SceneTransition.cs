@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-    [SerializeField] private int sceneNumber;
     public Transform player;
+    public EnterBattle enterBattle;
 
     private void Start()
     {
@@ -31,8 +31,9 @@ public class SceneTransition : MonoBehaviour
                 DataManager.instance.UpdateLastEnemyCollided(enemyID);
                 SetEnemyAliveStatusInDataManager(enemyID, false);
             }
+
             DisableOverworldEnemies();
-            SceneManager.LoadScene(sceneNumber);
+            enterBattle.StartBattle();
         }
     }
     private void SetEnemyAliveStatusInDataManager(int enemyID, bool isAlive)
@@ -57,5 +58,4 @@ public class SceneTransition : MonoBehaviour
             enemy.SetActive(false); // Disable each overworld enemy
         }
     }
-
 }
