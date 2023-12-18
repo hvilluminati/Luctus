@@ -4,7 +4,7 @@ using UnityEngine;
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
-
+   
     public float playerHealth = 100;
 
     public float x_old = 0;
@@ -17,6 +17,7 @@ public class DataManager : MonoBehaviour
 
     public bool gameOver = false;
     public bool gameFinish = false;
+    public bool[] haveEntered;
 
     public int lastEnemyCollidedID = -1; // ID of the last enemy collided with
 
@@ -31,6 +32,15 @@ public class DataManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        haveEntered = new bool[20]; //estimate of total scene number
+        for (int i = 0; i < haveEntered.Length; i++)
+        {
+            haveEntered[i] = false;
         }
     }
 

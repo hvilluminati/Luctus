@@ -1,12 +1,27 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public int testSceneNumber;
+    public int sceneNumber;
     public Animator transition;
     public float transitionTime;
+
+    public string sceneText = " ";
+
+    public TMP_Text textDisplay;
+
+    private void Start()
+    {
+        if (DataManager.instance.haveEntered[SceneManager.GetActiveScene().buildIndex])
+        {
+            sceneText = " ";
+        }
+        textDisplay.text = sceneText;
+        DataManager.instance.haveEntered[SceneManager.GetActiveScene().buildIndex] = true;
+    }
 
     public void LoadNextScene()
     {
@@ -39,13 +54,13 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void LoadTestScene()
+    public void LoadSelectedScene()
     {
         DeckManager.instance.GetComponent<DeckManager>().CreateNewDeck();
         DataManager.instance.gameOver = false;
         DataManager.instance.gameFinish = false;
 
-        StartCoroutine(LoadLevel(testSceneNumber));
+        StartCoroutine(LoadLevel(sceneNumber));
     }
 
     IEnumerator LoadLevel(int levelIndex)
