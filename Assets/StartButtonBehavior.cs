@@ -10,20 +10,20 @@ public class StartButtonBehavior : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		//if (isClicked)
-		//{
-		//	delay += 1;
-		//	if (delay >= delayTime)
-		//	{
-		//		sceneLoader.LoadNextScene();
-		//	}
+		if (isClicked)
+		{
+			delay += 1;
+			if (delay >= delayTime)
+			{
+				sceneLoader.LoadNextScene();
+			}
 
-		//}
+		}
 	}
 
 	public void SceneTransition()
 	{
-		//isClicked = true;
+		isClicked = true;
 		click.Play();
 		sceneLoader.LoadTestScene();
 	}
