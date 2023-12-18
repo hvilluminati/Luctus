@@ -20,11 +20,15 @@ public class OpenWordCardManager : MonoBehaviour
     private void Update()
     {
         transform.position = new Vector3(initialPosition.x , initialPosition.y + myCurve.Evaluate((Time.time % myCurve.length)) * distance, initialPosition.z);
-        if (AddCardPanel.activeInHierarchy)
+
+        if (AddCardPanel != null)
         {
-            if (Input.GetButtonDown("Cancel"))
+            if (AddCardPanel.activeInHierarchy)
             {
-                AddCardPanel.SetActive(false);
+                if (Input.GetButtonDown("Cancel"))
+                {
+                    AddCardPanel.SetActive(false);
+                }
             }
         }
     }

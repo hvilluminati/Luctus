@@ -25,6 +25,6 @@ public class StartButtonBehavior : MonoBehaviour
 	{
 		isClicked = true;
 		click.Play();
-		sceneLoader.LoadTestScene();
+		sceneLoader.LoadSelectedScene();
 	}
 }

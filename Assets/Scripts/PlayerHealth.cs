@@ -31,9 +31,6 @@ public class PlayerHealth : MonoBehaviour
 			SceneManager.LoadScene(0);
 		}
 
-		if (Input.GetKeyDown(KeyCode.Backspace)) { TakeDamage(30); }
-
-		if (Input.GetKeyDown(KeyCode.Return)) { HealDamage(20); }
 	}
 
 	public void UpdateDamage(float damage)

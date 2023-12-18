@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnterGame : MonoBehaviour
 {
     public int sceneNumber;
-    public Animator transition;
-    public float transitionTime;
+    public Animator Transition;
+    public float TransitionTime;
 
     void Update()
     {
@@ -19,10 +19,10 @@ public class EnterGame : MonoBehaviour
     IEnumerator LoadLevel(int levelIndex)
     {
         //Play animation
-        transition.SetTrigger("Start");
+        Transition.SetTrigger("Start");
 
         //wait
-        yield return new WaitForSeconds(transitionTime);
+        yield return new WaitForSeconds(TransitionTime);
 
         //load scene
         SceneManager.LoadScene(levelIndex);
