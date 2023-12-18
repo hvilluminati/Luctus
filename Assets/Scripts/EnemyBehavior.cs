@@ -20,8 +20,10 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private bool isHighlighted = false;
 	private RectTransform enemyTransform; // Used for animation
 	private Vector3 originalScale;
-	[SerializeField] public EnemyAttack enemyAttack;
-	public UnityEvent enemyDead = new UnityEvent();
+    [SerializeField] public EnemyAttack enemyAttack;
+    public UnityEvent enemyDead = new UnityEvent();
+	private EnemyType collidedEnemy;
+
 
 	private int statusDamage = 0;
 	private int bleedDamage;
@@ -42,6 +44,8 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
 
+		Debug.Log("enemy behaviour reacher 2");
+
 		healthNumber.text = currentHealth.ToString();
 	}
 
@@ -54,10 +58,10 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		}
 	}
 
-	private void InitializeEnemyFromLastCollided()
-	{
-		int lastCollidedID = DataManager.instance.lastEnemyCollidedID;
-		EnemyType collidedEnemy = GetEnemyTypeFromDataManager(lastCollidedID);
+    private void InitializeEnemyFromLastCollided()
+    {
+        int lastCollidedID = DataManager.instance.lastEnemyCollidedID;
+        collidedEnemy = GetEnemyTypeFromDataManager(lastCollidedID);
 
 		if (collidedEnemy != null)
 		{
@@ -84,13 +88,19 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	private void beginTurnHandler()
 	{
+		Debug.Log("EnemyTurnHandler begun");
+
 		DoDamage();
+		
+		
 	}
 
 
 	public void DoDamage()
 	{
-		Debug.Log("I have taken damage");
+
+		enemyAttack.AttackHandler(collidedEnemy.GetAttackType(), collidedEnemy.GetIsBoss());
+
 
 		turnManager.StartPlayerTurn(); // Start player turn
 	}
@@ -167,11 +177,6 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			float healthBarScale = (float)currentHealth / enemy.health;
 			//healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
 		}
-
-		/*
-		float healthBarScale = (float)currentHealth / enemy.health;
-		healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
-		*/
 
 	}
 

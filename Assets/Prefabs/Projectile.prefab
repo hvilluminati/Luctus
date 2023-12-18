@@ -93,8 +93,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5417410146048936083}
-  - component: {fileID: 8858694491691653622}
   - component: {fileID: 5864440855997430732}
+  - component: {fileID: 2767012483425004590}
   m_Layer: 7
   m_Name: Projectile
   m_TagString: Untagged
@@ -118,19 +118,6 @@ Transform:
   - {fileID: 1391057996286661534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8858694491691653622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6454748551629916404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fdba5b692cf84236896ff728dde4ffb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!58 &5864440855997430732
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +153,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
+--- !u!114 &2767012483425004590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6454748551629916404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954750c6c1f594b479b12bf4be4f6103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30

@@ -1584,6 +1584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 7066293813516686137, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: attackType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7247977098993304812, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
       propertyPath: player
       value: 

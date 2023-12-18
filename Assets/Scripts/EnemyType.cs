@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class EnemyType : MonoBehaviour
 {
-    public enum EnemyAttackType
-    {
-        Melee,
-        Ranged
-    }
 
     [Tooltip("Must be unique to the scene")]
     [SerializeField] private int enemyID; 
     [SerializeField] private Sprite enemySprite;
     [SerializeField] private EnemyAttackType attackType;
-    [SerializeField] private float damageMultiplier = 1.0f; 
+    [SerializeField] private int damageMultiplier = 1;
     [SerializeField] private bool isBoss = false; 
     [SerializeField] private int health = 100;
     [SerializeField] private Card card1;
@@ -24,6 +19,7 @@ public class EnemyType : MonoBehaviour
     void Start()
     {
         CheckInitialAliveStatus();
+        SetAttackType();
     }
 
     private void Awake()
@@ -48,6 +44,7 @@ public class EnemyType : MonoBehaviour
     private void Update()
     {
         CheckAliveStatus();
+        SetAttackType();
     }
 
     private void CheckAliveStatus()
@@ -79,6 +76,26 @@ public class EnemyType : MonoBehaviour
                 this.gameObject.SetActive(false); // Deactivate the enemy if it's marked as dead in DataManager
                 break;
             }
+        }
+    }
+
+    private void SetAttackType()
+    {
+        
+        if (enemySprite.name.Contains("fire"))
+        {
+            attackType = EnemyAttackType.Fire;
+        }
+        else if (enemySprite.name.Contains("slime"))
+        {
+            attackType = EnemyAttackType.Slime;
+        }
+        else if (enemySprite.name.Contains("ice"))
+        {
+            attackType = EnemyAttackType.Ice;
+        } else
+        {
+            attackType = EnemyAttackType.Melee;
         }
     }
 

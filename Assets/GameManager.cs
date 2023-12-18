@@ -66,12 +66,15 @@ public class GameManager : MonoBehaviour
 		Card2 = enemyType.GetCard2();
 		actualCard1.GetComponent<CardDecoratorSimple>().Initiate(Card1);
 		actualCard2.GetComponent<CardDecoratorSimple>().Initiate(Card2);
+
 		StartTurn();
 	}
 
 	private void PlayerTurn()
 	{
+		turnManager.beginPlayerTurn.AddListener(PlayerTurn);
 		DrawCard();
+		
 	}
 
 	private void StartTurn() // First turn of the game
@@ -81,9 +84,6 @@ public class GameManager : MonoBehaviour
 		{
 			DrawCard();
 		}
-
-		// Princess start turn
-		Debug.Log("Start player turn");
 	}
 
 	public void DrawCard()
@@ -108,7 +108,6 @@ public class GameManager : MonoBehaviour
 		cardInteraction.canvasRectransform = canvasRectransform;
 
 		cardInstance.Instantiate();
-
 		cardInstance.transform.localScale = Vector3.one * 0.75f;
 
 		// Move all cards into position
@@ -132,6 +131,9 @@ public class GameManager : MonoBehaviour
 			cardInteraction.cardUsed.AddListener(CardUsedHandler); // Subscribe to know when a card is used
 		});
 
+		Debug.Log("hey???");
+		turnManager.EndPlayerTurn();
+
 	}
 
 
@@ -145,6 +147,7 @@ public class GameManager : MonoBehaviour
 		DestroyImmediate(cardInteraction.gameObject); // Cleanup
 
 		turnManager.EndPlayerTurn(); // End player turn after card is used
+		
 	}
 
 	public void OnEnemyDeadHandler()

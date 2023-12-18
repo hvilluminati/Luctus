@@ -45,11 +45,17 @@ public class PlayerHealth : MonoBehaviour
 		audio.Play();
 		healthAmount -= damage;
 		DataManager.instance.ModifyHealth(-damage);
+		
 		healthBar.fillAmount = healthAmount / 100f;
-		damageEffect.StartFlashRenderer();
-		player.GetComponent<PlayerMovement>().Flinch();
 
+		Debug.Log("healthbar decreased");
+		
+        damageEffect.StartFlashRenderer();
 
+		Debug.Log("flash started");
+        player.GetComponent<PlayerMovement>().Flinch();
+		
+		
 	}
 
 

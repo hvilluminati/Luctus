@@ -3,54 +3,73 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour
 {
-	[SerializeField] private int charge;
+	private int charge = 0;
+	private int damage;
+	private static int DEFAULT_DAMAGE = 5;
 
-	[SerializeField] private EnemyType enemy;
 
 	[SerializeField] public Projectile projectile;
 	[SerializeField] public Transform launchOffset;
 
 	private void Start()
 	{
-		charge = 0;
 	}
 
 
+	void Update()
+	{
+		// Check for spacebar input to launch the projectile
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			projectile.Launch();
+		}
+	}
+
 	// todo: integrate damage multiplier 
 
-	public void AttackHandler(int damage)
+	public void AttackHandler(EnemyAttackType attackType, bool isBoss)
 	{
 
-		if (enemy.GetIsBoss() && Random.value <= 0.75f)
+		Debug.Log("hey");
+
+		this.damage = (int) attackType * DEFAULT_DAMAGE;
+
+		
+
+		if (isBoss && Random.value <= 0.75f)
 		{
-			// 75% chance of charging the attack
-			ChargeAttack(damage);
+			// boss has 75% chance of charging the attack
+			
+			ChargeAttack();
 		}
 
 		else
         {
-
+			// placeholder to test battle scene
+			MeleeAttack();
         }
 
-		Debug.Log($"Enemy of type is dealing damage");
 	}
 
-	private void MeleeAttack(int damage)
+	private void MeleeAttack()
 	{
-		DataManager.instance.playerHealth -= damage;
+		Debug.Log("meleed");
 
+		// todo -> instaed of just taking damage, need it to call take damage in playerhealth
+		//PlayerHealth.instance.TakeDamage(damage);
+		DataManager.instance.playerHealth -= damage;
 	}
 
 
 	
 	private void RangedAttack()
 	{
-		projectile.Launch();
+		projectile.setDamage(damage);
 		Instantiate(projectile, launchOffset.position, transform.rotation);
 	}
 	
 
-	private void ChargeAttack(int damage)
+	private void ChargeAttack()
 	{
 
 		// TODO: if player does not block charge
