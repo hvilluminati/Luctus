@@ -545,7 +545,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  sideForce: 8
+  sideForce: 10
   upwardForce: 23
   walkingSound: {fileID: 7269477013611714757}
 --- !u!95 &1043114570379753853
@@ -584,7 +584,6 @@ MonoBehaviour:
   healthBar: {fileID: 5615095525774981078}
   damageEffect: {fileID: 6892243921209180773}
   player: {fileID: 2727693200554657269}
-  audio: {fileID: 5724393751805143029}
 --- !u!114 &6892243921209180773
 MonoBehaviour:
   m_ObjectHideFlags: 0

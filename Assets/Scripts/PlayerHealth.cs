@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
 	public SpriteDamageEffect damageEffect;
 	public GameObject player;
 	public static PlayerHealth instance;
-	private new AudioSource audio;
+	public AudioSource audio;
 
 	// Start is called before the first frame update
 	void Start()
