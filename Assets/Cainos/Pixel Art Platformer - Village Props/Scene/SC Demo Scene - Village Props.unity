@@ -30808,14 +30808,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 52492776}
     m_Modifications:
-    - target: {fileID: 6147905309449828893, guid: e8bae36b607017047ace9061609051d9, type: 3}
-      propertyPath: UVModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6147905309449828893, guid: e8bae36b607017047ace9061609051d9, type: 3}
-      propertyPath: EmissionModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6309599118117444222, guid: e8bae36b607017047ace9061609051d9, type: 3}
       propertyPath: m_RootOrder
       value: 38
