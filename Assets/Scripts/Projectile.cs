@@ -20,6 +20,7 @@ public class Projectile : MonoBehaviour
 
         //transform.Translate(Vector2.left * speed * Time.deltaTime);
         transform.position += -transform.right * speed * Time.deltaTime;
+
     }
 
     public void Launch()
@@ -34,10 +35,11 @@ public class Projectile : MonoBehaviour
 
         if (collision.tag == "Player")
         {
-            Debug.Log("proejctile collided");
+            Debug.Log("projectile collided");
             //collision.GetComponent<PlayerHealth>().TakeDamage(damage);
-            Destroy(this.gameObject);
 
+            DataManager.instance.playerHealth -= damage;
+            Destroy(this.gameObject);
         }
 
 

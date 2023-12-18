@@ -40,4 +40,12 @@ public class DeckManager : MonoBehaviour
 		currentDeck.cards.Add(card);
 		collectedDeck.cards.Add(card);
 	}
+    public void SetCurrentDeckToCollectedDeck()
+    {
+        currentDeck.cards.Clear();
+        foreach (Card card in collectedDeck.cards)
+        {
+            currentDeck.cards.Add(card);
+        }
+    }
 }

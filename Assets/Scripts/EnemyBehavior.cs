@@ -3,11 +3,13 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.UI;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+
 	public Enemy enemy;
 	public Image healthBar;
 	public TMP_Text healthNumber;
@@ -19,7 +21,10 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private bool isHighlighted = false;
 	private RectTransform enemyTransform; // Used for animation
 	private Vector3 originalScale;
-	public UnityEvent enemyDead = new UnityEvent();
+    [SerializeField] public EnemyAttack enemyAttack;
+    public UnityEvent enemyDead = new UnityEvent();
+	private EnemyType collidedEnemy;
+
 
 	private int statusDamage = 0;
 	private int bleedDamage;
@@ -35,9 +40,12 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 		originalScale = enemyTransform.localScale;
 
-		currentHealth = enemy.health;
+		currentHealth = enemy.type.GetHealth();
+		enemy.charge = 0;
 
 		turnManager.beginEnemyTurn.AddListener(beginTurnHandler);
+
+		Debug.Log("enemy behaviour reacher 2");
 
 		healthNumber.text = currentHealth.ToString();
 	}
@@ -54,7 +62,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void InitializeEnemyFromLastCollided()
     {
         int lastCollidedID = DataManager.instance.lastEnemyCollidedID;
-        EnemyType collidedEnemy = GetEnemyTypeFromDataManager(lastCollidedID);
+        collidedEnemy = GetEnemyTypeFromDataManager(lastCollidedID);
 
         if (collidedEnemy != null)
         {
@@ -81,13 +89,19 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	private void beginTurnHandler()
 	{
+		Debug.Log("EnemyTurnHandler begun");
+
 		DoDamage();
+		
+		
 	}
 
 
 	public void DoDamage()
 	{
-		Debug.Log("I have taken damage");
+
+		enemyAttack.AttackHandler(collidedEnemy.GetAttackType(), collidedEnemy.GetIsBoss());
+
 
 		turnManager.StartPlayerTurn(); // Start player turn
 	}
@@ -146,14 +160,13 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		Debug.Log("Enemy took damage: " + damage);
 		enemyTransform.DOShakePosition(2f, new Vector3(3, 0, 0), 1, 0); // Shake enemy
 		currentHealth -= damage; // Loose health
-		if (currentHealth <= 0)
+        healthBar.fillAmount = (float)currentHealth / enemy.health;
+        if (currentHealth <= 0)
 		{
 			currentHealth = 0;
 			// End scene
 		}
-		//float healthBarScale = (float)currentHealth / enemy.health;
-		//healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
-		healthBar.fillAmount = currentHealth / 100f;
+
 	}
 
 	public void CheckStatus()
@@ -188,6 +201,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		{
 			isHighlighted = true;
 			enemyTransform.DOScale(originalScale * 1.1f, 0.3f).SetLoops(-1, LoopType.Yoyo);
+
 
 			GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
 			foreach (var card in cards)

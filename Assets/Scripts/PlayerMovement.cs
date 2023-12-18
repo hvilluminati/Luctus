@@ -37,12 +37,12 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, upwardForce);
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        if (Input.GetKeyUp(KeyCode.UpArrow) && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
@@ -62,10 +62,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        float horizontalForce = horizontal * sideForce;
+        bool isTryingToChangeDirection = (rb.velocity.x > 0f && horizontal < 0f) || (rb.velocity.x < 0f && horizontal > 0f);
         // Apply horizontal movement regardless of whether the player is grounded
         if (IsGrounded())
         {
-            rb.velocity = new Vector2(horizontal * sideForce, rb.velocity.y);
+            rb.velocity = new Vector2(horizontalForce, rb.velocity.y);
+        }
+        else if (!IsGrounded() && isTryingToChangeDirection)
+        {
+            horizontalForce *= 0.5f;
+            rb.velocity = new Vector2(horizontalForce, rb.velocity.y);
         }
         else
         {

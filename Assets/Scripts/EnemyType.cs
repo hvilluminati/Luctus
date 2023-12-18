@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnemyType : MonoBehaviour
 {
+
     [Tooltip("Must be unique to the scene")]
     [SerializeField] private int enemyID; 
-    [SerializeField] private Sprite enemySprite; 
-    [SerializeField] private float damageMultiplier = 1.0f; 
+    [SerializeField] private Sprite enemySprite;
+    [SerializeField] private EnemyAttackType attackType;
+    [SerializeField] private int damageMultiplier = 1;
     [SerializeField] private bool isBoss = false; 
     [SerializeField] private int health = 100;
     [SerializeField] private Card card1;
@@ -17,6 +19,7 @@ public class EnemyType : MonoBehaviour
     void Start()
     {
         CheckInitialAliveStatus();
+        SetAttackType();
     }
 
     private void Awake()
@@ -41,6 +44,7 @@ public class EnemyType : MonoBehaviour
     private void Update()
     {
         CheckAliveStatus();
+        SetAttackType();
     }
 
     private void CheckAliveStatus()
@@ -75,6 +79,26 @@ public class EnemyType : MonoBehaviour
         }
     }
 
+    private void SetAttackType()
+    {
+        
+        if (enemySprite.name.Contains("fire"))
+        {
+            attackType = EnemyAttackType.Fire;
+        }
+        else if (enemySprite.name.Contains("slime"))
+        {
+            attackType = EnemyAttackType.Slime;
+        }
+        else if (enemySprite.name.Contains("ice"))
+        {
+            attackType = EnemyAttackType.Ice;
+        } else
+        {
+            attackType = EnemyAttackType.Melee;
+        }
+    }
+
     public int GetEnemyID()
     {
         return enemyID;
@@ -83,6 +107,17 @@ public class EnemyType : MonoBehaviour
     public Sprite GetSprite()
     {
         return enemySprite;
+    }
+
+    public bool GetIsBoss()
+    {
+        return isBoss;
+    }
+
+
+    public EnemyAttackType GetAttackType()
+    {
+        return attackType;
     }
 
     public int GetHealth()
@@ -98,11 +133,6 @@ public class EnemyType : MonoBehaviour
     public Card GetCard2()
     {
         return card2;
-    }
-
-    public bool GetIsBoss()
-    {
-        return isBoss;
     }
 }
 

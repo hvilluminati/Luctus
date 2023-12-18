@@ -5,11 +5,15 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
-	public Image healthBar;
-	private float healthAmount = 100;
-	private float damageTaken;
-	public SpriteDamageEffect damageEffect;
-	public GameObject player;
+
+    public Image healthBar;
+    private float healthAmount = 100;
+    private float damageTaken;
+    public SpriteDamageEffect damageEffect;
+    public GameObject player;
+    public static PlayerHealth instance;
+
+
 
 	// Start is called before the first frame update
 	void Start()
@@ -43,10 +47,17 @@ public class PlayerHealth : MonoBehaviour
 	{
 		healthAmount -= damage;
 		DataManager.instance.ModifyHealth(-damage);
+		
 		healthBar.fillAmount = healthAmount / 100f;
-		player.GetComponent<PlayerMovement>().Flinch();
-		damageEffect.StartFlashRenderer();
 
+		Debug.Log("healthbar decreased");
+		
+        damageEffect.StartFlashRenderer();
+
+		Debug.Log("flash started");
+        player.GetComponent<PlayerMovement>().Flinch();
+		
+		
 	}
 
 

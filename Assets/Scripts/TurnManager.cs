@@ -18,13 +18,16 @@ public class TurnManager : MonoBehaviour
 
 	public void EndPlayerTurn()
 	{
+		Debug.Log("Player turn ended");
 		currentTurn = TurnState.enemyTurn;
 		beginEnemyTurn.Invoke();
+
 		//gm.EnemyTurn();
 	}
 
 	public void StartPlayerTurn()
 	{
+		Debug.Log("Player turn started");
 		currentTurn = TurnState.princessTurn;
 		beginPlayerTurn.Invoke();
 
