@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6973973392377551282}
   - component: {fileID: 7833670349958372683}
   - component: {fileID: 7247977098993304812}
+  - component: {fileID: 4584436616084710328}
   m_Layer: 0
   m_Name: EnemyOpen
   m_TagString: Enemy
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6854881215773587569}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.42, y: -2.29, z: 0.0040373458}
   m_LocalScale: {x: -0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -78,15 +79,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 00814a4ff1dee49f892fdc9a1773a86f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.8, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &366365307238671412
@@ -105,7 +106,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 4
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e19c79ea07d0c4c6aa6d808ade1945e1, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -125,7 +126,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6854881215773587569}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: bd74762bb97c34c1e8cbf19754d61ea0, type: 2}
+  m_Material: {fileID: 6200000, guid: e19c79ea07d0c4c6aa6d808ade1945e1, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -153,7 +154,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 4.8, y: 3.2}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 4.8, y: 3.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -233,7 +234,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 1
     m_RotationOrder: 4
-  distance: 12
+  distance: 2
+  soundEffect: {fileID: 8300000, guid: 471963845e75a8246b9923257f99048d, type: 3}
 --- !u!114 &7247977098993304812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,8 +248,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb173163b2b4c49cc82b714070746c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 3
+  sceneNumber: 2
   player: {fileID: 0}
+--- !u!114 &4584436616084710328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6854881215773587569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb7928088203aea459f5ed71fc444856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffects:
+  - {fileID: 8300000, guid: 9abe8496b6788f14c8576b6d25816420, type: 3}
+  - {fileID: 8300000, guid: 4b748ef26a5add643aad3f460c292ea3, type: 3}
+  - {fileID: 8300000, guid: 6bf421a78bb98b5469b6c3c1a3878fab, type: 3}
+  - {fileID: 8300000, guid: c60737e579200d34a821ddf0cdd1f183, type: 3}
+  minDelay: 5
+  maxDelay: 15
 --- !u!1 &9189835098346745322
 GameObject:
   m_ObjectHideFlags: 0
