@@ -22,7 +22,7 @@ public class EnemyMovementBird : MonoBehaviour
             Track();
             Flip();
         }
-        else
+        else if (transform.position != null)
         {
             Return();
         }

@@ -13,10 +13,6 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] public Projectile projectile;
 	[SerializeField] public Transform launchOffset;
 
-	private void Start()
-	{
-	}
-
 
 	void Update()
 	{
@@ -55,11 +51,9 @@ public class EnemyAttack : MonoBehaviour
 
 	private void MeleeAttack()
 	{
-		Debug.Log("meleed");
 
-		// todo -> instaed of just taking damage, need it to call take damage in playerhealth
 		playerHealth.TakeDamage(damage);
-		//DataManager.instance.playerHealth -= damage;
+
 	}
 
 
@@ -79,8 +73,8 @@ public class EnemyAttack : MonoBehaviour
 
 		if (charge >= 3)
         {
-			DataManager.instance.playerHealth -= damage;
-        }
+			playerHealth.TakeDamage(damage);
+		}
 
 	}
 

@@ -8,6 +8,7 @@ public class Card : ScriptableObject
 
 	[Multiline(4)]
 	public string description;
+	public string animationName;
 
 	public Sprite artwork;
 

@@ -21250,6 +21250,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6646601518745226421, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: WalkingSound
+      value: 
+      objectReference: {fileID: 756497967}
+    - target: {fileID: 6646601518745226421, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: walkingSound
       value: 
       objectReference: {fileID: 756497967}
@@ -30993,6 +30997,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f15620b06b45ceb47b504d95bfac8136, type: 3}
     - target: {fileID: 6646601518745226421, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: WalkingSound
+      value: 
+      objectReference: {fileID: 1153165359}
+    - target: {fileID: 6646601518745226421, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: detectWhat.m_Bits
       value: 1024
       objectReference: {fileID: 0}
@@ -31013,6 +31021,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+--- !u!82 &1153165359 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4964617579214987149, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+  m_PrefabInstance: {fileID: 1153165358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1155854525
 GameObject:
   m_ObjectHideFlags: 0
@@ -42852,7 +42865,7 @@ PrefabInstance:
       objectReference: {fileID: 1616277869}
     - target: {fileID: 7554674875832151159, guid: 19b5980c09a4e47558a49d55305b2483, type: 3}
       propertyPath: transitionTime
-      value: 2.5
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 7651788556548128728, guid: 19b5980c09a4e47558a49d55305b2483, type: 3}
       propertyPath: m_SizeDelta.x

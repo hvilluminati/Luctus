@@ -53,8 +53,10 @@ public class PlayerHealth : MonoBehaviour
         damageEffect.StartFlashRenderer();
 
 		Debug.Log("flash started");
-        player.GetComponent<PlayerMovement>().Flinch();
-		
+		if (player.GetComponent<PlayerMovement>() != null)
+        {
+			player.GetComponent<PlayerMovement>().Flinch();
+		}
 		
 	}
 

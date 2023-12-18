@@ -10,7 +10,7 @@ public class SimpleEnemyScripy : MonoBehaviour
 	private new Rigidbody2D rigidbody;
 	public LayerMask detectWhat;
 	public bool colliding;
-	[SerializeField] private AudioSource walkingSound;
+	[SerializeField] private AudioSource WalkingSound;
 
 	Animator anim;
 	private void Awake()
@@ -33,7 +33,7 @@ public class SimpleEnemyScripy : MonoBehaviour
 		if (enabled)
 		{
 			GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
-			walkingSound.Play();
+			WalkingSound.Play();
 		}
 		colliding = Physics2D.Linecast(sightStart.position, sightEnd.position, detectWhat);
 
@@ -73,7 +73,7 @@ public class SimpleEnemyScripy : MonoBehaviour
 	{
 		GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y * 0);
 		rigidbody.velocity = Vector2.zero;
-		walkingSound.Stop();
+		WalkingSound.Stop();
 		rigidbody.Sleep();
 	}
 

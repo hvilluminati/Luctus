@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
 	private float horizontal;
 	private bool isFacingRight = true;
-	private bool isFlinching;
 
 	private float x;
 	private float y;
@@ -24,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
 	void Start()
 	{
 		playerHealth = GetComponent<PlayerHealth>();
-		isFlinching = false;
 		x = DataManager.instance.x_old;
 		y = DataManager.instance.y_old;
 		transform.position = new Vector3(x, y, player.position.z);
@@ -112,13 +110,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 
 		rb.velocity = new Vector2(horizontal * -8, 8);
-		isFlinching = false;
 
-	}
-
-	public void setIsFlinching(bool flinchingState)
-	{
-		isFlinching = flinchingState;
 	}
 
 	private void PlaySound()
