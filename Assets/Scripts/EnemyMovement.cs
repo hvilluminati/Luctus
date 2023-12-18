@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
 		// Store the initial position of the GameObject
 		initialPosition = transform.position;
 
-		//if (!DataManager.instance.enemyAlive)
+		//if (!DataManager.instance.GetEnemyAliveStatus())
 		//{
 		//	this.gameObject.SetActive(false);
 		//}
