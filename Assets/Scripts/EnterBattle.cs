@@ -19,13 +19,11 @@ public class EnterBattle : MonoBehaviour
         //Play animation
         transition.SetTrigger("Battle");
 
-        Debug.Log("Is it the wait");
         //wait
         yield return new WaitForSeconds(transitionTime);
 
         //load scene
-        Debug.Log("Before transition");
         SceneManager.LoadScene(levelIndex);
-        Debug.Log("After transition");
+
     }
 }

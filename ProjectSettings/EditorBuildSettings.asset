@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelTemplate.unity
     guid: e08cafd6194dd8f4990508bf4774f372
+  - enabled: 1
+    path: Assets/Scenes/IntroStory-1.unity
+    guid: 024175178fc8446e0a30e46fc5c008f3
   m_configObjects: {}

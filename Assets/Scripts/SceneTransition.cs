@@ -6,6 +6,7 @@ public class SceneTransition : MonoBehaviour
     public Transform player;
     public EnterBattle enterBattle;
 
+
     private void Start()
     {
         if (player == null)
