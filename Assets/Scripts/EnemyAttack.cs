@@ -1,14 +1,16 @@
 using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EnemyAttack : MonoBehaviour
 {
 	private int charge = 0;
 	private int damage;
 	private static int DEFAULT_DAMAGE = 5;
+    public PlayerHealth playerHealth;
 
 
-	[SerializeField] public Projectile projectile;
+    [SerializeField] public Projectile projectile;
 	[SerializeField] public Transform launchOffset;
 
 	private void Start()
@@ -56,8 +58,8 @@ public class EnemyAttack : MonoBehaviour
 		Debug.Log("meleed");
 
 		// todo -> instaed of just taking damage, need it to call take damage in playerhealth
-		//PlayerHealth.instance.TakeDamage(damage);
-		DataManager.instance.playerHealth -= damage;
+		playerHealth.TakeDamage(damage);
+		//DataManager.instance.playerHealth -= damage;
 	}
 
 
