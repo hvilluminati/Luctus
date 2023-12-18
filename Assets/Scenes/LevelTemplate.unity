@@ -21219,7 +21219,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 377076791709587818, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 377076791709587818, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: playAlways
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 668198694408101267, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: m_Material

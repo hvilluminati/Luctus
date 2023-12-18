@@ -1200,9 +1200,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1010825614}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadTestScene
+      - m_Target: {fileID: 1697945576}
+        m_TargetAssemblyTypeName: StartButtonBehavior, Assembly-CSharp
+        m_MethodName: SceneTransition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1359,7 +1359,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 1697945575}
-  sceneLoader: {fileID: 1837919370}
+  sceneLoader: {fileID: 1010825614}
+  isClicked: 0
+  delayTime: 30
+  delay: 0
 --- !u!1 &1757592798
 GameObject:
   m_ObjectHideFlags: 0

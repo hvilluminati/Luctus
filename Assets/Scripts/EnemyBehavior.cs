@@ -1,10 +1,9 @@
 using Assets.Scripts;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using TMPro;
 using UnityEngine.UI;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -166,7 +165,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 				// End scene
 			}
 			float healthBarScale = (float)currentHealth / enemy.health;
-			healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
+			//healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
 		}
 
 		/*
