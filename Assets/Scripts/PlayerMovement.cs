@@ -11,9 +11,10 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] private float sideForce;
 	[SerializeField] private float upwardForce;
 	[SerializeField] private AudioSource walkingSound;
+	private PlayerHealth playerHealth;
+
 	private float horizontal;
 	private bool isFacingRight = true;
-
 	private bool isFlinching;
 
 	private float x;
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		playerHealth = GetComponent<PlayerHealth>();
 		isFlinching = false;
 		x = DataManager.instance.x_old;
 		y = DataManager.instance.y_old;
@@ -36,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetButtonDown("Jump") && IsGrounded())
 		{
 			rb.velocity = new Vector2(rb.velocity.x, upwardForce);
-			Debug.Log("Are we here?");
 		}
 
 		if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -48,6 +49,10 @@ public class PlayerMovement : MonoBehaviour
 		{
 			this.GetComponent<BoxCollider2D>().enabled = true;
 			transform.position = new Vector3(player.position.x - 7, -3, player.position.z);
+			if (playerHealth != null)
+			{
+				playerHealth.TakeDamage(10);
+			}
 		}
 
 		Flip();
@@ -55,11 +60,13 @@ public class PlayerMovement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		float horizontalForce = horizontal * sideForce;
+		bool isTryingToChangeDirection = (rb.velocity.x > 0f && horizontal < 0f) || (rb.velocity.x < 0f && horizontal > 0f);
 		// Apply horizontal movement regardless of whether the player is grounded
 		if (IsGrounded())
 		{
-			rb.velocity = new Vector2(horizontal * sideForce, rb.velocity.y);
-			//StopSound();
+			rb.velocity = new Vector2(horizontalForce, rb.velocity.y);
+
 			if (Input.GetAxisRaw("Horizontal") != 0 && walkingSound.isPlaying == false)
 			{
 				PlaySound();
@@ -69,15 +76,18 @@ public class PlayerMovement : MonoBehaviour
 				StopSound();
 			}
 		}
+		else if (!IsGrounded() && isTryingToChangeDirection)
+		{
+			horizontalForce *= 0.5f;
+			rb.velocity = new Vector2(horizontalForce, rb.velocity.y);
+		}
 		else
 		{
 			// If in the air and not already moving horizontally, apply a reduced force
 			if (Mathf.Abs(rb.velocity.x) < 0.01f) // Adjust this threshold as needed
 			{
 				rb.velocity = new Vector2(horizontal * (sideForce * 0.5f), rb.velocity.y);
-				//StopSound();
 			}
-
 		}
 	}
 

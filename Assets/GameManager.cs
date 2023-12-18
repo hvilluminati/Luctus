@@ -24,22 +24,48 @@ public class GameManager : MonoBehaviour
 	public CardDecorator cardPrefab;
 
 	public TurnManager turnManager;
+	public EnemyBehavior enemyBehavior;
+	private EnemyType enemyType;
 
-	public GameObject[] enemies;
-	public List<EnemyBehavior> enemyBehaviors;
-
+	public GameObject Exit;
+	public GameObject choosePanel;
+	public Card Card1;
+	public Card Card2;
+	public GameObject actualCard1;
+	public GameObject actualCard2;
 
 
 	public void Start()
 	{
 		turnManager.beginPlayerTurn.AddListener(PlayerTurn);
-		// Needs to be refactored
-		enemies = GameObject.FindGameObjectsWithTag("Enemy");
-		foreach (var enemy in enemies)
+
+		GameObject enemyGameObject = GameObject.FindGameObjectWithTag("Enemy");
+		// Get the EnemyBehavior component attached to the enemy GameObject
+		if (enemyGameObject != null)
 		{
-			enemyBehaviors.Add(enemy.GetComponent<EnemyBehavior>());
+			enemyBehavior = enemyGameObject.GetComponent<EnemyBehavior>();
+			if (enemyBehavior != null)
+			{
+				// Subscribe to the event in the EnemyBehavior class
+				enemyBehavior.enemyDead.AddListener(OnEnemyDeadHandler);
+			}
+			else
+			{
+				Debug.LogError("EnemyBehavior component not found on the enemy GameObject.");
+			}
+		}
+		else
+		{
+			Debug.LogError("No GameObject found with the 'Enemy' tag.");
 		}
 
+
+		//set reward cards
+		enemyType = enemyGameObject.GetComponent<EnemyDecorator>().collidedEnemy;
+		Card1 = enemyType.GetCard1();
+		Card2 = enemyType.GetCard2();
+		actualCard1.GetComponent<CardDecoratorSimple>().Initiate(Card1);
+		actualCard2.GetComponent<CardDecoratorSimple>().Initiate(Card2);
 		StartTurn();
 	}
 
@@ -119,6 +145,43 @@ public class GameManager : MonoBehaviour
 		DestroyImmediate(cardInteraction.gameObject); // Cleanup
 
 		turnManager.EndPlayerTurn(); // End player turn after card is used
+	}
+
+	public void OnEnemyDeadHandler()
+	{
+		ReturnDrawnCardsToDeck(); // Return drawn cards to the deck
+
+		//ChooseCards
+		choosePanel.SetActive(true);
+	}
+
+	public void ReturnDrawnCardsToDeck()
+	{
+		foreach (var drawnCardObject in drawnCardGameObjects)
+		{
+			CardDecorator cardDecorator = drawnCardObject.GetComponent<CardDecorator>();
+			if (cardDecorator != null)
+			{
+				Card drawnCard = cardDecorator.card;
+				currentDeck.AddCard(drawnCard); // Adding drawn card back to the deck
+				Destroy(drawnCardObject); // Destroy drawn card object from the drawn cards holder
+			}
+		}
+		drawnCardGameObjects.Clear(); // Clear the list of drawn card game objects
+	}
+
+	public void ChooseCard1()
+	{
+		DeckManager.instance.AddCard(Card1);
+		// Go back to platformer
+		Exit.GetComponent<SceneLoader>().LoadPrevScene();
+	}
+
+	public void ChooseCard2()
+	{
+		DeckManager.instance.AddCard(Card2);
+		// Go back to platformer
+		Exit.GetComponent<SceneLoader>().LoadPrevScene();
 	}
 
 	public void OnApplicationQuit()

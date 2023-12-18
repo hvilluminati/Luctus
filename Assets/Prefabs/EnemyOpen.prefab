@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6973973392377551282}
   - component: {fileID: 7833670349958372683}
   - component: {fileID: 7247977098993304812}
-  - component: {fileID: 4584436616084710328}
+  - component: {fileID: 6088874987005523221}
   m_Layer: 0
   m_Name: EnemyOpen
   m_TagString: Enemy
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNumber: 2
   player: {fileID: 0}
---- !u!114 &4584436616084710328
+--- !u!114 &6088874987005523221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,6 +269,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c60737e579200d34a821ddf0cdd1f183, type: 3}
   minDelay: 5
   maxDelay: 15
+  m_Script: {fileID: 11500000, guid: ffd6a065974f13549ba01358343ccecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyID: 1
+  enemySprite: {fileID: 21300000, guid: ff9621127aea4444c85e6e600b64dc34, type: 3}
+  damageMultiplier: 1
+  isBoss: 0
+  health: 10
 --- !u!1 &9189835098346745322
 GameObject:
   m_ObjectHideFlags: 0

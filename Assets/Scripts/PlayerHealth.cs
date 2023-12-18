@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
 	private float damageTaken;
 	public SpriteDamageEffect damageEffect;
 	public GameObject player;
-	[SerializeField]
+	public static PlayerHealth instance;
 	private new AudioSource audio;
 
 	// Start is called before the first frame update
@@ -49,8 +49,9 @@ public class PlayerHealth : MonoBehaviour
 		healthAmount -= damage;
 		DataManager.instance.ModifyHealth(-damage);
 		healthBar.fillAmount = healthAmount / 100f;
-		player.GetComponent<PlayerMovement>().Flinch();
 		damageEffect.StartFlashRenderer();
+		player.GetComponent<PlayerMovement>().Flinch();
+
 
 	}
 
