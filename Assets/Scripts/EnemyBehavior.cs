@@ -1,10 +1,9 @@
 using Assets.Scripts;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using TMPro;
 using UnityEngine.UI;
 
 public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -35,8 +34,8 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private void Start()
 	{
 		enemy = ScriptableObject.CreateInstance<Enemy>();
-        InitializeEnemyFromLastCollided();
-        enemyTransform = GetComponent<RectTransform>();
+		InitializeEnemyFromLastCollided();
+		enemyTransform = GetComponent<RectTransform>();
 
 		originalScale = enemyTransform.localScale;
 
@@ -64,28 +63,28 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         int lastCollidedID = DataManager.instance.lastEnemyCollidedID;
         collidedEnemy = GetEnemyTypeFromDataManager(lastCollidedID);
 
-        if (collidedEnemy != null)
-        {
-            enemy.health = collidedEnemy.GetHealth();
-        }
-        else
-        {
-            enemy.health = 20; // Default value if no enemy found
-        }
-    }
+		if (collidedEnemy != null)
+		{
+			enemy.health = collidedEnemy.GetHealth();
+		}
+		else
+		{
+			enemy.health = 20; // Default value if no enemy found
+		}
+	}
 
 
-    private EnemyType GetEnemyTypeFromDataManager(int enemyID)
-    {
-        foreach (var enemyState in DataManager.instance.enemies)
-        {
-            if (enemyState.enemyType.GetEnemyID() == enemyID)
-            {
-                return enemyState.enemyType;
-            }
-        }
-        return null; 
-    }
+	private EnemyType GetEnemyTypeFromDataManager(int enemyID)
+	{
+		foreach (var enemyState in DataManager.instance.enemies)
+		{
+			if (enemyState.enemyType.GetEnemyID() == enemyID)
+			{
+				return enemyState.enemyType;
+			}
+		}
+		return null;
+	}
 
 	private void beginTurnHandler()
 	{
@@ -114,7 +113,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		}
 
 		else if (damageType == DamageType.Poison)
-        {
+		{
 			Debug.Log("Enemy poisoned.");
 			checkCardEffects.isPoisoned = true;
 			statusDamage += damage;
@@ -155,31 +154,45 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	}
 
 	public void TakeDamage(int damage)
-    {
+	{
 		UnhighlightEnemy();
 		Debug.Log("Enemy took damage: " + damage);
 		enemyTransform.DOShakePosition(2f, new Vector3(3, 0, 0), 1, 0); // Shake enemy
 		currentHealth -= damage; // Loose health
-        healthBar.fillAmount = (float)currentHealth / enemy.health;
-        if (currentHealth <= 0)
+		healthBar.fillAmount = (float)currentHealth / enemy.health;
+		if (currentHealth <= 0)
 		{
-			currentHealth = 0;
-			// End scene
+			UnhighlightEnemy();
+			Debug.Log("Enemy took damage: " + damage);
+
+			// Shake enemy on damage
+			enemyTransform.DOShakePosition(0.5f, new Vector3(20, 0, 0), 5, 45f);
+
+			currentHealth -= damage; // Loose health
+			if (currentHealth <= 0)
+			{
+				currentHealth = 0;
+				// End scene
+			}
+			float healthBarScale = (float)currentHealth / enemy.health;
+			//healthBar.DOScaleX(healthBarScale, 0.3f); // Scale healthbar to lost health
 		}
 
 	}
 
 	public void CheckStatus()
-    {
+	{
 		//check bleed
 		if (bleedCounter > 1)
-        {
+		{
 			bleedCounter--;
-        } else {
+		}
+		else
+		{
 			statusDamage -= bleedDamage;
 			bleedDamage = 0;
 			checkCardEffects.isBleeding = false;
-        }
+		}
 
 		//check statusDuration
 		if (burnCounter > 1)

@@ -5,21 +5,20 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
-
-    public Image healthBar;
-    private float healthAmount = 100;
-    private float damageTaken;
-    public SpriteDamageEffect damageEffect;
-    public GameObject player;
-    public static PlayerHealth instance;
-
-
+	public Image healthBar;
+	private float healthAmount = 100;
+	private float damageTaken;
+	public SpriteDamageEffect damageEffect;
+	public GameObject player;
+	public static PlayerHealth instance;
+	public AudioSource audio;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		damageTaken = 100 - DataManager.instance.playerHealth;
 		UpdateDamage(damageTaken);
+
 	}
 
 	// Update is called once per frame
@@ -45,6 +44,8 @@ public class PlayerHealth : MonoBehaviour
 
 	public void TakeDamage(float damage)
 	{
+		Debug.Log("Took damage");
+		audio.Play();
 		healthAmount -= damage;
 		DataManager.instance.ModifyHealth(-damage);
 		

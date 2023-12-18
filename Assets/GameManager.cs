@@ -91,11 +91,17 @@ public class GameManager : MonoBehaviour
 		if (availableCardSlots <= 0)
 		{
 			return;
+			// What should happen when you run out of cards?
 		}
 
 		Card drawnCard = currentDeck.Cards[0];
 		currentDeck.RemoveCard(drawnCard);
-		CardDecorator cardInstance = Instantiate(cardPrefab, drawnCardsHolder);
+
+		// Deck sprite position
+		float deckXPosition = 1100f;
+		float deckYPosition = -20f;
+
+		CardDecorator cardInstance = Instantiate(cardPrefab, new Vector3(deckXPosition, deckYPosition, 0f), Quaternion.identity, drawnCardsHolder);
 		drawnCardGameObjects.Add(cardInstance.gameObject);
 		cardInstance.card = drawnCard;
 		var cardInteraction = cardInstance.GetComponent<CardInteraction>();
@@ -108,15 +114,22 @@ public class GameManager : MonoBehaviour
 		int drawnCardsCount = drawnCardsHolder.childCount;
 		int xStartPos = 0 - (drawnCardsCount - 1) * (drawnCardsSpacing / 2);
 
+		Sequence cardAnimationSequence = DOTween.Sequence();
+
 		for (int i = 0; i < drawnCardsCount; i++)
 		{
 			RectTransform child = drawnCardsHolder.GetChild(i).GetComponent<RectTransform>();
 			int xPos = xStartPos + i * drawnCardsSpacing;
 
-			child.anchoredPosition = new Vector2(xPos, drawnCardsYPosition);
+			cardAnimationSequence.Join(child.DOAnchorPos(new Vector2(xPos, drawnCardsYPosition), 1f)
+				.SetEase(Ease.InOutSine));
 
 		}
-		cardInteraction.cardUsed.AddListener(CardUsedHandler); // Subscribe to know when a card is used
+
+		cardAnimationSequence.OnComplete(() =>
+		{
+			cardInteraction.cardUsed.AddListener(CardUsedHandler); // Subscribe to know when a card is used
+		});
 
 		Debug.Log("hey???");
 		turnManager.EndPlayerTurn();

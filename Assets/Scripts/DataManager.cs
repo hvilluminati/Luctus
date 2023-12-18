@@ -42,6 +42,7 @@ public class DataManager : MonoBehaviour
     public void ModifyHealth(float amount)
     {
         playerHealth += amount;
+        
     }
 
     public void SaveCoordinate(float x_curr, float y_curr)

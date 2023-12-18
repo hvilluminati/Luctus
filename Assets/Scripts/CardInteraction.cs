@@ -23,7 +23,6 @@ namespace Assets.Scripts
 		private void Start()
 		{
 			enemy = GameObject.FindGameObjectWithTag("Enemy");
-			enemieBehaviour = (enemy.GetComponent<EnemyBehavior>());
 
 			card = gameObject.GetComponent<CardDecorator>().card;
 		}
@@ -70,7 +69,7 @@ namespace Assets.Scripts
 			Destroy(arrowInstance);
 			arrowInstance = null;
 
-			if (enemieBehaviour != null)
+			if (enemieBehaviour != null && GameObject.FindWithTag("Arrow"))
 			{
 				enemieBehaviour.ManageCard(card.damage, card.damageType, card.statusDuration);
 				cardUsed.Invoke(this);
