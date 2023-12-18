@@ -40,13 +40,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 3868614243658107028, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: slimeSound
+      value: 
+      objectReference: {fileID: 4964617579214987149}
     - target: {fileID: 5544367640300903013, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.42
+      value: 20.83
       objectReference: {fileID: 0}
     - target: {fileID: 5544367640300903013, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.29
+      value: -5.31
       objectReference: {fileID: 0}
     - target: {fileID: 5544367640300903013, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -120,8 +124,21 @@ PrefabInstance:
       propertyPath: distance
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7833670349958372683, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: slimeSound
+      value: 
+      objectReference: {fileID: 4964617579214987149}
+    - target: {fileID: 9189835098346745322, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+--- !u!82 &4964617579214987149 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3272060394216577964, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+  m_PrefabInstance: {fileID: 7605855148948292641}
+  m_PrefabAsset: {fileID: 0}
