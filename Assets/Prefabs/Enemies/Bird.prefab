@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3408355382152124873}
   m_Layer: 9
   m_Name: Bird
-  m_TagString: OverworldEnemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,6 @@ MonoBehaviour:
   health: 15
   card1: {fileID: 11400000, guid: 0d1c69753c3060f408a4f82a10b1d92b, type: 2}
   card2: {fileID: 11400000, guid: e0a51db697981f047b62511abc5aeec4, type: 2}
-  projectile: {fileID: 0}
 --- !u!114 &2775736654056447023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,8 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb173163b2b4c49cc82b714070746c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneNumber: 2
   player: {fileID: 0}
-  enterBattle: {fileID: 0}
 --- !u!50 &2463220636355359957
 Rigidbody2D:
   serializedVersion: 4
