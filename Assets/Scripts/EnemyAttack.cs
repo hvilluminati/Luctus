@@ -56,8 +56,7 @@ public class EnemyAttack : MonoBehaviour
 		Debug.Log("meleed");
 
 		// todo -> instaed of just taking damage, need it to call take damage in playerhealth
-		DataManager.instance.playerHealth -= damage;
-		Debug.Log(DataManager.instance.playerHealth);
+		PlayerHealth.instance.TakeDamage(damage);
 
 	}
 
