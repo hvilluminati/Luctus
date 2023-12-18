@@ -14,10 +14,10 @@ public class EnemyMovement : MonoBehaviour
 		// Store the initial position of the GameObject
 		initialPosition = transform.position;
 
-		//if (!DataManager.instance.enemyAlive)
-		//{
-		//	this.gameObject.SetActive(false);
-		//}
+		if (!DataManager.instance.GetEnemyAliveStatus(1))
+		{
+			this.gameObject.SetActive(false);
+		}
 		if (playAlways) { slimeSound.Play(); }
 	}
 
