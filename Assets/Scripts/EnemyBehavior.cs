@@ -163,14 +163,12 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public void TakeDamage(int damage)
 	{
 		UnhighlightEnemy();
-		Debug.Log("Enemy took damage: " + damage);
 		enemyTransform.DOShakePosition(2f, new Vector3(3, 0, 0), 1, 0); // Shake enemy
 		currentHealth -= damage; // Loose health
 		healthBar.fillAmount = (float)currentHealth / enemy.health;
 		if (currentHealth <= 0)
 		{
 			UnhighlightEnemy();
-			Debug.Log("Enemy took damage: " + damage);
 
 			// Shake enemy on damage
 			enemyTransform.DOShakePosition(0.5f, new Vector3(20, 0, 0), 5, 45f);
@@ -270,6 +268,11 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void OnDestroy()
 	{
+		// Clean up DOTween animations
+		if (enemyTransform != null)
+		{
+			enemyTransform.DOKill(); // Kills all tweens on enemyTransform
+		}
 		turnManager.beginEnemyTurn.RemoveListener(beginTurnHandler); // Cleanup
 	}
 }

@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3d68abdeb12416d9f92df31fed8385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 1000
+  playerHealth: 100
   x_old: 0
   y_old: 0
   x_new: 0
@@ -1360,7 +1360,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   click: {fileID: 1697945575}
   sceneLoader: {fileID: 1010825614}
-  isClicked: 0
   delayTime: 30
   delay: 0
 --- !u!1 &1757592798

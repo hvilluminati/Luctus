@@ -12,15 +12,14 @@ public class PlayerHealth : MonoBehaviour
 	public SpriteDamageEffect damageEffect;
 	public GameObject player;
 	public static PlayerHealth instance;
-	public AudioSource audio;
 	public TMP_Text healthNumber;
+	public new AudioSource audio;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		damageTaken = 100 - DataManager.instance.playerHealth;
 		UpdateDamage(damageTaken);
-
 	}
 
 	// Update is called once per frame
@@ -33,7 +32,6 @@ public class PlayerHealth : MonoBehaviour
 			DataManager.instance.gameOver = true;
 			SceneManager.LoadScene(0);
 		}
-
 	}
 
 	public void UpdateDamage(float damage)
