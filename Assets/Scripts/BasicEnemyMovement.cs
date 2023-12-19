@@ -33,7 +33,7 @@ public class SimpleEnemyScripy : MonoBehaviour
 		if (enabled)
 		{
 			GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
-			if (walkingSound != null)
+			if (walkingSound != null && !walkingSound.isPlaying)
 			{
 				walkingSound.Play();
 			}

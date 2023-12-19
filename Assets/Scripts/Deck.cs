@@ -38,14 +38,14 @@ namespace Assets.Scripts
 
 		public void ShuffleDeck()
 		{
-			int n = cards.Count; // Get the number of cards in the deck
+			int n = cards.Count;
 
 			for (int i = n - 1; i > 0; i--)
 			{
 				// Pick a random index from 0 to i
 				int randomIndex = rng.Next(i + 1);
 
-				// Swap element at i with the element at randomIndex
+				// Swap element i with element randomIndex
 				Card temp = cards[i];
 				cards[i] = cards[randomIndex];
 				cards[randomIndex] = temp;
