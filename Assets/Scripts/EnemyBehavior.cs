@@ -105,7 +105,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		if ((currentHealth > 0)&&(!isFreezing)) 
 		{
 			Debug.Log("Enemy Attacks");
-			enemyAttack.AttackHandler(collidedEnemy.GetAttackType(), collidedEnemy.GetIsBoss(), checkCardEffects.isBurning);
+			enemyAttack.AttackHandler(collidedEnemy.GetDamageModifier(), collidedEnemy.GetIsBoss(), checkCardEffects.isBurning);
 		}
 
 		turnManager.StartPlayerTurn(); // Start player turn

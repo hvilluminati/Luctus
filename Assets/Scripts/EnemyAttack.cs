@@ -6,7 +6,7 @@ public class EnemyAttack : MonoBehaviour
 {
 	private int charge = 0;
 	private int damage;
-	private static int DEFAULT_DAMAGE = 5;
+	private static int DEFAULT_DAMAGE = 10;
     public PlayerHealth playerHealth;
 
 
@@ -25,9 +25,9 @@ public class EnemyAttack : MonoBehaviour
 
 	// todo: integrate damage multiplier 
 
-	public void AttackHandler(EnemyAttackType attackType, bool isBoss, bool isBurning)
+	public void AttackHandler(float damageMultiplier, bool isBoss, bool isBurning)
 	{
-		this.damage = (int) attackType * DEFAULT_DAMAGE;
+		this.damage = (int)damageMultiplier * DEFAULT_DAMAGE;
 
 		if (isBurning) {
 			this.damage = Mathf.RoundToInt(damage * 0.75f);
@@ -43,15 +43,15 @@ public class EnemyAttack : MonoBehaviour
 		else
         {
 			// placeholder to test battle scene
-			MeleeAttack();
+			MeleeAttack(damage);
 		}
 
 	}
 
-	private void MeleeAttack()
+	private void MeleeAttack(int damageNumber)
 	{
-		Debug.Log("Player took damage: " + damage);
-		playerHealth.TakeDamage(damage);
+		Debug.Log("Player took damage: " + damageNumber);
+		playerHealth.TakeDamage(damageNumber);
 
 	}
 	
