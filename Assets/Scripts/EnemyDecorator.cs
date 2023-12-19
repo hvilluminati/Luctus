@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class EnemyDecorator : MonoBehaviour
 {
-	public Enemy enemy;
 	public Sprite spriteImage;
 	public Image image;
     public EnemyType collidedEnemy;

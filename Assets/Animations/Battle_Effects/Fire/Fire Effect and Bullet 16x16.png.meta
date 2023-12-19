@@ -5702,7 +5702,7 @@ TextureImporter:
         x: 480
         y: 0
         width: 17
-        height: 36
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5720,12 +5720,12 @@ TextureImporter:
       name: FireBurn_3
       rect:
         serializedVersion: 2
-        x: 512
+        x: 511
         y: 0
         width: 17
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 37
+      alignment: 9
+      pivot: {x: 0.525545, y: 0.37677205}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5741,10 +5741,10 @@ TextureImporter:
       name: FireBurn_4
       rect:
         serializedVersion: 2
-        x: 527
+        x: 528
         y: 0
         width: 17
-        height: 36
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5763,9 +5763,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 559
-        y: 1
+        y: 0
         width: 17
-        height: 36
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6350,10 +6350,10 @@ TextureImporter:
       name: FireBurn_5
       rect:
         serializedVersion: 2
-        x: 545
-        y: 1
-        width: 14
-        height: 36
+        x: 543
+        y: 0
+        width: 17
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6374,7 +6374,7 @@ TextureImporter:
         x: 496
         y: 0
         width: 17
-        height: 36
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
