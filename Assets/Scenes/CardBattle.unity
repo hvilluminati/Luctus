@@ -439,7 +439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &526406189
 Transform:
   m_ObjectHideFlags: 0
@@ -1142,6 +1142,10 @@ PrefabInstance:
       propertyPath: Exit
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6736662284013870317, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
+      propertyPath: animation
+      value: 
+      objectReference: {fileID: 526406191}
     - target: {fileID: 6736662284013870317, guid: 89aa985837ee42e49a561e4c1911a92f, type: 3}
       propertyPath: healthBar
       value: 
@@ -2244,7 +2248,7 @@ Animator:
   m_GameObject: {fileID: 1324077912}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2b59e0d9811524168bcc9c3bba83fadc, type: 2}
+  m_Controller: {fileID: 9100000, guid: a7eee34ae2b1046868d91c7249983d75, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2296,7 +2300,7 @@ SpriteRenderer:
   m_SortingLayerID: -187312955
   m_SortingLayer: 4
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 86ea23e8db5373242881cbe559617f32, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00471ba72156e844b8a9f04aa85f7f33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

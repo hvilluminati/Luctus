@@ -32,7 +32,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private int burnCounter;
 	private int freezeCounter;
 
-	//public Animator animation;
+	public Animator animation;
 
 	private void Start()
 	{
@@ -108,13 +108,13 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			enemyAttack.AttackHandler(collidedEnemy.GetAttackType(), collidedEnemy.GetIsBoss(), checkCardEffects.isBurning);
 		}
 
-		CheckStatus();
 		turnManager.StartPlayerTurn(); // Start player turn
 	}
 
 	public void ManageCard(int damage, DamageType damageType, int statusDuration, string animationName)
 	{
-		Debug.Log("Manage Card");
+		animation.SetTrigger(animationName);
+
 		if (damageType == DamageType.Normal)
 		{
 			TakeDamage(statusDamage + damage);
@@ -156,7 +156,8 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			checkCardEffects.isFreezing = true;
 			TakeDamage(statusDamage + damage);
 		}
-		//animation.SetTrigger(animationName);
+
+		CheckStatus();
 	}
 
 	public void TakeDamage(int damage)
