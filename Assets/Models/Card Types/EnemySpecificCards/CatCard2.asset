@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: CatCard2
   m_EditorClassIdentifier: 
   name: Bleeding Love
-  description: 'The love you had for you cat would give anyone heartache.
-
-    Do
-    5 bleed damage for 5 rounds.'
+  description: Do 5 bleed damage for 5 rounds.
   animationName: 
   artwork: {fileID: 21300000, guid: c6fea52dbe997324e9067c5b0bfb7c5d, type: 3}
   damageType: 4
