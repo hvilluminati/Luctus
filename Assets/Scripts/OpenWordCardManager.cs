@@ -12,8 +12,15 @@ public class OpenWordCardManager : MonoBehaviour
     public float distance = 0.5f;
     private Vector3 initialPosition;
 
+    public int cardId;
+
     private void Start()
     {
+        if (DataManager.instance.checkOpenCards[cardId])
+        {
+            thisCard.SetActive(false);
+        }
+
         // Store the initial position of the GameObject
         initialPosition = transform.position;
     }
@@ -39,6 +46,7 @@ public class OpenWordCardManager : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            DataManager.instance.checkOpenCards[cardId] = true;
             AddCardPanel.SetActive(true);
             Player.GetComponent<PlayerMovement>().enabled = false;
             Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;

@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Brain Eating
   description: One type of special card for defeating zombies.
+  animationName: Bleed
   artwork: {fileID: 21300000, guid: ee72c24f9706a0845a4e77272f7221cd, type: 3}
   damageType: 0
   damage: 10
   shield: 0
+  statusDuration: 0
   effect: 0
   effectAmount: 0

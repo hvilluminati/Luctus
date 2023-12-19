@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 'Peck '
   description: Send birds to peck your enemy. Inflict 12 damage.
-  animationName: 
+  animationName: Bleed
   artwork: {fileID: 21300000, guid: 3c8fc8a35f5d96644ba5a51b48472be1, type: 3}
   damageType: 0
   damage: 12

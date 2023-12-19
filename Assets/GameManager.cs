@@ -3,6 +3,7 @@ using DG.Tweening;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
 	public TurnManager turnManager;
 	public EnemyBehavior enemyBehavior;
 	private EnemyType enemyType;
+	private int enemyHealth;
 
 	public GameObject Exit;
 	public GameObject choosePanel;
@@ -33,7 +35,6 @@ public class GameManager : MonoBehaviour
 	public Card Card2;
 	public GameObject actualCard1;
 	public GameObject actualCard2;
-
 
 	public void Start()
 	{
@@ -72,10 +73,13 @@ public class GameManager : MonoBehaviour
 		StartTurn();
 	}
 
-	private void PlayerTurn()
+    private void PlayerTurn()
 	{
 		turnManager.beginPlayerTurn.AddListener(PlayerTurn);
-		DrawCard();
+		if (currentDeck.cards.Count > 0)
+		{
+			DrawCard();
+		}
 
 	}
     private EnemyType GetEnemyTypeFromDataManager(int enemyID)
@@ -95,7 +99,10 @@ public class GameManager : MonoBehaviour
 		// Draw 5 cards
 		for (int i = 0; i < 5; i++)
 		{
-			DrawCard();
+			if (currentDeck.cards.Count > 0)
+			{
+				DrawCard();
+			}
 		}
 	}
 
@@ -160,6 +167,14 @@ public class GameManager : MonoBehaviour
 		discardPile.AddCard(usedCard); // Add card to discardpile
 		cardInteraction.GetComponent<RectTransform>().DOKill();
 		DestroyImmediate(cardInteraction.gameObject); // Cleanup
+
+		//Player has finished doing damage and enemy health not yet 0 so can check here
+		if (availableCardSlots == 5)
+		{
+			DataManager.instance.GetComponent<DataManager>().DataReset();
+			DataManager.instance.gameOver = true;
+			SceneManager.LoadScene(0);
+		}
 
 		turnManager.EndPlayerTurn(); // End player turn after card is used
 

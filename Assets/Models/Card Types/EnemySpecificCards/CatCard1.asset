@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Paralysis of Denial
   description: Deny your opponent its round for 4 turns
-  animationName: 
+  animationName: GreenBox
   artwork: {fileID: 21300000, guid: 35052439756e7d046b1fcf8361b2f54a, type: 3}
   damageType: 3
   damage: 0

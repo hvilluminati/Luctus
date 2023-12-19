@@ -1874,7 +1874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNumber: 5
   Transition: {fileID: 1663873828}
-  TransitionTime: 2
+  TransitionTime: 0.1
 --- !u!95 &1663873828
 Animator:
   serializedVersion: 5

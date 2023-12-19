@@ -18,6 +18,7 @@ public class DataManager : MonoBehaviour
     public bool gameOver = false;
     public bool gameFinish = false;
     public bool[] haveEntered;
+    public bool[] checkOpenCards;
 
     public int lastEnemyCollidedID = -1; // ID of the last enemy collided with
 
@@ -41,6 +42,11 @@ public class DataManager : MonoBehaviour
         for (int i = 0; i < haveEntered.Length; i++)
         {
             haveEntered[i] = false;
+        }
+        checkOpenCards = new bool[20]; //estimate of total open world cards
+        for (int i = 0; i < checkOpenCards.Length; i++)
+        {
+            checkOpenCards[i] = false;
         }
     }
 
@@ -75,6 +81,7 @@ public class DataManager : MonoBehaviour
 
     public void DataReset()
     {
+
         EnemyType[] enemies = FindObjectsOfType<EnemyType>();
 
         foreach (EnemyType enemy in enemies)
@@ -89,6 +96,7 @@ public class DataManager : MonoBehaviour
         prevScene = 0;
         ResetEnemies();
         lastEnemyCollidedID = -1;
+
         DataManager.instance.enemies = new DataManager.EnemyState[0];
     }
 
