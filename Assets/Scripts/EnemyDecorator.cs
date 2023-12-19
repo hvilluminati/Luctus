@@ -21,7 +21,7 @@ public class EnemyDecorator : MonoBehaviour
 
         if (collidedEnemy != null)
         {
-            image.sprite = collidedEnemy.GetSprite(); // Assuming EnemyType has a GetSprite method
+            image.sprite = collidedEnemy.GetSprite(); 
         }
     }
 
@@ -34,6 +34,6 @@ public class EnemyDecorator : MonoBehaviour
                 return enemyState.enemyType;
             }
         }
-        return null; // Return null if no matching enemy is found
+        return null;
     }
 }
