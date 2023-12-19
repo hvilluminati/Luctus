@@ -39865,7 +39865,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8554685761281571334}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1275188665225227461, guid: cbd62c429457d4be58a4663d892491a5, type: 3}
       propertyPath: m_Pivot.x
@@ -39950,7 +39950,7 @@ PrefabInstance:
     - target: {fileID: 2293849222562712273, guid: cbd62c429457d4be58a4663d892491a5, type: 3}
       propertyPath: MusicPlayer
       value: 
-      objectReference: {fileID: 1616277868}
+      objectReference: {fileID: 519420028}
     - target: {fileID: 3316719083409112057, guid: cbd62c429457d4be58a4663d892491a5, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -39976,11 +39976,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbd62c429457d4be58a4663d892491a5, type: 3}
---- !u!224 &1328040558 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1275188665225227461, guid: cbd62c429457d4be58a4663d892491a5, type: 3}
-  m_PrefabInstance: {fileID: 1328040557}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1329350612
 GameObject:
   m_ObjectHideFlags: 0
@@ -63616,3 +63611,4 @@ SceneRoots:
   - {fileID: 1032184180}
   - {fileID: 1181667278}
   - {fileID: 1500344709}
+  - {fileID: 1328040557}

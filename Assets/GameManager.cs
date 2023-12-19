@@ -131,8 +131,8 @@ public class GameManager : MonoBehaviour
 			cardInteraction.cardUsed.AddListener(CardUsedHandler); // Subscribe to know when a card is used
 		});
 
-		Debug.Log("hey???");
-		turnManager.EndPlayerTurn();
+		//Debug.Log("hey???");
+		//turnManager.EndPlayerTurn();
 
 	}
 

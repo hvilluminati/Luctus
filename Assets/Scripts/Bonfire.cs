@@ -30,7 +30,7 @@ public class ObjectActivator : MonoBehaviour
             spark.SetActive(true);
             glow.SetActive(true);
 
-            if (IsPlayerInRange() && CanActivateObject() && Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (IsPlayerInRange() && CanActivateObject() && Input.GetKeyDown(KeyCode.Return)
             {
                 Debug.Log("Bonfire activated");
                 ActivateBonfire();
