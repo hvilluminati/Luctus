@@ -21233,6 +21233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4964617579214987149, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6646601518745226421, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: walkingSound
       value: 
@@ -30792,6 +30796,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 377076791709587818, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: slimeSound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 668198694408101267, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: m_Size.x
       value: 1.3444825
@@ -30952,6 +30960,22 @@ PrefabInstance:
       propertyPath: enemySprite
       value: 
       objectReference: {fileID: 21300000, guid: f15620b06b45ceb47b504d95bfac8136, type: 3}
+    - target: {fileID: 4399290606432170292, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: soundEffects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399290606432170292, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: soundEffects.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fc0fe7dfeed7c314fbd0fc169c49afa5, type: 3}
+    - target: {fileID: 4399290606432170292, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: soundEffects.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a3ea7632ac41df43b34602630f3b625, type: 3}
+    - target: {fileID: 4399290606432170292, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: soundEffects.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d07069279e7ff14ab0fe42b5280520a, type: 3}
     - target: {fileID: 6646601518745226421, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: detectWhat.m_Bits
       value: 1024
@@ -30968,7 +30992,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 1.16
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4964617579214987149, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

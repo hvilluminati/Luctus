@@ -33,16 +33,21 @@ public class SimpleEnemyScripy : MonoBehaviour
 		if (enabled)
 		{
 			GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
-			walkingSound.Play();
+			if (walkingSound != null)
+			{
+				walkingSound.Play();
+			}
 		}
 		colliding = Physics2D.Linecast(sightStart.position, sightEnd.position, detectWhat);
 
 		if (colliding)
 		{
-
+			if (walkingSound != null)
+			{
+				walkingSound.Stop();
+			}
 			transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
 			velocity *= -1;
-
 		}
 
 	}
@@ -73,7 +78,10 @@ public class SimpleEnemyScripy : MonoBehaviour
 	{
 		GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y * 0);
 		rigidbody.velocity = Vector2.zero;
-		walkingSound.Stop();
+		if (walkingSound != null)
+		{
+			walkingSound.Stop();
+		}
 		rigidbody.Sleep();
 	}
 

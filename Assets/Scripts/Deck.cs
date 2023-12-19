@@ -16,6 +16,8 @@ namespace Assets.Scripts
 		// Event to tell subscriber that the number in the deck has changed
 		public UnityEvent cardsChanged = new UnityEvent();
 
+		private static readonly System.Random rng = new System.Random(); // Singleton
+
 		public void AddCard(Card card)
 		{
 			cards.Add(card);
@@ -32,6 +34,22 @@ namespace Assets.Scripts
 		{
 			cards.Clear();
 			cardsChanged.Invoke();
+		}
+
+		public void ShuffleDeck()
+		{
+			int n = cards.Count; // Get the number of cards in the deck
+
+			for (int i = n - 1; i > 0; i--)
+			{
+				// Pick a random index from 0 to i
+				int randomIndex = rng.Next(i + 1);
+
+				// Swap element at i with the element at randomIndex
+				Card temp = cards[i];
+				cards[i] = cards[randomIndex];
+				cards[randomIndex] = temp;
+			}
 		}
 	}
 }
