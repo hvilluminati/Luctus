@@ -8,6 +8,8 @@ public class EnterBattle : MonoBehaviour
 	public float transitionTime;
 	[SerializeField] private int sceneNumber;
 
+	public GameObject Player;
+
 	// Update is called once per frame
 	public void StartBattle()
 	{
@@ -18,6 +20,9 @@ public class EnterBattle : MonoBehaviour
 	{
 		//Play animation
 		transition.SetTrigger("Battle");
+
+		Player.GetComponent<PlayerMovement>().enabled = false;
+		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
 		//wait
 		yield return new WaitForSeconds(transitionTime);

@@ -16,7 +16,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public CheckCardEffects checkCardEffects;
 
 
-	private int currentHealth;
+	public int currentHealth;
 	private bool isHighlighted = false;
 	private RectTransform enemyTransform; // Used for animation
 	private Vector3 originalScale;
@@ -188,7 +188,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public void CheckStatus()
 	{
 		//check bleed
-		if (bleedCounter > 0)
+		if (bleedCounter > 1)
 		{
 			bleedCounter--;
 		}
@@ -200,7 +200,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		}
 
 		//check burn
-		if (burnCounter > 0)
+		if (burnCounter > 1)
 		{
 			burnCounter--;
 		}
@@ -212,7 +212,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 		}
 
 		//check freeze
-		if (freezeCounter > -1)
+		if (freezeCounter > 0)
 		{
 			freezeCounter--;
 		}

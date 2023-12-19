@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Bleeding Love
   description: Do 5 bleed damage for 5 rounds.
-  animationName: 
+  animationName: Bleed
   artwork: {fileID: 21300000, guid: c6fea52dbe997324e9067c5b0bfb7c5d, type: 3}
   damageType: 4
   damage: 5
