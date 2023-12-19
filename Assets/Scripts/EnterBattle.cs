@@ -4,44 +4,26 @@ using UnityEngine.SceneManagement;
 
 public class EnterBattle : MonoBehaviour
 {
-    public Animator transition;
-    public float transitionTime;
-    [SerializeField] private int sceneNumber;
-    public AudioSource audio;
-    public GameObject Player;
+	public Animator transition;
+	public float transitionTime;
+	[SerializeField] private int sceneNumber;
 
-    // Update is called once per frame
+	// Update is called once per frame
+	public void StartBattle()
+	{
+		StartCoroutine(LoadLevel(sceneNumber));
+	}
 
-    private void Start()
-    {
-        // Ensure the AudioSource is disabled at the start
-        if (audio != null)
-        {
-            audio.enabled = false;
-        }
-    }
+	IEnumerator LoadLevel(int levelIndex)
+	{
+		//Play animation
+		transition.SetTrigger("Battle");
 
-    public void StartBattle()
-    {
-        Player.GetComponent<PlayerMovement>().enabled = false;
-        Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        StartCoroutine(LoadLevel(sceneNumber));
-    }
+		//wait
+		yield return new WaitForSeconds(transitionTime);
 
-    IEnumerator LoadLevel(int levelIndex)
-    {
-        //Play animation
-        transition.SetTrigger("Battle");
-        if (audio != null)
-        {
-            audio.enabled = true;
-        }
+		//load scene
+		SceneManager.LoadScene(levelIndex);
 
-        //wait
-        yield return new WaitForSeconds(transitionTime);
-
-        //load scene
-        SceneManager.LoadScene(levelIndex);
-
-    }
+	}
 }

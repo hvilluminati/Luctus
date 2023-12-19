@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 		Card2 = enemyType.GetCard2();
 		actualCard1.GetComponent<CardDecoratorSimple>().Initiate(Card1);
 		actualCard2.GetComponent<CardDecoratorSimple>().Initiate(Card2);
-
+		DeckManager.instance.ShuffleCurrentDeck();
 		StartTurn();
 	}
 
@@ -186,6 +186,7 @@ public class GameManager : MonoBehaviour
 		// Go back to platformer
 		Exit.GetComponent<SceneLoader>().LoadPrevScene();
 	}
+
 
 	public void OnApplicationQuit()
 	{

@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class StartButtonBehavior : MonoBehaviour
+public class ButtonBehavior : MonoBehaviour
 {
 	[SerializeField] private AudioSource click;
 	[SerializeField] private SceneLoader sceneLoader;
-	public bool isClicked;
 	public int delayTime = 30;
 	public int delay = 0;
+	private bool isClicked;
 
 	private void FixedUpdate()
 	{
@@ -15,16 +15,16 @@ public class StartButtonBehavior : MonoBehaviour
 			delay += 1;
 			if (delay >= delayTime)
 			{
-				sceneLoader.LoadNextScene();
+				sceneLoader.LoadSelectedScene();
 			}
 
 		}
 	}
 
-	public void SceneTransition()
+	public void SceneTransition(int sceneNumber)
 	{
+		sceneLoader.sceneNumber = sceneNumber;
 		isClicked = true;
 		click.Play();
-		sceneLoader.LoadSelectedScene();
 	}
 }
