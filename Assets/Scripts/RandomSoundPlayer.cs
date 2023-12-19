@@ -9,13 +9,13 @@ public class RandomSoundPlayer : MonoBehaviour
 	private float timer;
 	private AudioSource audioSource;
 	private Transform playerTransform; // Used for sound attenuation
-	public float maxHearingDistance = 10.0f; // Distance from where sound can be heard
+	public float maxHearingDistance = 25.0f; // Distance from where sound can be heard
 
 	void Start()
 	{
 		audioSource = gameObject.AddComponent<AudioSource>();
 		timer = Random.Range(minDelay, maxDelay);
-		audioSource.volume = 0.5f;
+		//audioSource.volume = 0.5f;
 		GameObject playerGameObject = GameObject.FindWithTag("Player");
 		if (playerGameObject != null)
 		{
@@ -27,6 +27,7 @@ public class RandomSoundPlayer : MonoBehaviour
 	{
 		float distance = Vector2.Distance(transform.position, playerTransform.position);
 		audioSource.volume = CalculateVolumeBasedOnDistance(distance);
+		Debug.Log($"Volumes is: {audioSource.volume}");
 
 		timer -= Time.deltaTime;
 		if (timer <= 0f)
@@ -38,7 +39,7 @@ public class RandomSoundPlayer : MonoBehaviour
 
 	private float CalculateVolumeBasedOnDistance(float distance)
 	{
-		return Mathf.Clamp(1 - (distance / maxHearingDistance), 0, 1);
+		return Mathf.Clamp(2 - (distance / maxHearingDistance), 0, 1);
 	}
 
 	void PlayRandomSound()
