@@ -6,6 +6,7 @@ public class OpenWordCardManager : MonoBehaviour
     public GameObject CardObject;
     public Card card;
     public GameObject thisCard;
+    public GameObject Player;
 
     public AnimationCurve myCurve;
     public float distance = 0.5f;
@@ -28,6 +29,7 @@ public class OpenWordCardManager : MonoBehaviour
                 if (Input.GetButtonDown("Cancel"))
                 {
                     AddCardPanel.SetActive(false);
+                    Player.GetComponent<PlayerMovement>().enabled = true;
                 }
             }
         }
@@ -38,6 +40,8 @@ public class OpenWordCardManager : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             AddCardPanel.SetActive(true);
+            Player.GetComponent<PlayerMovement>().enabled = false;
+            Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             DeckManager.instance.AddCard(card);
             CardObject.GetComponent<CardDecoratorSimple>().Initiate(card);
             thisCard.SetActive(false);

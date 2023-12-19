@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: StartCard10
   m_EditorClassIdentifier: 
   name: Sneak Attack
-  description: Throw a dagger at the enemy inflicting 5 bleed damage for 3 rounds.
+  description: Throw a dagger. Inflicting 5 bleed damage for 3 turns.
+  animationName: 
   artwork: {fileID: 21300000, guid: b9ddbb0b1f23a7a41aa69f9737c50926, type: 3}
   damageType: 4
   damage: 5

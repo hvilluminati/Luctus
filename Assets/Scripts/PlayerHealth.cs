@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
 	public GameObject player;
 	public static PlayerHealth instance;
 	public AudioSource audio;
+	public TMP_Text healthNumber;
 
 	// Start is called before the first frame update
 	void Start()
@@ -24,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		healthNumber.text = healthAmount.ToString();
 		if (healthAmount <= 0)
 		{
 			DataManager.instance.GetComponent<DataManager>().DataReset();

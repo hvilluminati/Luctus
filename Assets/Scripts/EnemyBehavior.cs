@@ -30,6 +30,9 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	private int bleedCounter;
 	private int burnDamage;
 	private int burnCounter;
+	private int freezeCounter;
+
+	//public Animator animation;
 
 	private void Start()
 	{
@@ -98,15 +101,20 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void DoDamage()
 	{
+		bool isFreezing = checkCardEffects.isFreezing;
+		if ((currentHealth > 0)&&(!isFreezing)) 
+		{
+			Debug.Log("Enemy Attacks");
+			enemyAttack.AttackHandler(collidedEnemy.GetAttackType(), collidedEnemy.GetIsBoss(), checkCardEffects.isBurning);
+		}
 
-		enemyAttack.AttackHandler(collidedEnemy.GetAttackType(), collidedEnemy.GetIsBoss());
-
-
+		CheckStatus();
 		turnManager.StartPlayerTurn(); // Start player turn
 	}
 
-	public void ManageCard(int damage, DamageType damageType, int statusDuration)
+	public void ManageCard(int damage, DamageType damageType, int statusDuration, string animationName)
 	{
+		Debug.Log("Manage Card");
 		if (damageType == DamageType.Normal)
 		{
 			TakeDamage(statusDamage + damage);
@@ -137,20 +145,18 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			burnCounter += statusDuration;
 			Debug.Log("Enemy burned.");
 			checkCardEffects.isBurning = true;
-			//deal with reduce atk
 			statusDamage += damage;
 			TakeDamage(statusDamage);
 		}
 
 		else if (damageType == DamageType.Frost)
 		{
+			freezeCounter += statusDuration;
 			Debug.Log("Enemy frozen.");
 			checkCardEffects.isFreezing = true;
-			//deal with freezing
-			TakeDamage(statusDamage);
+			TakeDamage(statusDamage + damage);
 		}
-
-		CheckStatus();
+		//animation.SetTrigger(animationName);
 	}
 
 	public void TakeDamage(int damage)
@@ -183,7 +189,7 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 	public void CheckStatus()
 	{
 		//check bleed
-		if (bleedCounter > 1)
+		if (bleedCounter > 0)
 		{
 			bleedCounter--;
 		}
@@ -194,8 +200,8 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			checkCardEffects.isBleeding = false;
 		}
 
-		//check statusDuration
-		if (burnCounter > 1)
+		//check burn
+		if (burnCounter > 0)
 		{
 			burnCounter--;
 		}
@@ -204,6 +210,16 @@ public class EnemyBehavior : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 			statusDamage -= burnDamage;
 			checkCardEffects.isBurning = false;
 			burnDamage = 0;
+		}
+
+		//check freeze
+		if (freezeCounter > -1)
+		{
+			freezeCounter--;
+		}
+		else
+		{
+			checkCardEffects.isFreezing = false;
 		}
 	}
 

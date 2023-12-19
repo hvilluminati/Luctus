@@ -71,7 +71,7 @@ namespace Assets.Scripts
 
 			if (enemieBehaviour != null && GameObject.FindWithTag("Arrow"))
 			{
-				enemieBehaviour.ManageCard(card.damage, card.damageType, card.statusDuration);
+				enemieBehaviour.ManageCard(card.damage, card.damageType, card.statusDuration, card.animationName);
 				cardUsed.Invoke(this);
 			}
 
