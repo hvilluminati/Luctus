@@ -113,7 +113,10 @@ public class EnemyType : MonoBehaviour
     {
         return isBoss;
     }
-
+    public float GetDamageModifier()
+    {
+        return damageMultiplier;
+    }
 
     public EnemyAttackType GetAttackType()
     {
