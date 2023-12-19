@@ -5486,7 +5486,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Effect and Bullet 16x16_256
+      name: Firebolt_1
       rect:
         serializedVersion: 2
         x: 224
@@ -5696,13 +5696,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Effect and Bullet 16x16_266
+      name: FireBurn_1
       rect:
         serializedVersion: 2
-        x: 485
+        x: 480
         y: 0
-        width: 8
-        height: 9
+        width: 17
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5717,13 +5717,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Effect and Bullet 16x16_267
+      name: FireBurn_3
       rect:
         serializedVersion: 2
-        x: 518
+        x: 512
         y: 0
-        width: 5
-        height: 23
+        width: 17
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5738,13 +5738,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Effect and Bullet 16x16_268
+      name: FireBurn_4
       rect:
         serializedVersion: 2
-        x: 533
+        x: 527
         y: 0
-        width: 7
-        height: 28
+        width: 17
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5759,13 +5759,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Effect and Bullet 16x16_269
+      name: FireBurn_6
       rect:
         serializedVersion: 2
         x: 559
-        y: 0
+        y: 1
         width: 17
-        height: 37
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5788,7 +5788,7 @@ TextureImporter:
         width: 10
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5809,7 +5809,7 @@ TextureImporter:
         width: 10
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5830,7 +5830,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5851,7 +5851,7 @@ TextureImporter:
         width: 17
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5872,7 +5872,7 @@ TextureImporter:
         width: 17
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5893,7 +5893,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5914,7 +5914,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5935,7 +5935,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5956,7 +5956,7 @@ TextureImporter:
         width: 14
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5977,7 +5977,7 @@ TextureImporter:
         width: 16
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5998,7 +5998,7 @@ TextureImporter:
         width: 14
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6019,7 +6019,7 @@ TextureImporter:
         width: 17
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6040,7 +6040,7 @@ TextureImporter:
         width: 17
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6061,7 +6061,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6082,7 +6082,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6095,7 +6095,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Effect and Bullet 16x16_285
+      name: Firebolt_2
       rect:
         serializedVersion: 2
         x: 240
@@ -6103,7 +6103,7 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6116,7 +6116,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Effect and Bullet 16x16_286
+      name: Firebolt_3
       rect:
         serializedVersion: 2
         x: 256
@@ -6124,7 +6124,7 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6137,7 +6137,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Effect and Bullet 16x16_287
+      name: Firebolt_4
       rect:
         serializedVersion: 2
         x: 272
@@ -6145,7 +6145,7 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6166,7 +6166,7 @@ TextureImporter:
         width: 16
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6187,7 +6187,7 @@ TextureImporter:
         width: 16
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6208,7 +6208,7 @@ TextureImporter:
         width: 16
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6229,7 +6229,7 @@ TextureImporter:
         width: 16
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6250,7 +6250,7 @@ TextureImporter:
         width: 14
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6271,7 +6271,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6292,7 +6292,7 @@ TextureImporter:
         width: 11
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6313,7 +6313,7 @@ TextureImporter:
         width: 14
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6334,7 +6334,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6347,15 +6347,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Effect and Bullet 16x16_297
+      name: FireBurn_5
       rect:
         serializedVersion: 2
         x: 545
-        y: 0
+        y: 1
         width: 14
-        height: 37
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6368,15 +6368,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire Effect and Bullet 16x16_298
+      name: FireBurn_2
       rect:
         serializedVersion: 2
-        x: 502
+        x: 496
         y: 0
-        width: 5
-        height: 13
+        width: 17
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6397,7 +6397,7 @@ TextureImporter:
         width: 15
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6418,7 +6418,7 @@ TextureImporter:
         width: 14
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6439,7 +6439,7 @@ TextureImporter:
         width: 10
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6637,7 +6637,6 @@ TextureImporter:
       Fire Effect and Bullet 16x16_253: 1203343563
       Fire Effect and Bullet 16x16_254: 64922110
       Fire Effect and Bullet 16x16_255: 1850865074
-      Fire Effect and Bullet 16x16_256: -976570072
       Fire Effect and Bullet 16x16_257: 1862039828
       Fire Effect and Bullet 16x16_258: -41835530
       Fire Effect and Bullet 16x16_259: -142160036
@@ -6648,10 +6647,6 @@ TextureImporter:
       Fire Effect and Bullet 16x16_263: 59641337
       Fire Effect and Bullet 16x16_264: 666902777
       Fire Effect and Bullet 16x16_265: 1039562561
-      Fire Effect and Bullet 16x16_266: 1323556494
-      Fire Effect and Bullet 16x16_267: 776735364
-      Fire Effect and Bullet 16x16_268: 638148382
-      Fire Effect and Bullet 16x16_269: -1617741770
       Fire Effect and Bullet 16x16_27: -3111923
       Fire Effect and Bullet 16x16_270: -804502669
       Fire Effect and Bullet 16x16_271: 872299033
@@ -6669,9 +6664,6 @@ TextureImporter:
       Fire Effect and Bullet 16x16_282: -1318142717
       Fire Effect and Bullet 16x16_283: -545912407
       Fire Effect and Bullet 16x16_284: 1594098649
-      Fire Effect and Bullet 16x16_285: -456281120
-      Fire Effect and Bullet 16x16_286: 640146303
-      Fire Effect and Bullet 16x16_287: -448203664
       Fire Effect and Bullet 16x16_288: -180418122
       Fire Effect and Bullet 16x16_289: 1937708352
       Fire Effect and Bullet 16x16_29: -45910392
@@ -6682,8 +6674,6 @@ TextureImporter:
       Fire Effect and Bullet 16x16_294: -1449824997
       Fire Effect and Bullet 16x16_295: -40947392
       Fire Effect and Bullet 16x16_296: -52247109
-      Fire Effect and Bullet 16x16_297: 1669789478
-      Fire Effect and Bullet 16x16_298: -559472776
       Fire Effect and Bullet 16x16_299: -888019059
       Fire Effect and Bullet 16x16_3: -683462009
       Fire Effect and Bullet 16x16_30: -1156641529
@@ -6764,6 +6754,16 @@ TextureImporter:
       Fire Effect and Bullet 16x16_97: 1401248832
       Fire Effect and Bullet 16x16_98: 1201453565
       Fire Effect and Bullet 16x16_99: 1643673281
+      FireBurn_1: 1323556494
+      FireBurn_2: -559472776
+      FireBurn_3: 776735364
+      FireBurn_4: 638148382
+      FireBurn_5: 1669789478
+      FireBurn_6: -1617741770
+      Firebolt_1: -976570072
+      Firebolt_2: -456281120
+      Firebolt_3: 640146303
+      Firebolt_4: -448203664
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
