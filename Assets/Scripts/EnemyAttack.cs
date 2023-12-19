@@ -33,17 +33,19 @@ public class EnemyAttack : MonoBehaviour
 			this.damage = Mathf.RoundToInt(damage * 0.75f);
 		}
 
-		if (isBoss && Random.value <= 0.75f)
+        this.damage = Random.Range(Mathf.RoundToInt(this.damage * 0.5f), this.damage);
+
+        if (isBoss && Random.value <= 0.5f||charge > 0)
 		{
-			// boss has 75% chance of charging the attack
+			// boss has 50% chance of charging the attack
 			
-			ChargeAttack();
+			ChargeAttack(this.damage);
 		}
 
 		else
         {
 			// placeholder to test battle scene
-			MeleeAttack(damage);
+			MeleeAttack(this.damage);
 		}
 
 	}
@@ -62,16 +64,19 @@ public class EnemyAttack : MonoBehaviour
 	}
 	
 
-	private void ChargeAttack()
+	private void ChargeAttack(int damageNumber)
 	{
 
 		// TODO: if player does not block charge
 		charge++;
+        Debug.Log("Enemy is charging: " + charge);
 
-		if (charge >= 3)
+        if (charge >= 3)
         {
-			playerHealth.TakeDamage(damage);
-		}
+			playerHealth.TakeDamage(damageNumber * 4);
+			charge = 0;
+			Debug.Log("Player took damage: " + damageNumber);
+        }
 
 	}
 
