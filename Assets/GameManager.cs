@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 	{
 		turnManager.beginPlayerTurn.AddListener(PlayerTurn);
 		DrawCard();
-		
+
 	}
 
 	private void StartTurn() // First turn of the game
@@ -91,9 +91,11 @@ public class GameManager : MonoBehaviour
 		if (availableCardSlots <= 0)
 		{
 			return;
-			// What should happen when you run out of cards?
 		}
-
+		if (currentDeck.Cards.Count <= 0)
+		{
+			// Game over
+		}
 		Card drawnCard = currentDeck.Cards[0];
 		currentDeck.RemoveCard(drawnCard);
 
@@ -147,7 +149,7 @@ public class GameManager : MonoBehaviour
 		DestroyImmediate(cardInteraction.gameObject); // Cleanup
 
 		turnManager.EndPlayerTurn(); // End player turn after card is used
-		
+
 	}
 
 	public void OnEnemyDeadHandler()
