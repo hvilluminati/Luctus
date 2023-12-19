@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
 		turnManager.beginPlayerTurn.AddListener(PlayerTurn);
 
 		GameObject enemyGameObject = GameObject.FindGameObjectWithTag("Enemy");
+
+
+
 		// Get the EnemyBehavior component attached to the enemy GameObject
 		if (enemyGameObject != null)
 		{
@@ -59,10 +62,9 @@ public class GameManager : MonoBehaviour
 			Debug.LogError("No GameObject found with the 'Enemy' tag.");
 		}
 
-
-		//set reward cards
-		enemyType = enemyGameObject.GetComponent<EnemyDecorator>().collidedEnemy;
-		Card1 = enemyType.GetCard1();
+        int lastCollidedID = DataManager.instance.lastEnemyCollidedID;
+        enemyType = GetEnemyTypeFromDataManager(lastCollidedID);
+        Card1 = enemyType.GetCard1();
 		Card2 = enemyType.GetCard2();
 		actualCard1.GetComponent<CardDecoratorSimple>().Initiate(Card1);
 		actualCard2.GetComponent<CardDecoratorSimple>().Initiate(Card2);
@@ -76,8 +78,19 @@ public class GameManager : MonoBehaviour
 		DrawCard();
 
 	}
+    private EnemyType GetEnemyTypeFromDataManager(int enemyID)
+    {
+        foreach (var enemyState in DataManager.instance.enemies)
+        {
+            if (enemyState.enemyType.GetEnemyID() == enemyID)
+            {
+                return enemyState.enemyType;
+            }
+        }
+        return null;
+    }
 
-	private void StartTurn() // First turn of the game
+    private void StartTurn() // First turn of the game
 	{
 		// Draw 5 cards
 		for (int i = 0; i < 5; i++)
