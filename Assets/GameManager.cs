@@ -99,7 +99,10 @@ public class GameManager : MonoBehaviour
 		{
 			return;
 		}
-
+		if (currentDeck.Cards.Count <= 0)
+		{
+			// Game over
+		}
 		Card drawnCard = currentDeck.Cards[0];
 		currentDeck.RemoveCard(drawnCard);
 
@@ -161,7 +164,7 @@ public class GameManager : MonoBehaviour
 		}
 
 		turnManager.EndPlayerTurn(); // End player turn after card is used
-		
+
 	}
 
 	public void OnEnemyDeadHandler()
