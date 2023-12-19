@@ -10,7 +10,7 @@ public class SimpleEnemyScripy : MonoBehaviour
 	private new Rigidbody2D rigidbody;
 	public LayerMask detectWhat;
 	public bool colliding;
-	[SerializeField] private AudioSource WalkingSound;
+	[SerializeField] private AudioSource walkingSound;
 
 	Animator anim;
 	private void Awake()

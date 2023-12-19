@@ -27,7 +27,7 @@ public class RandomSoundPlayer : MonoBehaviour
 	{
 		float distance = Vector2.Distance(transform.position, playerTransform.position);
 		audioSource.volume = CalculateVolumeBasedOnDistance(distance);
-		Debug.Log($"Volumes is: {audioSource.volume}");
+		//Debug.Log($"Volumes is: {audioSource.volume}");
 
 		timer -= Time.deltaTime;
 		if (timer <= 0f)

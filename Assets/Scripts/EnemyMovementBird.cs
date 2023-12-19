@@ -6,7 +6,7 @@ public class EnemyMovementBird : MonoBehaviour
 	public bool track = false;
 	public Transform startingPoint;
 	private GameObject player;
-	[SerializeField] private AudioSource flapSound;
+	[SerializeField] public AudioSource flapSound;
 
 	void Start()
 	{
