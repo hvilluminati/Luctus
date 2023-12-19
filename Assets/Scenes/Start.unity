@@ -550,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 1010825615}
     - target: {fileID: 1527587523434717269, guid: 04108489102914af1b6bc81b78421611, type: 3}
       propertyPath: sceneNumber
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1527587523434717269, guid: 04108489102914af1b6bc81b78421611, type: 3}
       propertyPath: transitionTime
