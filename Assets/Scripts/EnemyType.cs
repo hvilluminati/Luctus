@@ -9,7 +9,7 @@ public class EnemyType : MonoBehaviour
     [SerializeField] private int enemyID; 
     [SerializeField] private Sprite enemySprite;
     [SerializeField] private EnemyAttackType attackType;
-    [SerializeField] private int damageMultiplier = 1;
+    [SerializeField] private float damageMultiplier = 1;
     [SerializeField] private bool isBoss = false; 
     [SerializeField] private int health = 100;
     [SerializeField] private Card card1;

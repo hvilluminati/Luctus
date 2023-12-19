@@ -6,7 +6,7 @@ public class EnemyAttack : MonoBehaviour
 {
 	private int charge = 0;
 	private int damage;
-	private static int DEFAULT_DAMAGE = 10;
+	private static int DEFAULT_DAMAGE = 1;
     public PlayerHealth playerHealth;
 
 
@@ -33,7 +33,7 @@ public class EnemyAttack : MonoBehaviour
 			this.damage = Mathf.RoundToInt(damage * 0.75f);
 		}
 
-        this.damage = Random.Range(Mathf.RoundToInt(this.damage * 0.5f), this.damage);
+        this.damage = Random.Range(Mathf.RoundToInt(this.damage * 0.75f), this.damage);
 
         if (isBoss && Random.value <= 0.5f||charge > 0)
 		{

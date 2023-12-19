@@ -23436,6 +23436,10 @@ PrefabInstance:
       propertyPath: isBoss
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 837080454569940760, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: damageMultiplier
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 943662661987074253, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: player
       value: 
@@ -29139,6 +29143,10 @@ PrefabInstance:
     - target: {fileID: 837080454569940760, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: enemyID
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 837080454569940760, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
+      propertyPath: damageMultiplier
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 943662661987074253, guid: 3b67ea3096f94734f81efa1b8ed3f34e, type: 3}
       propertyPath: player
@@ -41712,6 +41720,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5555767746447417214, guid: 7718fa43eae5d704ea252280f52fe8ff, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7210936292123644768}
+    - target: {fileID: 5555767746447417214, guid: 7718fa43eae5d704ea252280f52fe8ff, type: 3}
+      propertyPath: enterBattle
+      value: 
+      objectReference: {fileID: 1616277871}
     - target: {fileID: 7382560557897739106, guid: 7718fa43eae5d704ea252280f52fe8ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.75
@@ -41719,6 +41735,10 @@ PrefabInstance:
     - target: {fileID: 7648570737823309451, guid: 7718fa43eae5d704ea252280f52fe8ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255260356528284423, guid: 7718fa43eae5d704ea252280f52fe8ff, type: 3}
+      propertyPath: damageMultiplier
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -63231,6 +63251,10 @@ PrefabInstance:
       propertyPath: enemyID
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8255260356528284423, guid: 7718fa43eae5d704ea252280f52fe8ff, type: 3}
+      propertyPath: damageMultiplier
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6782928303931387097, guid: 7718fa43eae5d704ea252280f52fe8ff, type: 3}
@@ -63374,6 +63398,10 @@ PrefabInstance:
       propertyPath: enterBattle
       value: 
       objectReference: {fileID: 1616277871}
+    - target: {fileID: 3354265436684235555, guid: 3442a9792529e664f93464b4bf136f90, type: 3}
+      propertyPath: damageMultiplier
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
