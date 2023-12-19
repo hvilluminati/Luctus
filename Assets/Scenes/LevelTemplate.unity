@@ -33865,6 +33865,7 @@ MonoBehaviour:
   CardObject: {fileID: 1500344711}
   card: {fileID: 11400000, guid: 46f1f24516d464f03a4ef3d2cdbadf57, type: 2}
   thisCard: {fileID: 276174852}
+  Player: {fileID: 8554685761281571333}
   myCurve:
     serializedVersion: 2
     m_Curve:
@@ -39486,11 +39487,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358643889677958642, guid: a60fb3053fc184d92ae38edd92371efb, type: 3}
       propertyPath: m_fontSize
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4358643889677958642, guid: a60fb3053fc184d92ae38edd92371efb, type: 3}
       propertyPath: m_fontSizeBase
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4784689140131335280, guid: a60fb3053fc184d92ae38edd92371efb, type: 3}
       propertyPath: m_SizeDelta.x
@@ -39676,7 +39677,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2293430966279000317, guid: a60fb3053fc184d92ae38edd92371efb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -42860,12 +42862,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1616277872}
     - target: {fileID: 7554674875832151159, guid: 19b5980c09a4e47558a49d55305b2483, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 8554685761281571333}
+    - target: {fileID: 7554674875832151159, guid: 19b5980c09a4e47558a49d55305b2483, type: 3}
       propertyPath: transition
       value: 
       objectReference: {fileID: 1616277869}
     - target: {fileID: 7554674875832151159, guid: 19b5980c09a4e47558a49d55305b2483, type: 3}
       propertyPath: transitionTime
-      value: 2.8
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 7651788556548128728, guid: 19b5980c09a4e47558a49d55305b2483, type: 3}
       propertyPath: m_SizeDelta.x
@@ -52917,7 +52923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -692.4, y: 472.6}
+  m_AnchoredPosition: {x: -422, y: 435}
   m_SizeDelta: {x: 11.84, y: 11.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &2039492298
@@ -55968,6 +55974,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 606008949641528076, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -701
+      objectReference: {fileID: 0}
+    - target: {fileID: 606008949641528076, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 429
+      objectReference: {fileID: 0}
     - target: {fileID: 1183731432344839675, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 428
@@ -56172,6 +56186,18 @@ PrefabInstance:
       propertyPath: audio
       value: 
       objectReference: {fileID: 8554685761281571332}
+    - target: {fileID: 7776064948799602829, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776064948799602829, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776064948799602829, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -56185,7 +56211,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7439039137020760514, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
   m_PrefabInstance: {fileID: 8554685761281571330}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8554685761281571333}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27a3a3da08e28234c8b416b4a93e1307, type: 3}
@@ -56194,6 +56220,11 @@ MonoBehaviour:
 --- !u!82 &8554685761281571332 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5724393751805143029, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+  m_PrefabInstance: {fileID: 8554685761281571330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8554685761281571333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727693200554657269, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
   m_PrefabInstance: {fileID: 8554685761281571330}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

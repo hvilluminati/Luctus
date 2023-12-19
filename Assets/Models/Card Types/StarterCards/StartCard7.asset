@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa7ea04d8566884290a37e19477d7c9, type: 3}
   m_Name: StartCard7
   m_EditorClassIdentifier: 
-  name: BurnTest
-  description: Burn 2dmg for 2 rd, reduce enemy atk.
+  name: Burn
+  description: Burn enemy for 2 damage for 2 turns, reduce enemy damage.
+  animationName: FireBurn
   artwork: {fileID: 21300000, guid: f587d53381a358f4593aaa9b7460690d, type: 3}
   damageType: 2
   damage: 2

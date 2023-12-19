@@ -354,7 +354,6 @@ GameObject:
   - component: {fileID: 6574662573103643686}
   - component: {fileID: -8375557467741668188}
   - component: {fileID: 8963323504557051370}
-  - component: {fileID: 2293430966279000317}
   - component: {fileID: 7385728976934900821}
   - component: {fileID: 4361930935724827360}
   m_Layer: 5
@@ -429,29 +428,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2293430966279000317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125618110180661090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98420a1f2df4642e18a08a8ef783c775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AddCardPanel: {fileID: 0}
-  CardObject: {fileID: 0}
-  card: {fileID: 0}
-  thisCard: {fileID: 0}
-  myCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  distance: 0.5
 --- !u!114 &7385728976934900821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,8 +791,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

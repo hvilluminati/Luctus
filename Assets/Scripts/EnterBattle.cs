@@ -8,6 +8,7 @@ public class EnterBattle : MonoBehaviour
     public float transitionTime;
     [SerializeField] private int sceneNumber;
     public AudioSource audio;
+    public GameObject Player;
 
     // Update is called once per frame
 
@@ -22,6 +23,8 @@ public class EnterBattle : MonoBehaviour
 
     public void StartBattle()
     {
+        Player.GetComponent<PlayerMovement>().enabled = false;
+        Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         StartCoroutine(LoadLevel(sceneNumber));
     }
 

@@ -17,22 +17,21 @@ public class EnemyAttack : MonoBehaviour
 	void Update()
 	{
 		// Check for spacebar input to launch the projectile
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			projectile.Launch();
-		}
+		//if (Input.GetKeyDown(KeyCode.Space))
+		//{
+		//	projectile.Launch();
+		//}
 	}
 
 	// todo: integrate damage multiplier 
 
-	public void AttackHandler(EnemyAttackType attackType, bool isBoss)
+	public void AttackHandler(EnemyAttackType attackType, bool isBoss, bool isBurning)
 	{
-
-		Debug.Log("hey");
-
 		this.damage = (int) attackType * DEFAULT_DAMAGE;
 
-		
+		if (isBurning) {
+			this.damage = Mathf.RoundToInt(damage * 0.75f);
+		}
 
 		if (isBoss && Random.value <= 0.75f)
 		{
@@ -45,18 +44,16 @@ public class EnemyAttack : MonoBehaviour
         {
 			// placeholder to test battle scene
 			MeleeAttack();
-        }
+		}
 
 	}
 
 	private void MeleeAttack()
 	{
-
+		Debug.Log("Player took damage: " + damage);
 		playerHealth.TakeDamage(damage);
 
 	}
-
-
 	
 	private void RangedAttack()
 	{
@@ -77,10 +74,6 @@ public class EnemyAttack : MonoBehaviour
 		}
 
 	}
-
-
-
-
 
 
 }
