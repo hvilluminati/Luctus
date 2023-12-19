@@ -43,7 +43,11 @@ public class PlayerHealth : MonoBehaviour
 	public void TakeDamage(float damage)
 	{
 		Debug.Log("Took damage");
-		audio.Play();
+		if(audio != null)
+        {
+			audio.Play();
+        }
+		
 		healthAmount -= damage;
 		DataManager.instance.ModifyHealth(-damage);
 		
