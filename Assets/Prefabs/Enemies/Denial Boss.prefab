@@ -209,6 +209,14 @@ PrefabInstance:
       value: 3.7327538
       objectReference: {fileID: 0}
     - target: {fileID: 7066293813516686137, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: card1
+      value: 
+      objectReference: {fileID: 11400000, guid: 31f87440aa5f82e4a89602bcc88b445c, type: 2}
+    - target: {fileID: 7066293813516686137, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
+      propertyPath: card2
+      value: 
+      objectReference: {fileID: 11400000, guid: c9a364ad0a71b6148b6f83c33105a38e, type: 2}
+    - target: {fileID: 7066293813516686137, guid: bc59170e3ab3a4364a5bc7655e91160c, type: 3}
       propertyPath: health
       value: 50
       objectReference: {fileID: 0}
