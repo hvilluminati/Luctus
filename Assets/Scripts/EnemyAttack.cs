@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using TMPro;
 public class EnemyAttack : MonoBehaviour
 {
 	private int charge = 0;
 	private int damage;
 	private static int DEFAULT_DAMAGE = 1;
     public PlayerHealth playerHealth;
-
+    [SerializeField] public TMP_Text attackInfoText;
 
     [SerializeField] public Projectile projectile;
 	[SerializeField] public Transform launchOffset;
@@ -52,7 +52,9 @@ public class EnemyAttack : MonoBehaviour
 
 	private void MeleeAttack(int damageNumber)
 	{
-		Debug.Log("Player took damage: " + damageNumber);
+        string message = "Player took " + damageNumber + " points of damage";
+        UpdateAttackInfoText(message);
+        Debug.Log("Player took damage: " + damageNumber);
 		playerHealth.TakeDamage(damageNumber);
 
 	}
@@ -68,19 +70,31 @@ public class EnemyAttack : MonoBehaviour
 	{
 
 		// TODO: if player does not block charge
+
 		charge++;
         Debug.Log("Enemy is charging: " + charge);
+        string message = "Enemy is charging charge number " + charge;
+		if (charge == 2)
+		{
+			message = "Enemy is charging charge number " + charge + "\nNext round is gonna hurt!";
+        }
 
         if (charge >= 3)
         {
-			playerHealth.TakeDamage(damageNumber * 4);
+            message = "Player took " + (damageNumber * 4) + " points of damage";
+            playerHealth.TakeDamage(damageNumber * 4);
 			charge = 0;
 			Debug.Log("Player took damage: " + damageNumber);
         }
-
-	}
-
-
+        UpdateAttackInfoText(message);
+    }
+    private void UpdateAttackInfoText(string message)
+    {
+        if (attackInfoText != null)
+        {
+            attackInfoText.text = message;
+        }
+    }
 }
 
 
