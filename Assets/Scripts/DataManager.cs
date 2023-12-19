@@ -75,6 +75,12 @@ public class DataManager : MonoBehaviour
 
     public void DataReset()
     {
+        EnemyType[] enemies = FindObjectsOfType<EnemyType>();
+
+        foreach (EnemyType enemy in enemies)
+        {
+            Destroy(enemy.gameObject); // Destroy the GameObject to which the EnemyType component is attached
+        }
         playerHealth = 100;
         x_old = 0;
         y_old = 0;
@@ -83,6 +89,7 @@ public class DataManager : MonoBehaviour
         prevScene = 0;
         ResetEnemies();
         lastEnemyCollidedID = -1;
+        DataManager.instance.enemies = new DataManager.EnemyState[0];
     }
 
 

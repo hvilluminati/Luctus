@@ -70,7 +70,6 @@ public class ObjectActivator : MonoBehaviour
         if (DataManager.instance != null)
         {
             DataManager.instance.DataReset();
-            DataManager.instance.enemies = new DataManager.EnemyState[0];
         }
         if (deckManager != null)
         {
