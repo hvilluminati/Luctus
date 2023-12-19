@@ -568,42 +568,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 173912437564697344, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 173912437564697344, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 173912437564697344, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721238344891646366, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
-      propertyPath: m_SortingLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721238344891646366, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721238344891646366, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721238344891646366, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 3824763866229849014, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7439039137020760514, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1031494822103712194, guid: 3bb3f0de328269144aee8ea4423d7a82, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -678,6 +642,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8426439291051337319, guid: 3bb3f0de328269144aee8ea4423d7a82, type: 3}
       propertyPath: rb
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 173912437564697344, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 173912437564697344, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 173912437564697344, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721238344891646366, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721238344891646366, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721238344891646366, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721238344891646366, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 3824763866229849014, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439039137020760514, guid: 7f8cbf6601a364d359cc27020f0c04cf, type: 3}
+      propertyPath: healthBar
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lucia: Mewy! Where are you going! Wait!!!'
+  m_text: 'Lucia: Mewy, where are you going?! Wait!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40f60d66c44804bcfa2eb0ba8af9048e, type: 2}
   m_sharedMaterial: {fileID: 4094263067072541204, guid: 40f60d66c44804bcfa2eb0ba8af9048e, type: 2}
@@ -971,7 +971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lucia: !!!!!!!! Mewy!!!!!!!!'
+  m_text: 'Lucia: Mewy!!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40f60d66c44804bcfa2eb0ba8af9048e, type: 2}
   m_sharedMaterial: {fileID: 4094263067072541204, guid: 40f60d66c44804bcfa2eb0ba8af9048e, type: 2}

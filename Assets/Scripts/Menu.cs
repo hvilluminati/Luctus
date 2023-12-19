@@ -37,9 +37,15 @@ public class Menu : MonoBehaviour
 
     public void ExitGame()
     {
+        //DataManager.instance.gameOver = true;
+        //DataManager.instance.GetComponent<DataManager>().DataReset();
+        //SceneManager.LoadScene(0);
         DataManager.instance.gameOver = true;
         DataManager.instance.GetComponent<DataManager>().DataReset();
-        SceneManager.LoadScene(0);
+
+        // Quit the application
+        Application.Quit();
+
     }
 
     public void ToggleMusic()

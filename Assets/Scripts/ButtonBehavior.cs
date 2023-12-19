@@ -6,6 +6,7 @@ public class ButtonBehavior : MonoBehaviour
 	[SerializeField] private SceneLoader sceneLoader;
 	public int delayTime = 30;
 	public int delay = 0;
+	public int start0OrQuit1 = 0;
 	private bool isClicked;
 
 	private void FixedUpdate()
@@ -15,7 +16,14 @@ public class ButtonBehavior : MonoBehaviour
 			delay += 1;
 			if (delay >= delayTime)
 			{
-				sceneLoader.LoadSelectedScene();
+				if(start0OrQuit1 == 0)
+				{
+                    sceneLoader.LoadSelectedScene();
+                }
+				else if (start0OrQuit1 == 1)
+				{
+                    Application.Quit();
+                }
 			}
 
 		}
