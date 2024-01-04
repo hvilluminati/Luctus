@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Ice Blast
   description: Shoots a snowball for 5 damage.
   animationName: WaterBall
-  artwork: {fileID: 21300000, guid: 6ffa8ca51ad88354f98bac0198d82518, type: 3}
+  artwork: {fileID: 21300000, guid: 118dbd9dcf01f0f4885f3197d3c54b1e, type: 3}
   damageType: 0
   damage: 5
   shield: 0

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa7ea04d8566884290a37e19477d7c9, type: 3}
+  m_Name: FireCard3
+  m_EditorClassIdentifier: 
+  name: Blazing Branch
+  description: Strike the enemy for 12 points of damage.
+  animationName: FireBurn
+  artwork: {fileID: 21300000, guid: dfccbf704da18df449642dbda46cefbc, type: 3}
+  damageType: 0
+  damage: 12
+  shield: 0
+  statusDuration: 0
+  effect: 0
+  effectAmount: 0

@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulations! Try Again?
+  m_text: "Congratulations! And thanks for playing our demo! \nTry Again?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40f60d66c44804bcfa2eb0ba8af9048e, type: 2}
   m_sharedMaterial: {fileID: 4094263067072541204, guid: 40f60d66c44804bcfa2eb0ba8af9048e, type: 2}

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Burn
   description: Burn enemy for 2 damage for 2 turns, reduce enemy damage.
   animationName: FireBurn
-  artwork: {fileID: 21300000, guid: f587d53381a358f4593aaa9b7460690d, type: 3}
+  artwork: {fileID: 21300000, guid: d1ace91c56db0654997ae759e2b7f5fd, type: 3}
   damageType: 2
   damage: 2
   shield: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Sneak Attack
   description: Throw a dagger. Inflicting 5 bleed damage for 3 turns.
   animationName: Bleed
-  artwork: {fileID: 21300000, guid: b9ddbb0b1f23a7a41aa69f9737c50926, type: 3}
+  artwork: {fileID: 21300000, guid: 8d8b52ba4987c3744a8a93f774b04d50, type: 3}
   damageType: 4
   damage: 5
   shield: 0

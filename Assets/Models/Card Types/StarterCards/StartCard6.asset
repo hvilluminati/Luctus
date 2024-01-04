@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Magic Missile
   description: Shoot a burst of arcane energy for 10 damage.
   animationName: PurpleMissile
-  artwork: {fileID: 21300000, guid: bde2c5e3962adb04f8bc7ab014b15513, type: 3}
+  artwork: {fileID: 21300000, guid: c15e467eacbf3ee4197483734b0a3c51, type: 3}
   damageType: 0
   damage: 10
   shield: 0

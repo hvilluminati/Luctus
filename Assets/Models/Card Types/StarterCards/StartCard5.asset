@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Misleading Sweet
   description: Throws an acidic lolly pop for 6 damage.
   animationName: GreenBomb
-  artwork: {fileID: 21300000, guid: 35052439756e7d046b1fcf8361b2f54a, type: 3}
+  artwork: {fileID: 21300000, guid: 354e9c74843c58a4c8a535d3efcdb49e, type: 3}
   damageType: 0
   damage: 6
   shield: 0
