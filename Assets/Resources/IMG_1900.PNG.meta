@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -108,18 +108,216 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: FireBush1
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 212
+        width: 138
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 58}
+        - {x: 16, y: 58}
+        - {x: 16, y: 63}
+        - {x: 13, y: 65}
+        - {x: 4, y: 77}
+        - {x: -11, y: 65}
+        - {x: -34, y: 31}
+        - {x: -45, y: 21}
+        - {x: -49, y: 11}
+        - {x: -52, y: 11}
+        - {x: -52, y: -1}
+        - {x: -54.64807, y: -2.6080017}
+        - {x: -55, y: -10}
+        - {x: -60, y: -13}
+        - {x: -61, y: -19}
+        - {x: -67, y: -24}
+        - {x: -67, y: -36}
+        - {x: -64, y: -40}
+        - {x: -55, y: -40}
+        - {x: -55, y: -43}
+        - {x: -61, y: -48}
+        - {x: -61, y: -55}
+        - {x: -56, y: -55}
+        - {x: -51, y: -61}
+        - {x: -23, y: -61}
+        - {x: -22, y: -63}
+        - {x: -11, y: -64}
+        - {x: -8, y: -68}
+        - {x: 3, y: -67}
+        - {x: 6, y: -64}
+        - {x: 43, y: -64}
+        - {x: 60, y: -58}
+        - {x: 61, y: -51}
+        - {x: 55, y: -46}
+        - {x: 55, y: -40}
+        - {x: 67, y: -31}
+        - {x: 67, y: -9}
+        - {x: 62, y: -4}
+        - {x: 59, y: 3}
+        - {x: 55, y: 12}
+        - {x: 56, y: 20}
+        - {x: 53, y: 24}
+        - {x: 52, y: 31}
+        - {x: 48, y: 38}
+        - {x: 46, y: 46}
+        - {x: 41, y: 52}
+        - {x: 36, y: 53}
+        - {x: 29, y: 50}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e687f5225fe544981bc2b980556c3620
+      internalID: -403591445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireBush2
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 232
+        width: 147
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.5, y: 51.5}
+        - {x: 13.5, y: 49.5}
+        - {x: 7.5, y: 45.5}
+        - {x: -1.5, y: 45.5}
+        - {x: -1.5, y: 50.5}
+        - {x: -5.5, y: 54.5}
+        - {x: -15.5, y: 54.5}
+        - {x: -19.5, y: 50.5}
+        - {x: -29.5, y: 43.5}
+        - {x: -39.5, y: 39.5}
+        - {x: -43.5, y: 33.5}
+        - {x: -42.5, y: 27.5}
+        - {x: -53.5, y: 28.5}
+        - {x: -66.5, y: 20.5}
+        - {x: -66.5, y: 4.5}
+        - {x: -57.5, y: 1.5}
+        - {x: -57.5, y: -8.5}
+        - {x: -46.5, y: -19.5}
+        - {x: -60.5, y: -28.5}
+        - {x: -56.5, y: -35.5}
+        - {x: -39.5, y: -49.5}
+        - {x: -5.5, y: -49.5}
+        - {x: -3.5, y: -46.5}
+        - {x: 16.5, y: -46.5}
+        - {x: 17.5, y: -49.5}
+        - {x: 36.5, y: -49.5}
+        - {x: 39.5, y: -47.5}
+        - {x: 46.5, y: -46.5}
+        - {x: 55.5, y: -38.5}
+        - {x: 55.5, y: -26.5}
+        - {x: 61.5, y: -21.5}
+        - {x: 61.5, y: -16.5}
+        - {x: 67.5, y: -15.5}
+        - {x: 67.5, y: 1.5}
+        - {x: 56.5, y: 7.5}
+        - {x: 58.5, y: 12.5}
+        - {x: 54.5, y: 18.5}
+        - {x: 46.5, y: 25.5}
+        - {x: 46.5, y: 36.5}
+        - {x: 43.5, y: 42.5}
+        - {x: 40.5, y: 48.5}
+        - {x: 34.5, y: 51.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73cf7491b7cb4092a8e0d67f5563ad8
+      internalID: 718354666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -340, y: -70}
+      - {x: -343, y: -73}
+      - {x: -354, y: -73}
+      - {x: -369, y: -68}
+      - {x: -394, y: -68}
+      - {x: -403, y: -63}
+      - {x: -407, y: -57}
+      - {x: -403, y: -47}
+      - {x: -407, y: -47}
+      - {x: -413, y: -41}
+      - {x: -411, y: -27}
+      - {x: -402, y: -13}
+      - {x: -398, y: 6}
+      - {x: -392, y: 16}
+      - {x: -374, y: 30}
+      - {x: -372, y: 45}
+      - {x: -360, y: 52}
+      - {x: -353, y: 56}
+      - {x: -340, y: 74}
+      - {x: -326, y: 54}
+      - {x: -315, y: 43}
+      - {x: -310, y: 51}
+      - {x: -296, y: 34}
+      - {x: -288, y: 3}
+      - {x: -278, y: -15}
+      - {x: -279, y: -35}
+      - {x: -289, y: -49}
+      - {x: -283, y: -56}
+      - {x: -284, y: -63}
+      - {x: -298, y: -69}
+    - - {x: -172, y: -56}
+      - {x: -175, y: -51}
+      - {x: -194, y: -51}
+      - {x: -196, y: -55}
+      - {x: -229, y: -55}
+      - {x: -234, y: -50}
+      - {x: -249, y: -38}
+      - {x: -245, y: -30}
+      - {x: -237, y: -24}
+      - {x: -248, y: -17}
+      - {x: -247, y: -5}
+      - {x: -257, y: -1}
+      - {x: -257, y: 15}
+      - {x: -244, y: 22}
+      - {x: -233, y: 23}
+      - {x: -233, y: 29}
+      - {x: -224, y: 35}
+      - {x: -215, y: 41}
+      - {x: -204, y: 49}
+      - {x: -195, y: 49}
+      - {x: -191, y: 41}
+      - {x: -183, y: 40}
+      - {x: -174, y: 46}
+      - {x: -154, y: 46}
+      - {x: -149, y: 40}
+      - {x: -142, y: 32}
+      - {x: -141, y: 20}
+      - {x: -130, y: 10}
+      - {x: -130, y: 2}
+      - {x: -122, y: -5}
+      - {x: -123, y: -22}
+      - {x: -133, y: -32}
+      - {x: -132, y: -44}
+      - {x: -150, y: -54}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FireBush1: -403591445
+      FireBush2: 718354666
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
